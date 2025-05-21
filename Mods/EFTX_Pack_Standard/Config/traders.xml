@@ -1,0 +1,83 @@
+<configs>
+	<set xpath="//traders/@currency_item">casinoCoin</set>
+	<!-- *** New Traderstage For T4 and T5 -->
+	<insertAfter xpath="//traderstage_template[@name='baseTier3']">
+		<traderstage_template name="baseTier4">
+			<entry min="1" max="999999" quality="0"/>
+			<entry min="150" max="999999" quality="1"/>
+			<entry min="150" max="999999" quality="2"/>
+			<entry min="150" max="999999" quality="3"/>
+			<entry min="150" max="999999" quality="4"/>
+			<entry min="150" max="999999" quality="5"/>
+		</traderstage_template>
+		<traderstage_template name="modsTier4">
+			<entry min="150" max="999999" quality="0"/>
+		</traderstage_template>
+		
+		<traderstage_template name="baseTier5">
+			<entry min="1" max="999999" quality="0"/>
+			<entry min="200" max="999999" quality="1"/>
+			<entry min="200" max="999999" quality="2"/>
+			<entry min="200" max="999999" quality="3"/>
+			<entry min="200" max="999999" quality="4"/>
+			<entry min="200" max="999999" quality="5"/>
+		</traderstage_template>
+		<traderstage_template name="modsTier5">
+			<entry min="200" max="999999" quality="0"/>
+		</traderstage_template>
+		
+	</insertAfter>		
+				
+		<append xpath="//trader_item_group[@name='generalResources']">
+			<item name="resourceCellulosePowder" count="50,150"/>
+			<item name="resourceNitricAcid" count="300,900"/>
+			<item name="resourceSulfuricAcid" count="300,900"/>			
+			<item name="resourceWeaponRepairKit" count="1,5"/>			
+			<item name="resourceWeaponParts" count="1,4"/>
+			<item name="resourceBottleOfHydrogenPeroxide" count="1,3"/>
+			<item name="resourceCanisterWithPurifiedWater"/>
+			<item name="resourceCanOfWhiteSalt" count="1,3"/>
+			<item name="resourceOxBbleach" count="1,2"/>
+			<item name="resourceSmokedChimneyDrainCleaner" count="1,2"/>
+			<item name="resourcePrinterPaper" count="1,3"/>
+			<item name="resourceClassicMatches" count="1,3"/>
+			<item name="resourceWD40" count="1,2"/>
+		</append>
+		<append xpath="//trader_item_group[@name='skillMagazines']">
+			<item name="SMGSSkillMagazine" count="1,2"/>			
+			<item name="PistolsSkillMagazine" count="1,2"/>							
+			<item name="ShotgunsSkillMagazine" count="1,2"/>
+			<item name="RocketsandLaunchersSkillMagazine" count="1,2"/>			
+			<item name="RiflesSkillMagazine" count="1,2"/>
+			<item name="weaponModifiersScopesSkillMagazine" count="1,2"/>
+			<item name="weaponModifiersBipodsForegripsSkillMagazine" count="1,2"/>
+			<item name="weaponModifiersMagazinesSkillMagazine" count="1,2"/>
+			<item name="weaponModifiersSilencersSkillMagazine" count="1,2"/>
+			<item name="weaponModifiersStocksSkillMagazine" count="1,2"/>
+			<item name="weaponModifiersGrenadeLauncherAttachmentsSkillMagazine" count="1,2"/>
+			<item name="HeadLightsandNVGSSkillMagazine" count="1"/>
+		</append>
+	
+	<append xpath="//trader_item_group[@name='rareMedicine']">
+		<item name="medicalIFAK"/>
+		<item name="medicalSalewa"/>
+		<item name="medicalInjectorMULE"/>
+		<item name="medicalCMS"/>
+		<item name="medicalSurv12"/>
+		<item name="medicalInjectorAdrenaline" prob="0.5"/>
+		<item name="medicalInjectorMorphine" prob="0.5"/>
+		<item name="medicalInjectorPerfortran" prob="0.5"/>
+		<item name="medicalInjectorPropitalRegenerativeStim" prob="0.5"/>
+		<item name="medicalInjectorSJ12" prob="0.4"/>
+		<item name="medicalInjector2A2" prob="0.4"/>
+		<item name="BooksOfASurgeonSkillMagazine" count="1,2"/>
+	</append>
+	<append xpath="//trader_item_group[@name='medicine']">
+		<item name="resourceDisposableSyringe" count="1,4"/>
+		<item name="resourcePileOfMeds" count="1,4"/>
+		<item name="resourceSalineSolution" count="1,2"/>		
+		<item name="DoctorMedicalJournalsSkillMagazine" count="1,2"/>				
+	</append>	
+
+	
+</configs>
