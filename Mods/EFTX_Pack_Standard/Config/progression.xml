@@ -932,7 +932,6 @@
 		<!-- SHOTGUNS -->
 		<!-- LAUNCHERS -->
 		<perk name="perkEFTXBoomBoom" parent="skillEFTXExplosives" max_level="5"  name_key="EFTX Boom Boom" desc_key="Finding More Rocket and Grenade Launcher Books in loot" icon="ui_game_symbol_explosion">
-		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="1" desc_key="reqStrengthLevel01"/></level_requirements>
 			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="1" desc_key="reqPerceptionLevel01"/></level_requirements>
 			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="3" desc_key="reqPerceptionLevel03"/></level_requirements>
 			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="5" desc_key="reqPerceptionLevel05"/></level_requirements>
