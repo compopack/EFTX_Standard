@@ -40,6 +40,7 @@
 	<set xpath="/entity_classes/entity_class[@name='zombieBikerRadiated']/effect_group[@name='Base Effects']/triggered_effect[@cvar='RadiatedRegenAmount']/@value">48</set>
 	<set xpath="/entity_classes/entity_class[@name='zombieWightRadiated']/effect_group[@name='Base Effects']/triggered_effect[@cvar='RadiatedRegenAmount']/@value">96</set>
 	<set xpath="/entity_classes/entity_class[@name='zombieMutatedRadiated']/effect_group[@name='Base Effects']/triggered_effect[@cvar='RadiatedRegenAmount']/@value">96</set>
+	<set xpath="/entity_classes/entity_class[starts-with(@name,'zombie')]/property[@name='TimeStayAfterDeath']/@value">90</set>
 	<!-- COP -->
 	<append xpath="/entity_classes/entity_class[@name='zombieFatCop']" >
 		<property name="LootListOnDeath" value="groupZombiesCops"/>
@@ -47,6 +48,7 @@
 	</append>
 	<append xpath="/entity_classes/entity_class[@name='zombieFatCopFeral']" >
 		<property name="LootListOnDeath" value="groupZombiesCopsFeral"/>
+		<property name="TimeStayAfterDeath" value="90"/>
 	</append>
 	<append xpath="/entity_classes/entity_class[@name='zombieFatCopRadiated']" >
 		<property name="LootListOnDeath" value="groupZombieFatCopRadiated"/>
