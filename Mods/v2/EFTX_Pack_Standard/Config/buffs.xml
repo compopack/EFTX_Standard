@@ -3,758 +3,9 @@
 	<!-- *** Bandolier Nerf -->
 	<set xpath="//buff[@name='buffBandolierChest']/effect_group/passive_effect[@name='ReloadSpeedMultiplier']/@value">.1</set> 
 	<set xpath="//buff[@name='buffBandolierLegs']/effect_group/passive_effect[@name='ReloadSpeedMultiplier']/@value">.1</set>
-		
-	<!-- *** No Broken/Sprained Leg/Arm Reloadspeed/AttacksPerMinute/Mobility Debuff When Having Adrenaline Rush (Injector/Default) -->
-	<append xpath="//buff[@name='buffLegSprained']/effect_group/passive_effect[(@name='Mobility') or (@name='JumpStrength')]">
-		<requirement name="!HasBuff" buff="buffMorphineInjector"/>
-		<requirement name="!HasBuff" buff="buffAdrenalineRushInjector"/>
-		<requirement name="!HasBuff" buff="buffAdrenalineRushDefault"/>
-		<requirement name="!HasBuff" buff="buffAdrenalineRush"/>
-	</append>
-	<append xpath="//buff[@name='buffLegBroken']/effect_group/passive_effect[(@name='Mobility') or (@name='JumpStrength')]">
-		<requirement name="!HasBuff" buff="buffMorphineInjector"/>
-		<requirement name="!HasBuff" buff="buffAdrenalineRushInjector"/>
-		<requirement name="!HasBuff" buff="buffAdrenalineRushDefault"/>
-		<requirement name="!HasBuff" buff="buffAdrenalineRush"/>
-	</append>
-	<append xpath="//buff[@name='buffLegSplinted']/effect_group/passive_effect[(@name='Mobility') or (@name='JumpStrength')]">
-		<requirement name="!HasBuff" buff="buffMorphineInjector"/>
-		<requirement name="!HasBuff" buff="buffAdrenalineRushInjector"/>
-		<requirement name="!HasBuff" buff="buffAdrenalineRushDefault"/>
-		<requirement name="!HasBuff" buff="buffAdrenalineRush"/>
-	</append>
-	<append xpath="//buff[@name='buffLegCast']/effect_group/passive_effect[(@name='Mobility') or (@name='JumpStrength')]">
-		<requirement name="!HasBuff" buff="buffMorphineInjector"/>
-		<requirement name="!HasBuff" buff="buffAdrenalineRushInjector"/>
-		<requirement name="!HasBuff" buff="buffAdrenalineRushDefault"/>
-		<requirement name="!HasBuff" buff="buffAdrenalineRush"/>
-	</append>
-	<append xpath="//buff[@name='buffArmSprained']/effect_group/passive_effect[(@name='ReloadSpeedMultiplier') or (@name='AttacksPerMinute')]">
-		<requirement name="!HasBuff" buff="buffMorphineInjector"/>
-		<requirement name="!HasBuff" buff="buffAdrenalineRushInjector"/>
-		<requirement name="!HasBuff" buff="buffAdrenalineRushDefault"/>
-		<requirement name="!HasBuff" buff="buffAdrenalineRush"/>
-	</append>
-	<append xpath="//buff[@name='buffArmBroken']/effect_group/passive_effect[(@name='ReloadSpeedMultiplier') or (@name='AttacksPerMinute')]">
-		<requirement name="!HasBuff" buff="buffMorphineInjector"/>
-		<requirement name="!HasBuff" buff="buffAdrenalineRushInjector"/>
-		<requirement name="!HasBuff" buff="buffAdrenalineRushDefault"/>
-		<requirement name="!HasBuff" buff="buffAdrenalineRush"/>
-	</append>
-	<append xpath="//buff[@name='buffArmSplinted']/effect_group/passive_effect[(@name='ReloadSpeedMultiplier') or (@name='AttacksPerMinute')]">
-		<requirement name="!HasBuff" buff="buffMorphineInjector"/>
-		<requirement name="!HasBuff" buff="buffAdrenalineRushInjector"/>
-		<requirement name="!HasBuff" buff="buffAdrenalineRushDefault"/>
-		<requirement name="!HasBuff" buff="buffAdrenalineRush"/>
-	</append>
-	<append xpath="//buff[@name='buffArmCast']/effect_group/passive_effect[(@name='ReloadSpeedMultiplier') or (@name='AttacksPerMinute')]">
-		<requirement name="!HasBuff" buff="buffMorphineInjector"/>
-		<requirement name="!HasBuff" buff="buffAdrenalineRushInjector"/>
-		<requirement name="!HasBuff" buff="buffAdrenalineRushDefault"/>
-		<requirement name="!HasBuff" buff="buffAdrenalineRush"/>
-	</append>
-	<append xpath="//buff/effect_group/passive_effect[@name='HealthMaxBlockage']">
-		<requirement name="!HasBuff" buff="buffMorphineInjector"/>
-	</append>
-	
-	<append xpath="/buffs/buff[@name='buffStatusCheck01']">
-	<!-- ### Negative Trips Checking -->
-		<!-- *** Negative Cross-Effects -->
-		<effect_group>
-			<requirement name="!HasBuff" buff="buffEftBadTrip"/>
-				<!--triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffEftBadTrip">
-					<requirement name="HasBuff" buff="buff2A2Injector"/>
-					<requirement name="HasBuff" buff="buffAdrenalineRushInjector"/>
-				</triggered_effect-->
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffEftBadTrip">
-					<requirement name="HasBuff" buff="buffPropitalInjector"/>
-					<requirement name="HasBuff" buff="buffAdrenalineRushInjector"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffEftBadTrip">
-					<requirement name="HasBuff" buff="buffPropitalInjector"/>
-					<requirement name="HasBuff" buff="buffMorphineInjector"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffEftBadTrip">
-					<requirement name="HasBuff" buff="buffPropitalInjector"/>
-					<requirement name="HasBuff" buff="buffPerfotoranInjector"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffEftBadTrip">
-					<requirement name="HasBuff" buff="buffTrimadolInjector"/>
-					<requirement name="HasBuff" buff="buffAdrenalineRushInjector"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffEftBadTrip">
-					<requirement name="HasBuff" buff="buffTrimadolInjector"/>
-					<requirement name="HasBuff" buff="buffPerfotoranInjector"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffEftBadTrip">
-					<requirement name="HasBuff" buff="buffTrimadolInjector"/>
-					<requirement name="HasBuff" buff="buffMorphineInjector"/>
-				</triggered_effect>
-		</effect_group>
-		<effect_group>
-			<requirement name="!HasBuff" buff="buffEftDeadlyTrip"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffEftDeadlyTrip">
-					<requirement name="HasBuff" buff="buff2A2Injector"/>
-					<requirement name="HasBuff" buff="buffMorphineInjector"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffEftDeadlyTrip">
-					<requirement name="HasBuff" buff="buff2A2Injector"/>
-					<requirement name="HasBuff" buff="buffPerfotoranInjector"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffEftDeadlyTrip">
-					<requirement name="HasBuff" buff="buff2A2Injector"/>
-					<requirement name="HasBuff" buff="buffPropitalInjector"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffEftDeadlyTrip">
-					<requirement name="HasBuff" buff="buff2A2Injector"/>
-					<requirement name="HasBuff" buff="buffTrimadolInjector"/>
-				</triggered_effect>
-		</effect_group>
-		</append>
-		<!-- ### Adrenaline Rush -->
-	<append xpath="/buffs">
-		<!-- *** Adrenaline Rush -->
-		<buff name="buffAdrenalineRushDefault" name_key="Adrenaline Rush" description_key="Your mobility, stamina and reload speed have been moderately increased!" icon="iconInjectorAdrenaline">
-			<stack_type value="replace"/>
-			<duration value="0"/>
-            <effect_group>
-				<requirements compare_type="or">
-					<requirement name="HasBuff" buff="buffAdrenalineRush"/>
-					<requirement name="HasBuff" buff="buffAdrenalineRush2"/>
-					<requirement name="HasBuff" buff="buffAdrenalineRushInjector"/>
-					<requirement name="HasBuff" buff="buffPropitalInjector"/>
-					<requirement name="HasBuff" buff="buffTrimadolInjector"/>
-					<requirement name="HasBuff" buff="buff2A2Injector"/>
-					<requirement name="HasBuff" buff="buffStatusHungry02"/>
-					<requirement name="HasBuff" buff="buffStatusHungry03"/>
-					<requirement name="HasBuff" buff="buffStatusThirsty02"/>
-					<requirement name="HasBuff" buff="buffStatusThirsty03"/>
-				</requirements>
-						<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffAdrenalineRushDefault"/>
-            </effect_group>
-            <effect_group>
-				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffAdrenalineRushDefault"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffAdrenalineRushDefault"/>
-				
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.3" fade="1" effect_name="Blur"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.3" fade="1" effect_name="Blur"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="3" effect_name="Blur"/>
-				
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.3" fade="1" effect_name="Brighth"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.3" fade="1" effect_name="Brighth"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="3" effect_name="Brighth"/>
-				
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.6" fade="1" effect_name="Greyscale"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.6" fade="1" effect_name="Greyscale"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="3" effect_name="Greyscale"/>
-				
-				<passive_effect name="HealthChangeOT" operation="base_add" value="0.125"/>
-				<passive_effect name="RunSpeed" operation="perc_add" value=".15"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value=".12" tags="running,swimmingRun"/>
-				<passive_effect name="StaminaLoss" operation="perc_add" value="-.12"/>
-				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value=".25"/>
-				<passive_effect name="AttacksPerMinute" operation="perc_add" value=".15"/>
-            </effect_group>
-		</buff>
-		<buff name="buffAdrenalineRush" name_key="Adrenaline Rush" description_key="Your mobility, stamina and reload speed have been greatly increased!" icon="iconInjectorAdrenaline" icon_color="0,255,0">
-			<stack_type value="replace"/>
-			<duration value="0"/>
-            <effect_group>
-				<requirements compare_type="or">
-					<requirement name="HasBuff" buff="buffAdrenalineRushInjector"/>
-					<requirement name="HasBuff" buff="buffPropitalInjector"/>
-					<requirement name="HasBuff" buff="buffTrimadolInjector"/>
-					<requirement name="HasBuff" buff="buff2A2Injector"/>
-				</requirements>
-						<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffAdrenalineRush"/>
-            </effect_group>
-            <effect_group>
-				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffAdrenalineRush"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffAdrenalineRush"/>
-				
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.3" fade="1" effect_name="Blur"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.3" fade="1" effect_name="Blur"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="3" effect_name="Blur"/>
-				
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.3" fade="1" effect_name="Brighth"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.3" fade="1" effect_name="Brighth"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="3" effect_name="Brighth"/>
-				
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.6" fade="1" effect_name="Greyscale"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.6" fade="1" effect_name="Greyscale"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="3" effect_name="Greyscale"/>
-				
-				<passive_effect name="HealthChangeOT" operation="base_add" value="0.25"/>
-				<passive_effect name="RunSpeed" operation="perc_add" value=".2"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value=".25" tags="running,swimmingRun"/>
-				<passive_effect name="StaminaLoss" operation="perc_add" value="-.25"/>
-				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value=".35"/>
-				<passive_effect name="AttacksPerMinute" operation="perc_add" value=".3"/>
-            </effect_group>
-		</buff>
-		
-	<!-- ### Injectors -->
-		<!-- *** Adrenaline Rush -->
-		<buff name="buffAdrenalineRushInjectorInitialise" hidden="true">
-			<duration value="1.1"/>
-            <effect_group>
-				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffAdrenalineRushInjector"/>
-            </effect_group>
-		</buff>
-		<buff name="buffAdrenalineRushInjector" name_key="Adrenaline Rush" description_key="Your mobility, stamina and reload speed have been greatly increased!" icon="iconInjectorAdrenaline" icon_color="0,255,0">
-			<stack_type value="replace"/>
-			<duration value="0"/>
-			<display_value value="$buffInjectorAdrenalineDuration"/>
-			<display_value_format value="time"/>
-            <effect_group>
-				<requirement name="CVarCompare" cvar="$buffInjectorAdrenalineDuration" operation="GTE" value="0"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffInjectorAdrenalineDuration" operation="add" value="-1"/>
-					<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$buffInjectorAdrenalineDuration"/>
-            </effect_group>
-            <effect_group>
-				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffAdrenalineRushInjector"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffAdrenalineRushInjector">
-					<requirement name="HasBuff" buff="god"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffAdrenalineRushInjector">
-					<requirement name="CVarCompare" cvar="$buffInjectorAdrenalineDuration" operation="LTE" value="0"/>
-				</triggered_effect>
-				
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.3" fade="1" effect_name="Blur"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.3" fade="1" effect_name="Blur"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="3" effect_name="Blur"/>
-				
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.3" fade="1" effect_name="Brighth"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.3" fade="1" effect_name="Brighth"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="3" effect_name="Brighth"/>
-				
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.6" fade="1" effect_name="Greyscale"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.54" fade="1" effect_name="Greyscale"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="3" effect_name="Greyscale"/>
-				
-				<!--passive_effect name="HealthChangeOT" operation="base_add" value="0.25"/-->
-				<passive_effect name="RunSpeed" operation="perc_add" value=".2"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value=".25" tags="running,swimmingRun"/>
-				<passive_effect name="StaminaLoss" operation="perc_add" value="-.25"/>
-				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value=".35"/>
-				<passive_effect name="AttacksPerMinute" operation="perc_add" value=".3"/>
-            </effect_group>
-		</buff>
-		
-		<!-- *** Morphine -->
-		<buff name="buffMorphineInjectorInitialise" hidden="true">
-			<duration value="1.1"/>
-            <effect_group>
-				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffMorphineInjector"/>
-            </effect_group>
-		</buff>
-		<buff name="buffMorphineInjectorHealthAdd">
-			<duration value="0.4"/>
-            <effect_group>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" stat="Health" operation="add" value="100"/>
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="1" fade=".5" effect_name="Blur"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="2" effect_name="Blur"/>
-            </effect_group>
-		</buff>
-		<buff name="buffMorphineInjector" name_key="Morphine Shot" description_key="" icon="iconInjectorMorphine" icon_color="0,255,0">
-			<stack_type value="replace"/>
-			<duration value="0"/>
-			<display_value value="$buffInjectorMorphineDuration"/>
-			<display_value_format value="time"/>
-            <effect_group>
-				<requirement name="CVarCompare" cvar="$buffInjectorMorphineDuration" operation="GTE" value="0"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffInjectorMorphineDuration" operation="add" value="-1"/>
-					<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$buffInjectorMorphineDuration"/>
-            </effect_group>
-            <effect_group>
-				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffMorphineInjectorHealthAdd"/>
-				<triggered_effect trigger="onSelfBuffStack" action="AddBuff" buff="buffMorphineInjectorHealthAdd"/>
-				
-				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffMorphineInjector"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffMorphineInjector">
-					<requirement name="HasBuff" buff="god"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffMorphineInjector">
-					<requirement name="CVarCompare" cvar="$buffInjectorMorphineDuration" operation="LTE" value="0"/>
-				</triggered_effect>
-				
-				<!--triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.25" fade="1" effect_name="Greyscale"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.25" fade="1" effect_name="Greyscale"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Greyscale"/-->
-				
-				<passive_effect name="GeneralDamageResist" operation="base_add" value="0.25"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="0.5" tags="buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffFatiguedTrigger,buffInjuryStunned01CHTrigger,buffInjuryStunned00,buffInjuryStunned01,buffInjuryStunned01Shotgun,buffInjuryStunned02,buffInjuryStunned02Shotgun,buffInjuryStunned03,buffInjuryStunned03Shotgun"/>
-				<passive_effect name="HealthMaxBlockage" operation="base_set" value="0"/>
-            </effect_group>
-		</buff>
-		
-		<!-- *** Perfotoran -->
-		<buff name="buffPerfotoranInjectorInitialise" hidden="true">
-			<duration value="1.1"/>
-            <effect_group>
-				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffPerfotoranInjector"/>
-            </effect_group>
-		</buff>
-		<buff name="buffPerfotoranInjector" name_key="Perfotoran Injector" description_key="" icon="iconInjectorPerfortran" icon_color="0,255,0">
-			<stack_type value="replace"/>
-			<duration value="0"/>
-			<display_value value="$buffInjectorPerfotoranDuration"/>
-			<display_value_format value="time"/>
-            <effect_group>
-				<requirement name="CVarCompare" cvar="$buffInjectorPerfotoranDuration" operation="GTE" value="0"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffInjectorPerfotoranDuration" operation="add" value="-1"/>
-					<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$buffInjectorPerfotoranDuration"/>
-            </effect_group>
-            <effect_group>
-				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffPerfotoranInjector"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffPerfotoranInjector">
-					<requirement name="HasBuff" buff="god"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffPerfotoranInjector">
-					<requirement name="CVarCompare" cvar="$buffInjectorPerfotoranDuration" operation="LTE" value="0"/>
-				</triggered_effect>
-				
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.3" fade="3" effect_name="Blur"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.3" fade="3" effect_name="Blur"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="3" effect_name="Blur"/>
-				
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.3" fade="3" effect_name="Brighth"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.3" fade="3" effect_name="Brighth"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="3" effect_name="Brighth"/>
-				
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.15" fade="3" effect_name="Greyscale"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.15" fade="3" effect_name="Greyscale"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="3" effect_name="Greyscale"/>
-				
-				<passive_effect name="HealthMax" operation="perc_add" value="-.25"/>
-				<passive_effect name="HealthChangeOT" operation="base_add" value="20"/>
-				<passive_effect name="StaminaLoss" operation="perc_add" value=".25"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire"/>
-				<passive_effect name="WaterLossPerHealthPointGained" operation="perc_add" value="-.7"/>
-				<passive_effect name="FoodLossPerHealthPointGained" operation="perc_add" value="-.7"/>
-            </effect_group>
-		</buff>
-		
-		<!-- *** Propital -->
-		<buff name="buffPropitalInjectorInitialise" hidden="true">
-			<duration value="1.1"/>
-            <effect_group>
-				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffPropitalInjector"/>
-            </effect_group>
-		</buff>
-		<buff name="buffPropitalInjectorHealthAdd">
-			<duration value="0.5"/>
-            <effect_group>
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="multiply" value="1.25"/>
-            </effect_group>
-		</buff>
-		<buff name="buffPropitalInjector" name_key="Propital Regen Stim" description_key="" icon="iconInjectorPropital" icon_color="0,255,0">
-			<stack_type value="replace"/>
-			<duration value="0"/>
-			<display_value value="$buffInjectorPropitalDuration"/>
-			<display_value_format value="time"/>
-            <effect_group>
-				<requirement name="CVarCompare" cvar="$buffInjectorPropitalDuration" operation="GTE" value="0"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffInjectorPropitalDuration" operation="add" value="-1"/>
-					<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$buffInjectorPropitalDuration"/>
-            </effect_group>
-            <effect_group>
-				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPropitalInjectorHealthAdd"/>
-				<triggered_effect trigger="onSelfBuffStack" action="AddBuff" buff="buffPropitalInjectorHealthAdd"/>
-				
-				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffPropitalInjector"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffPropitalInjector">
-					<requirement name="HasBuff" buff="god"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffPropitalInjector">
-					<requirement name="CVarCompare" cvar="$buffInjectorPropitalDuration" operation="LTE" value="0"/>
-				</triggered_effect>
-				
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.3" fade="6" effect_name="Blur"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.3" fade="6" effect_name="Blur"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="6" effect_name="Blur"/>
-				
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.15" fade="6" effect_name="Brighth"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.15" fade="6" effect_name="Brighth"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="6" effect_name="Brighth"/>
-				
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.1" fade="6" effect_name="Greyscale"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.1" fade="6" effect_name="Greyscale"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="6" effect_name="Greyscale"/>
-				
-				<passive_effect name="HealthMax" operation="perc_add" value=".25"/>
-				<passive_effect name="HealthChangeOT" operation="base_add" value="2.5"/>
-				<passive_effect name="WaterLossPerHealthPointGained" operation="perc_add" value="-.7"/>
-				<passive_effect name="FoodLossPerHealthPointGained" operation="perc_add" value="-.7"/>
-            </effect_group>
-		</buff>
-		
-		<!-- *** Trimadol -->
-		<buff name="buffTrimadolInjectorInitialise" hidden="true">
-			<duration value="1.1"/>
-            <effect_group>
-				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffTrimadolInjector"/>
-            </effect_group>
-		</buff>
-		<buff name="buffTrimadolInjector" name_key="Trimadol Injector" description_key="" icon="iconInjectorSJ12" icon_color="0,255,0">
-			<stack_type value="replace"/>
-			<duration value="0"/>
-			<display_value value="$buffInjectorTrimadolDuration"/>
-			<display_value_format value="time"/>
-            <effect_group>
-				<requirement name="CVarCompare" cvar="$buffInjectorTrimadolDuration" operation="GTE" value="0"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffInjectorTrimadolDuration" operation="add" value="-1"/>
-					<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$buffInjectorTrimadolDuration"/>
-            </effect_group>
-            <effect_group>
-				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffTrimadolInjector"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffTrimadolInjector">
-					<requirement name="HasBuff" buff="god"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffTrimadolInjector">
-					<requirement name="CVarCompare" cvar="$buffInjectorTrimadolDuration" operation="LTE" value="0"/>
-				</triggered_effect>
-				
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.5" fade="6" effect_name="Blur"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.5" fade="6" effect_name="Blur"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="3" effect_name="Blur"/>
-				
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.2" fade="1" effect_name="Dying"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.2" fade="1" effect_name="Dying"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Dying"/>
-				
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.1" fade="1" effect_name="Greyscale"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.1" fade="1" effect_name="Greyscale"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Greyscale"/>
-				
-				<passive_effect name="EntityDamage" operation="perc_add" value="2">
-					<requirement name="HoldingItemHasTags" tags="melee"/>
-				</passive_effect>
-				<passive_effect name="GeneralDamageResist" operation="base_add" value="0.5"/>
-				<passive_effect name="StaminaMax" operation="perc_add" value="1"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="1"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch"/> <!-- Buffed from 0.5 | Why was it 0.5? -->
-				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffFatiguedTrigger,buffInjuryStunned01CHTrigger,buffInjuryStunned00,buffInjuryStunned01,buffInjuryStunned01Shotgun,buffInjuryStunned02,buffInjuryStunned02Shotgun,buffInjuryStunned03,buffInjuryStunned03Shotgun"/>
-				<passive_effect name="CarryCapacity" operation="base_set" value="60"/>
-            </effect_group>
-		</buff>
-		<!-- *** 2A2 -->
-		<buff name="buff2A2InjectorInitialise" hidden="true">
-			<duration value="1.1"/>
-            <effect_group>
-				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buff2A2Injector"/>
-            </effect_group>
-		</buff>
-		<buff name="buff2A2Injector" name_key="2A2 Injector" description_key="" icon="iconInjector2A2" icon_color="0,255,0">
-			<stack_type value="replace"/>
-			<duration value="0"/>
-			<display_value value="$buffInjector2A2Duration"/>
-			<display_value_format value="time"/>
-            <effect_group>
-				<requirement name="CVarCompare" cvar="$buffInjector2A2Duration" operation="GTE" value="0"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffInjector2A2Duration" operation="add" value="-1"/>
-					<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$buffInjector2A2Duration"/>
-            </effect_group>
-            <effect_group>
-				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffEftDeadlyTrip">
-					<requirement name="HasBuff" buff="buffEftBadTrip"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buff2A2Injector"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buff2A2Injector">
-					<requirement name="HasBuff" buff="god"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buff2A2Injector">
-					<requirement name="CVarCompare" cvar="$buffInjector2A2Duration" operation="LTE" value="0"/>
-				</triggered_effect>
-				
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.21" fade="1" effect_name="Dying"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.21" fade="1" effect_name="Dying"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Dying"/>
-				
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.1" fade="1" effect_name="Greyscale"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.1" fade="1" effect_name="Greyscale"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Greyscale"/>
-				
-				<passive_effect name="EntityDamage" operation="perc_add" value="1">
-					<requirement name="HoldingItemHasTags" tags="ranged"/>
-				</passive_effect>
-				<!-- Recoil Reduction Is In buffEftRecoilCalculation -->
-				<!-- Shaking Hands Is In buffHoldBreathAiming01 ??? -->
-				<passive_effect name="CarryCapacity" operation="base_set" value="60"/>
-            </effect_group>
-		</buff>
-		
-		<!-- *** MULE -->
-		<buff name="buffMULEInjectorInitialise" hidden="true">
-			<duration value="1.1"/>
-            <effect_group>
-				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffMULEInjector"/>
-            </effect_group>
-		</buff>
-		<buff name="buffMULEInjector" name_key="M.U.L.E. Injector" description_key="Increases your carry capacity." icon="iconInjectorMULE" icon_color="0,255,0">
-			<stack_type value="replace"/>
-			<duration value="0"/>
-			<display_value value="$buffInjectorMULEDuration"/>
-			<display_value_format value="time"/>
-            <effect_group>
-				<requirement name="CVarCompare" cvar="$buffInjectorMULEDuration" operation="GTE" value="0"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffInjectorMULEDuration" operation="add" value="-1"/>
-					<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="$buffInjectorMULEDuration"/>
-            </effect_group>
-            <effect_group>
-				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffMULEInjector"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffMULEInjector">
-					<requirement name="HasBuff" buff="god"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffMULEInjector">
-					<requirement name="CVarCompare" cvar="$buffInjectorMULEDuration" operation="LTE" value="0"/>
-				</triggered_effect>
-				
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value=".15" tags="running,swimmingRun"/>
-				<passive_effect name="StaminaLoss" operation="perc_add" value="-.15"/>
-				<passive_effect name="CarryCapacity" operation="base_set" value="60"/>
-            </effect_group>
-		</buff>
-		
-		<!-- *** Bad Trip -->
-		<buff name="buffEftBadTrip" name_key="" description_key="" tooltip_key="buffTooltipTrip1" hidden="true">
-			<stack_type value="replace"/>
-			<duration value="36"/>
-            <effect_group>
-				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffAdrenalineRush"/>
-				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffAdrenalineRush2"/>
-				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffAdrenalineRushInjector"/>
-				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffMorphineInjector"/>
-				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffPerfotoranInjector"/>
-				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffPropitalInjector"/>
-				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffTrimadolInjector"/>
-				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buff2A2Injector"/>
-				
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffAdrenalineRush"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffAdrenalineRush2"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffAdrenalineRushInjector"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffMorphineInjector"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffPerfotoranInjector"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffPropitalInjector"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffTrimadolInjector"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buff2A2Injector"/>
-			</effect_group>
-            <effect_group>
-				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffEftBadTrip"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffEftBadTrip">
-					<requirement name="HasBuff" buff="god"/>
-				</triggered_effect>
-				
-				<!-- Slight Swaying -->
-				<triggered_effect trigger="onSelfBuffStart" action="ShakeCamera" shake_speed="0.1" shake_amplitude="100" shake_time="-1"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ShakeCamera" shake_speed="0.1" shake_amplitude="100" shake_time="-1"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ShakeCamera" shake_speed="0" shake_amplitude="0" shake_time="-1"/>
-				
-				<!-- Other Trip Effects -->
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="1" fade="10" effect_name="Trippy"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="1" fade="10" effect_name="Trippy"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="5" effect_name="Trippy"/>
-				
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="1" fade="10" effect_name="Bright"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="1" fade="10" effect_name="Bright"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="5" effect_name="Bright"/>
-				
-				<!--triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="1" fade="10" effect_name="Distortion"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="1" fade="10" effect_name="Distortion"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="5" effect_name="Distortion"/-->
-				
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.1" fade="10" effect_name="Blur"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.1" fade="10" effect_name="Blur"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="5" effect_name="Blur"/>
-				
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="1" fade="1" effect_name="Infected"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="1" fade="1" effect_name="Infected"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Infected"/>
-				
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="2" fade="10" effect_name="Drunk"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="2" fade="10" effect_name="Drunk"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="5" effect_name="Drunk"/>
-				
-				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="buff_stunned" play_in_head="true"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="buff_stunned" play_in_head="true"/>
-				
-				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="soundBuffEftTrip" play_in_head="true"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="soundBuffEftTrip" play_in_head="true"/>
-				
-				<triggered_effect trigger="onSelfBuffStart" action="SetAudioMixerState" state="Stunned" enabled="true"/> <!-- Doesn't work for guns yet -->
-				<triggered_effect trigger="onSelfBuffRemove" action="SetAudioMixerState" state="Stunned" enabled="false"/>
-							
-				<!--passive_effect name="HealthChangeOT" operation="base_subtract" value="2"><requirement name="EntityTagCompare" tags="player"/></passive_effect-->
-				<passive_effect name="Mobility" operation="perc_add" value="-.5"/>
-				<passive_effect name="JumpStrength" operation="base_set" value="0.1"/>
-				<passive_effect name="FallDamageReduction" operation="base_set" value="0"/>
-				<passive_effect name="GeneralDamageResist" operation="base_add" value="0.75"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffFatiguedTrigger,buffInjuryStunned01CHTrigger,buffInjuryStunned00,buffInjuryStunned01,buffInjuryStunned01Shotgun,buffInjuryStunned02,buffInjuryStunned02Shotgun,buffInjuryStunned03,buffInjuryStunned03Shotgun"/>
-            </effect_group>
-		</buff>
-		
-		<!-- *** Deadly Trip -->
-		<buff name="buffEftDeadlyTrip" tooltip_key="buffTooltipTrip2" hidden="true">
-			<stack_type value="replace"/>
-			<duration value="73"/>
-			<update_rate value="0.5"/>
-            <effect_group>
-				<!-- HP Reduction -->
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="eftCounter" operation="set" value="0"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="healthModifier" operation="set" value="@$LastPlayerLevel"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="healthModifier" operation="add" value="100"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="healthModifier" operation="divide" value="77"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="speedModifier" operation="set" value="-0.012987"/> <!-- 100% speed reduction at sec 77 -->
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="eftCounter" operation="add" value=".5"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="healthModifier" operation="multiply" value="@eftCounter"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="speedModifier" operation="multiply" value="@eftCounter"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="speedModifier" operation="add" value="0.5"/> <!-- starts with +50% speed, stops with -50% -->
-				<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="healthModifier,eftCounter,speedModifier"/>
-				
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="tripChange" operation="set" value="94"/>
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="tripFade" operation="set" value="12"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="tripChange"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="tripFade"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="0.5" effect_name="FadeToBlack"/>
-				
-				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffAdrenalineRush"/>
-				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffAdrenalineRush2"/>
-				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffAdrenalineRushInjector"/>
-				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffMorphineInjector"/>
-				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffPerfotoranInjector"/>
-				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffPropitalInjector"/>
-				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffTrimadolInjector"/>
-				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buff2A2Injector"/>
-				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffEftBadTrip"/>
-				
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffAdrenalineRush"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffAdrenalineRush2"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffAdrenalineRushInjector"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffMorphineInjector"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffPerfotoranInjector"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffPropitalInjector"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffTrimadolInjector"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buff2A2Injector"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffEftBadTrip"/>
-			</effect_group>
-            <effect_group>
-				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffEftDeadlyTrip"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffEftDeadlyTrip">
-					<requirement name="HasBuff" buff="god"/>
-				</triggered_effect>
-				
-				<!-- Blinking Eyes -->
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="tripFade" operation="add" value="-1"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="1" fade="4" effect_name="FadeToBlack">
-					<requirement name="CVarCompare" cvar="tripFade" operation="GT" value="3"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0" fade="2" effect_name="FadeToBlack">
-					<requirement name="CVarCompare" cvar="tripFade" operation="LTE" value="3"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="tripFade" operation="add" value="12">
-					<requirement name="CVarCompare" cvar="tripFade" operation="LTE" value="0"/>
-				</triggered_effect>
 			
-				<!-- Slight Swaying -->
-				<triggered_effect trigger="onSelfBuffStart" action="ShakeCamera" shake_speed="0.05" shake_amplitude="25" shake_time="-1"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ShakeCamera" shake_speed="0.05" shake_amplitude="25" shake_time="-1"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ShakeCamera" shake_speed="0" shake_amplitude="0" shake_time="-1"/>
-				
-				 <!-- Other effects (shift at sec 49.5) -->
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="tripChange" operation="add" value="-1"/>
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.25" fade="10" effect_name="Trippy"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0.25" fade="10" effect_name="Trippy">
-					<requirement name="CVarCompare" cvar="tripChange" operation="GTE" value="0"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="1" fade="0" effect_name="Trippy">
-					<requirement name="CVarCompare" cvar="tripChange" operation="LT" value="0"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="2" effect_name="Trippy"/>
-				
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="1" fade="10" effect_name="Dead">
-					<requirement name="CVarCompare" cvar="tripChange" operation="LT" value="0"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="2" effect_name="Dead"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="1" fade="10" effect_name="Dying">
-					<requirement name="CVarCompare" cvar="tripChange" operation="LT" value="0"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="2" effect_name="Dying"/>
-				
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="1" fade="10" effect_name="Blur"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="1" fade="10" effect_name="Blur">
-					<requirement name="CVarCompare" cvar="tripChange" operation="GTE" value="0"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0" fade="0" effect_name="Blur">
-					<requirement name="CVarCompare" cvar="tripChange" operation="LT" value="0"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="2" effect_name="Blur"/>
-				
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="1" fade="0" effect_name="Infected">
-					<requirement name="CVarCompare" cvar="tripChange" operation="LT" value="0"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="2" effect_name="Infected"/>
-				
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="1" fade="10" effect_name="Greyscale"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="1" fade="10" effect_name="Greyscale"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="2" effect_name="Greyscale"/>
-				
-				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="soundBuffEftTripHB_Slow" play_in_head="true">
-					<requirement name="CVarCompare" cvar="tripChange" operation="GTE" value="0"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="soundBuffEftTripHB_Fast" play_in_head="true">
-					<requirement name="CVarCompare" cvar="tripChange" operation="LT" value="0"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="soundBuffEftTripHB_Slow" play_in_head="true"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="soundBuffEftTripHB_Fast" play_in_head="true"/>
-				
-				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="soundBuffEftTrip2" play_in_head="true"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="soundBuffEftTrip2" play_in_head="true"/>
-				<triggered_effect trigger="onSelfBuffStart" action="SetAudioMixerState" state="Stunned" enabled="true"/> <!-- Doesn't work for guns yet -->
-				<triggered_effect trigger="onSelfBuffRemove" action="SetAudioMixerState" state="Stunned" enabled="false"/>
-				
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value="1">
-					<requirement name="CVarCompare" cvar="tripChange" operation="LT" value="0"/>
-				</triggered_effect>
-            </effect_group>
-            <effect_group>
-				<passive_effect name="HealthMaxBlockage" operation="base_set" value="@healthModifier"/> <!-- Caps Out At 1/4th HP... -->
-				<passive_effect name="StaminaMaxBlockage" operation="base_set" value="@healthModifier"/>
-				<passive_effect name="FoodMaxBlockage" operation="base_set" value="@healthModifier"/>
-				<passive_effect name="WaterMaxBlockage" operation="base_set" value="@healthModifier"/>
-				
-				<passive_effect name="RunSpeed" operation="perc_add" value="@speedModifier"/>
-				<passive_effect name="WalkSpeed" operation="perc_add" value="@speedModifier"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value=".9"/>
-				<passive_effect name="StaminaLoss" operation="perc_add" value="-.9"/>
-			</effect_group>
-		</buff>		
-		
-	<!-- ### Black Corners Shooting Effect -->
-		<buff name="buffEftGunShootingAdrenalineVisual">
-			<stack_type value="replace"/>
-			<duration value="0.2"/>
-            <effect_group>
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="Dark" intensity=".8" fade=".1"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="Dark" intensity="0" fade=".3"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="Dark" intensity=".2" fade=".2">
-					<requirement name="HasBuff" buff="buffCrouching"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfBuffStart" action="ShakeCamera" shake_speed="3" shake_amplitude="0.7" shake_time="-1"/> <!-- Also removes the weird massive shake, that appears when a big zombie hit you and you shoot after (does it?) -->
-				<triggered_effect trigger="onSelfBuffRemove" action="ShakeCamera" shake_speed="0" shake_amplitude="0" shake_time="-1"/>
-				
-				<!-- Shaking Effect (While Shooting) (looked nice on full auto but ridiculous on semi (or guns like desert eagle, rsh12, ..) -->
-				<!--triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$gunEftRecoilCameraShake" operation="set" value="@$gunEftBaseRecoil"/>
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$gunEftRecoilCameraShake" operation="multiply" value="3"/>
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$gunEftRecoilCameraShakeSpeed" operation="set" value="@$gunEftBaseRecoil"/>
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$gunEftRecoilCameraShakeSpeed" operation="multiply" value=".6"/>
-				<triggered_effect trigger="onSelfBuffStart" action="ShakeCamera" shake_speed="@$gunEftRecoilCameraShakeSpeed" shake_amplitude="@$gunEftRecoilCameraShake" shake_time="-1"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ShakeCamera" shake_speed="0" shake_amplitude="0" shake_time="-1"/>
-				<triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="$gunEftRecoilCameraShake"/>
-				<triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="$gunEftRecoilCameraShakeSpeed"/-->
-            </effect_group>
-		</buff>
-				
+	<append xpath="/buffs">
+						
 	<!-- ### Bipod Display -->
 		<buff name="buffBipodDisplayDisplayed" name_key="[4FBE28]Bipod Gun Handling Bonus[-]" description_key="Bipod deployed. Your accuracy and recoil-control have been greatly improved. Stamina consumption on aiming has been reduced. " icon="iconBipod" icon_color="0,192,0">
 		<update_rate value="0.1"/>
@@ -864,9 +115,13 @@
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$gunEftRecoilReduction" operation="set" value=".10"> <!-- Prevent Negative Kick and caps the max bonus at -87% -->
 					<requirement name="CVarCompare" cvar="$gunEftRecoilReduction" operation="LT" value=".10"/>
 				</triggered_effect>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$gunEftRecoilReduction" operation="set" value=".10"> <!-- 2A2 Injector -->
-					<requirement name="HasBuff" buff="buff2A2Injector"/>
-				</triggered_effect>
+				<conditional>
+				<if cond="mod_loaded('Z1_EFTX_Meds_Plus')">		
+							<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$gunEftRecoilReduction" operation="set" value=".10"> <!-- 2A2 Injector -->
+								<requirement name="HasBuff" buff="buff2A2Injector"/>
+							</triggered_effect>
+							</if>
+				</conditional>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$gunEftRecoilReduction" operation="set" value=".05"> <!-- Bipod -->
 					<requirement name="HasBuff" buff="buffEftModifierBipod"/>
 				</triggered_effect>
@@ -888,12 +143,20 @@
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$gunEftBaseRecoilHor" operation="divide" value="@$gunEftRecoilControlVert"> <!-- Counter -->
 					<requirement name="HasBuff" buff="buffEftRecoilControl"/>
 					<requirement name="!HasBuff" buff="buffEftModifierBipod"/>
+					<conditional>
+				<if cond="mod_loaded('Z1_EFTX_Meds_Plus')">	
 					<requirement name="!HasBuff" buff="buff2A2Injector"/>
+					</if>
+				</conditional>
 				</triggered_effect>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$gunEftBaseRecoilHor" operation="multiply" value="@$gunEftRecoilControlHor"> <!-- Add Recoil Control Buff (Horizontal Value) -->
 					<requirement name="HasBuff" buff="buffEftRecoilControl"/>
 					<requirement name="!HasBuff" buff="buffEftModifierBipod"/>
+					<conditional>
+				<if cond="mod_loaded('Z1_EFTX_Meds_Plus')">	
 					<requirement name="!HasBuff" buff="buff2A2Injector"/>
+					</if>
+				</conditional>
 				</triggered_effect>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$gunEftBaseRecoilHorNeg" operation="set" value="@$gunEftBaseRecoilHor"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$gunEftBaseRecoilHorNeg" operation="multiply" value="-1"/>
@@ -1187,6 +450,8 @@
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".aimShakeSpeedTarget" operation="set" value="0.17"/>
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".aimShakeAmpTarget" operation="set" value="3.0"/>
 			</effect_group>
+			<conditional>
+				<if cond="mod_loaded('Z1_EFTX_Meds_Plus')">
 			<effect_group>
 				<!-- when 2A2 buff exist, amp is not set for simplicity, you can also set them based on stamina -->
 				<requirement name="HoldingItemHasTags" tags="perkGunslinger"/>
@@ -1200,6 +465,8 @@
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".aimShakeSpeedBase" operation="set" value="0.68"/>
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".aimShakeSpeedTarget" operation="set" value="0.68"/>
 			</effect_group>
+			</if>
+				</conditional>
 			<!-- shotguns -->
 			<effect_group>
 				<requirement name="HoldingItemHasTags" tags="perkBoomstick"/>
@@ -1235,6 +502,8 @@
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".aimShakeSpeedTarget" operation="set" value="0.17"/>
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".aimShakeAmpTarget" operation="set" value="6"/>
 			</effect_group>
+			<conditional>
+				<if cond="mod_loaded('Z1_EFTX_Meds_Plus')">
 			<effect_group>
 				<requirement name="HoldingItemHasTags" tags="perkBoomstick"/>
 				<requirement name="HasBuff" buff="buff2A2Injector"/>
@@ -1247,6 +516,8 @@
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".aimShakeSpeedBase" operation="set" value="0.68"/>
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".aimShakeSpeedTarget" operation="set" value="0.68"/>
 			</effect_group>
+			</if>
+				</conditional>
 			<!-- assault rifles -->
 			<effect_group>
 				<requirement name="HoldingItemHasTags" tags="perkMachineGunner"/>
@@ -1285,6 +556,8 @@
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".aimShakeSpeedTarget" operation="set" value="0.17"/>
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".aimShakeAmpTarget" operation="set" value="4.8"/>
 			</effect_group>
+			<conditional>
+				<if cond="mod_loaded('Z1_EFTX_Meds_Plus')">
 			<effect_group>
 				<requirement name="HoldingItemHasTags" tags="perkMachineGunner"/>
 				<requirement name="!HoldingItemHasTags" tags="fnminimionly,rpdonly,pkponly"/>
@@ -1298,6 +571,8 @@
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".aimShakeSpeedTarget" operation="set" value="0.68"/>
 					<!-- <triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".aimShakeAmpTarget" operation="set" value="2.64"/> -->
 			</effect_group>
+			</if>
+				</conditional>
 			<!-- sniper rifles -->
 			<effect_group>
 				<requirement name="HoldingItemHasTags" tags="perkDeadEye"/>
@@ -1360,6 +635,8 @@
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".aimShakeSpeedTarget" operation="set" value="0.07"/>
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".aimShakeAmpTarget" operation="set" value="6"/>
 			</effect_group>
+			<conditional>
+				<if cond="mod_loaded('Z1_EFTX_Meds_Plus')">
 			<effect_group>
 				<requirement name="HoldingItemHasTags" tags="perkDeadEye"/>
 				<requirement name="HasBuff" buff="buff2A2Injector"/>
@@ -1372,6 +649,8 @@
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".aimShakeSpeedBase" operation="set" value="0.6"/>
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".aimShakeSpeedTarget" operation="set" value="0.6"/>
 			</effect_group>
+			</if>
+				</conditional>
 			<!-- machine guns -->
 			<effect_group>
 				<requirement name="HoldingItemHasTags" tags="fnminimionly,rpdonly,pkponly"/>
@@ -1407,6 +686,8 @@
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".aimShakeSpeedTarget" operation="set" value="0.17"/>
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".aimShakeAmpTarget" operation="set" value="7.2"/>
 			</effect_group>
+			<conditional>
+				<if cond="mod_loaded('Z1_EFTX_Meds_Plus')">
 			<effect_group>
 				<requirement name="HoldingItemHasTags" tags="fnminimionly,rpdonly,pkponly"/>
 				<requirement name="HasBuff" buff="buff2A2Injector"/>
@@ -1419,6 +700,8 @@
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".aimShakeSpeedBase" operation="set" value="0.68"/>
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".aimShakeSpeedTarget" operation="set" value="0.68"/>
 			</effect_group>
+			</if>
+				</conditional>
 			<!-- 2A2 should stack this buff when used, so that even if it's added during aiming, the shake is properly interpolated -->
 			<effect_group>
 				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".aimShakeSpeedBase" operation="set" value="@.aimShakeSpeed"/>

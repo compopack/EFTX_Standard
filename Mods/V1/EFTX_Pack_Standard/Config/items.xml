@@ -1,12 +1,7 @@
 <configs>	
 	<append xpath="/items/item/effect_group[starts-with(@name, 'gun')]"> 
 		<passive_effect name="DegradationMax" operation="perc_add" value="-.1,.1"/>		
-	</append>	
-	
-	
-	<!-- ### Mod-Slots -->
-	<set xpath="/items/item/effect_group[((starts-with(@name, 'gun')) or (starts-with(@name, 'tarkov'))) and not ((starts-with(@name, 'gunExplosives')) or (starts-with(@name, 'gunBow')) or (starts-with(@name, 'gunBot')) or ((contains(@name, 'gun')) and (contains(@name, 'Parts'))))]/passive_effect[@name='ModSlots']/@value">6,6,6,8,9,10</set>
-	
+	</append>
 
 	<!-- *** On-Aim Absolute Accuracy - Bullets go where the reticle is -->
 	<append xpath="/items/item[starts-with(@name, 'gun') and ./property[@name='Tags' and not(contains(@value, 'shotgun'))] and not(@name='gunm32a1mgl') and not(@name='gunfn40gl') and not(@name='gunchinalake')]">
@@ -14,58 +9,9 @@
 				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value="0" tag="shotgun" invert_tag_check="true"/>
 			</effect_group>
 	</append>
-	
-	<set xpath="/items/item/effect_group/passive_effect[@name='ModSlots' and @value='1,1,2,2,3,4']/@value">1,2,2,3,4,5</set> <!-- Rocket Launcher, Turrets, Wrench and Claw Hammer-->
-	<set xpath="/items/item/effect_group/passive_effect[@name='ModSlots' and @value='2,2,2,3,3,4']/@value">2,2,2,3,3,4</set> <!-- t1 Melee, t1 Guns and t2 Ratchet -->
-	<set xpath="/items/item/effect_group/passive_effect[@name='ModSlots' and @value='2,2,3,3,4,4']/@value">2,2,3,3,4,5</set> <!-- Magnum, Iron Cross, Stun Baton -->
-	<set xpath="/items/item/effect_group/passive_effect[@name='ModSlots' and @value='3,3,3,4,4,4']/@value">3,3,4,4,4,5</set> <!-- t2 and t3 Impact Driver, t3 Melee , t3 SMG, t3 Desert Vulture, t2 Pump Shotgun, t2 Lever Action Rifle, t2 Tactical AR -->
-			
-	<append xpath="/items">
-		
-		<item name="resourceCellulosePowder">
-			<property name="Tags" value="chemicalEftItems"/>
-			<property name="HoldType" value="45"/>
-			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
-			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-			<property name="Material" value="MresourcePaper"/>
-			<property name="Weight" value="0"/>
-			<property name="Stacknumber" value="6000"/>
-			<property name="EconomicValue" value="1"/>
-			<property name="EconomicBundleSize" value="10"/>
-			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
-			<property name="CraftingIngredientTime" value=".2"/>
-			<property name="SoundPickup" value="cornmeal_grab"/>
-			<property name="SoundPlace" value="cornmeal_place"/>
-		</item>
-		<item name="resourceNitricAcid">
-			<property name="Tags" value="chemicalEftItems"/>
-			<property name="HoldType" value="45"/>
-			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
-			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-			<property name="Material" value="MresourceAcid"/>
-			<property name="Stacknumber" value="10000"/>
-			<property name="EconomicValue" value="1.15"/>
-			<property name="EconomicBundleSize" value="10"/>
-			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
-			<property name="CraftingIngredientTime" value=".15"/>
-			<property name="SoundPickup" value="grandpas_awesome_grab"/>
-			<property name="SoundPlace" value="grandpas_awesome_place"/>
-		</item>
-		<item name="resourceSulfuricAcid">
-			<property name="Tags" value="chemicalEftItems"/>
-			<property name="HoldType" value="45"/>
-			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
-			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-			<property name="Material" value="MresourceAcid"/>
-			<property name="Stacknumber" value="10000"/>
-			<property name="EconomicValue" value="1.12"/>
-			<property name="EconomicBundleSize" value="10"/>
-			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
-			<property name="CraftingIngredientTime" value=".15"/>
-			<property name="SoundPickup" value="grandpas_awesome_grab"/>
-			<property name="SoundPlace" value="grandpas_awesome_place"/>
-		</item>
-		
+
+	<append xpath="/items">	
+				
 		<item name="resourceWeaponRepairKit">
 			<!--property name="Tags" value="ammoEftCrafting"/-->
 			<property name="HoldType" value="45"/>
@@ -83,150 +29,6 @@
 			<property name="SoundPlace" value="repairkits_place"/>
 		</item>	
 		
-		<item name="resourcePrinterPaper"> <!-- Scrappable to 30 Paper -->
-			<property name="Tags" value="craftingEftItems"/>
-			<property name="HoldType" value="45"/>
-			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
-			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-			<property name="Material" value="MoldCash"/>
-			<property name="Weight" value="40"/>
-			<property name="Stacknumber" value="500"/>
-			<property name="EconomicValue" value="30"/>
-			<property name="EconomicBundleSize" value="1"/>
-			<property name="Group" value="Resources"/>
-			<property name="CraftingIngredientTime" value="10"/>
-			<property name="SoundPickup" value="paper_grab"/>
-			<property name="SoundPlace" value="paper_place"/>
-		</item>
-		<item name="resourceToiletPaper"> <!-- Scrappable to 3 Paper -->
-			<property name="HoldType" value="45"/>
-			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
-			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-			<property name="Material" value="MoldCash"/>
-			<property name="Weight" value="4"/>
-			<property name="Stacknumber" value="500"/>
-			<property name="EconomicValue" value="3"/>
-			<property name="EconomicBundleSize" value="1"/>
-			<property name="Group" value="Resources"/>
-			<property name="CraftingIngredientTime" value="10"/>
-			<property name="SoundPickup" value="paper_grab"/>
-			<property name="SoundPlace" value="paper_place"/>
-		</item>
-		<item name="resourceNewspaper"> <!-- Scrappable to 4 Paper -->
-			<property name="HoldType" value="45"/>
-			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
-			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-			<property name="Material" value="MoldCash"/>
-			<property name="Weight" value="6"/>
-			<property name="Stacknumber" value="500"/>
-			<property name="EconomicValue" value="4"/>
-			<property name="EconomicBundleSize" value="1"/>
-			<property name="Group" value="Resources"/>
-			<property name="CraftingIngredientTime" value="10"/>
-			<property name="SoundPickup" value="paper_grab"/>
-			<property name="SoundPlace" value="paper_place"/>
-		</item>
-		<item name="resourceOldBook"> <!-- Scrappable to 6 Paper -->
-			<property name="HoldType" value="45"/>
-			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
-			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-			<property name="Material" value="MoldCash"/>
-			<property name="Weight" value="8"/>
-			<property name="Stacknumber" value="500"/>
-			<property name="EconomicValue" value="6"/>
-			<property name="EconomicBundleSize" value="1"/>
-			<property name="Group" value="Resources"/>
-			<property name="CraftingIngredientTime" value="10"/>
-			<property name="SoundPickup" value="book_grab"/>
-			<property name="SoundPlace" value="book_place"/>
-		</item>
-		<item name="resourceClassicMatches">
-			<property name="Tags" value="chemicalEftItems"/>
-			<property name="HoldType" value="45"/>
-			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
-			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-			<property name="Material" value="Mdirt"/>
-			<property name="Stacknumber" value="500"/>
-			<property name="EconomicValue" value="10"/>
-			<property name="EconomicBundleSize" value="1"/>
-			<property name="Group" value="Resources"/>
-			<property name="CraftingIngredientTime" value="10"/>
-			<property name="SoundPickup" value="schematics_grab"/>
-			<property name="SoundPlace" value="schematics_place"/>
-		</item>
-		
-		<!-- *** Chemical Items -->
-		<item name="resourceBottleOfHydrogenPeroxide">
-			<property name="Tags" value="chemicalEftItems"/>
-			<property name="HoldType" value="45"/>
-			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
-			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-			<property name="Material" value="MresourceScrapIron"/>
-			<property name="Stacknumber" value="500"/>
-			<property name="EconomicValue" value="77"/>
-			<property name="EconomicBundleSize" value="1"/>
-			<property name="Group" value="Resources"/>
-			<property name="CraftingIngredientTime" value="10"/>
-			<property name="SoundPickup" value="aloeleaf_grab"/>
-			<property name="SoundPlace" value="aloeleaf_place"/>
-		</item>
-		<item name="resourceCanisterWithPurifiedWater">
-			<property name="Tags" value="chemicalEftItems"/>
-			<property name="HoldType" value="45"/>
-			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
-			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-			<property name="Material" value="MresourceScrapIron"/>
-			<property name="Stacknumber" value="500"/>
-			<property name="EconomicValue" value="750"/>
-			<property name="EconomicBundleSize" value="1"/>
-			<property name="Group" value="Resources"/>
-			<property name="CraftingIngredientTime" value="600"/>
-			<property name="SoundPickup" value="bottle_acid_grab"/>
-			<property name="SoundPlace" value="bottle_acid_place"/>
-		</item>
-		<item name="resourceCanOfWhiteSalt">
-			<property name="Tags" value="chemicalEftItems"/>
-			<property name="HoldType" value="45"/>
-			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
-			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-			<property name="Material" value="MresourceScrapIron"/>
-			<property name="Stacknumber" value="500"/>
-			<property name="EconomicValue" value="30"/>
-			<property name="EconomicBundleSize" value="1"/>
-			<property name="Group" value="Resources"/>
-			<property name="CraftingIngredientTime" value="10"/>
-			<property name="SoundPickup" value="crucible_grab"/>
-			<property name="SoundPlace" value="crucible_place"/>
-		</item>
-		<item name="resourceOxBbleach">
-			<property name="Tags" value="chemicalEftItems"/>
-			<property name="HoldType" value="45"/>
-			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
-			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-			<property name="Material" value="MresourceScrapIron"/>
-			<property name="Stacknumber" value="500"/>
-			<property name="EconomicValue" value="300"/>
-			<property name="EconomicBundleSize" value="1"/>
-			<property name="Group" value="Resources"/>
-			<property name="CraftingIngredientTime" value="10"/>
-			<property name="SoundPickup" value="puremineralwater_grab"/>
-			<property name="SoundPlace" value="puremineralwater_place"/>
-		</item>
-		<item name="resourceSmokedChimneyDrainCleaner">
-			<property name="Tags" value="chemicalEftItems"/>
-			<property name="HoldType" value="45"/>
-			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
-			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-			<property name="Material" value="MresourceScrapIron"/>
-			<property name="Stacknumber" value="500"/>
-			<property name="EconomicValue" value="150"/>
-			<property name="EconomicBundleSize" value="1"/>
-			<property name="Group" value="Resources"/>
-			<property name="CraftingIngredientTime" value="25"/>
-			<property name="SoundPickup" value="puremineralwater_grab"/>
-			<property name="SoundPlace" value="puremineralwater_place"/>
-		</item>
-				
 		<item name="resourceWeaponParts">
 			<property name="Tags" value="parts"/>
 			<property name="HoldType" value="45"/>
@@ -286,463 +88,19 @@
 			<property name="SoundPlace" value="parts_grab"/>
 		</item>
 		
-		<!-- *** Medical Items -->
-		<item name="resourceDisposableSyringe">
-			<property name="HoldType" value="45"/>
-			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
-			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-			<property name="Material" value="MresourceScrapIron"/>
-			<property name="Stacknumber" value="500"/>
-			<property name="EconomicValue" value="19"/>
-			<property name="EconomicBundleSize" value="1"/>
-			<property name="Group" value="Resources"/>
-			<property name="CraftingIngredientTime" value="2"/>
-			<property name="SoundPickup" value="drug_jailbreakers_grab"/>
-			<property name="SoundPlace" value="drug_jailbreakers_place"/>
-		</item>
-		<item name="resourcePileOfMeds">
-			<property name="HoldType" value="45"/>
-			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
-			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-			<property name="Material" value="MresourceScrapIron"/>
-			<property name="Stacknumber" value="500"/>
-			<property name="EconomicValue" value="29"/>
-			<property name="EconomicBundleSize" value="1"/>
-			<property name="Group" value="Resources"/>
-			<property name="CraftingIngredientTime" value="4"/>
-		</item>
-		<item name="resourceSalineSolution">
-			<property name="HoldType" value="45"/>
-			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
-			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-			<property name="Material" value="MresourceScrapIron"/>
-			<property name="Stacknumber" value="500"/>
-			<property name="EconomicValue" value="139"/>
-			<property name="EconomicBundleSize" value="1"/>
-			<property name="Group" value="Resources"/>
-			<property name="CraftingIngredientTime" value="2"/>
-			<property name="SoundPickup" value="aloeleaf_grab"/>
-			<property name="SoundPlace" value="aloeleaf_place"/>
-		</item>
-		
-		<item name="medicalInjectorAdrenaline">
-			<property name="Extends" value="drugPainkillers"/>
-			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovStimAdrenaline.prefab"/>
-			<property name="Stacknumber" value="10"/>
-			<property name="DisplayType" value="injectorAdrenaline"/>
-			<property name="EconomicValue" value="359"/>
-			<property name="UnlockedBy" value="craftingBooksOfASurgeon"/>
-			<property name="Group" value="Science,Medical,TCMedical"/>
-			<property name="SoundPickup" value="steroids_grab"/>
-			<property name="SoundPlace" value="steroids_place"/>
-			<property name="Sound_start" value=""/>
-			<property class="Action0">
-				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
-				<property name="Sound_start" value=""/>
-				<property name="Delay" value="2.5"/>
-			</property>
-			<effect_group tiered="false" name="Drug Tier 3">
-				<display_value name="dRunSpeed" value=".2"/>
-				<display_value name="dAttPerMin" value=".3"/>
-				<display_value name="dStaminaEff" value=".25"/>
-				<display_value name="dReloadSpeed" value=".35"/>
-				<display_value name="brokenLimbMovement" value="1"/>
-				<display_value name="dDuration" value="180"/>
-				
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="$ASkill_CombatStim_InjectorUsedCount" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="$buffInjectorAdrenalineDurationBase" operation="set" value="180"/>
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="$buffInjectorAdrenalineDurationBase" operation="multiply" value="@$ASkill_CombatStim_DurationBonus"/>
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="$buffInjectorAdrenalineDuration" operation="add" value="@$buffInjectorAdrenalineDurationBase"/>
-				
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="buffAdrenalineRushInjectorInitialise"/>
-			</effect_group>
-		</item>
-		<item name="medicalInjectorMorphine">
-			<property name="Extends" value="drugPainkillers"/>
-			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovStimMorphine.prefab"/>
-			<property name="Stacknumber" value="10"/>
-			<property name="DisplayType" value="injectorMorphine"/>
-			<property name="EconomicValue" value="321"/>
-			<property name="UnlockedBy" value="craftingBooksOfASurgeon"/>
-			<property name="Group" value="Science,Medical,TCMedical"/>
-			<property name="SoundPickup" value="steroids_grab"/>
-			<property name="SoundPlace" value="steroids_place"/>
-			<property name="Sound_start" value=""/>
-			<property class="Action0">
-				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
-				<property name="Sound_start" value=""/>
-				<property name="Delay" value="2.5"/>
-			</property>
-			<effect_group tiered="false" name="Drug Tier 3">
-				<display_value name="dInstantHealth" value="100"/>
-				<display_value name="dDamageResist" value=".25"/>
-				<display_value name="dBuffResistance" value="1"/>
-				<display_value name="brokenLimbMovement" value="1"/>
-				<display_value name="healthBlockRemoval" value="1"/>
-				<display_value name="dDuration" value="600"/>
-				
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="$ASkill_CombatStim_InjectorUsedCount" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="$buffInjectorMorphineDurationBase" operation="set" value="600"/>
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="$buffInjectorMorphineDurationBase" operation="multiply" value="@$ASkill_CombatStim_DurationBonus"/>
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="$buffInjectorMorphineDuration" operation="add" value="@$buffInjectorMorphineDurationBase"/>
-				
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="buffMorphineInjectorInitialise"/>
-			</effect_group>
-		</item>
-		<item name="medicalInjectorPerfortran">
-			<property name="Extends" value="drugPainkillers"/>
-			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovStimPerfotoran.prefab"/>
-			<property name="Stacknumber" value="10"/>
-			<property name="DisplayType" value="injectorPerfotoran"/>
-			<property name="EconomicValue" value="387"/>
-			<property name="UnlockedBy" value="craftingBooksOfASurgeon"/>
-			<property name="Group" value="Science,Medical,TCMedical"/>
-			<property name="SoundPickup" value="steroids_grab"/>
-			<property name="SoundPlace" value="steroids_place"/>
-			<property name="Sound_start" value=""/>
-			<property class="Action0">
-				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
-				<property name="Sound_start" value=""/>
-				<property name="Delay" value="2"/>
-			</property>
-			<effect_group tiered="false" name="Drug Tier 3">
-				<display_value name="dMaxHealth" value="-.249"/> <!-- -.15 = displayed as 16% ?? -->
-				<display_value name="dHealthRegenS" value="20"/>
-				<display_value name="dBleedResistance" value="1"/>
-				<display_value name="dStaminaUsage" value=".25"/>
-				<display_value name="dDuration" value="300"/>
-				
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="$ASkill_CombatStim_InjectorUsedCount" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="$buffInjectorPerfotoranDurationBase" operation="set" value="300"/>
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="$buffInjectorPerfotoranDurationBase" operation="multiply" value="@$ASkill_CombatStim_DurationBonus"/>
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="$buffInjectorPerfotoranDuration" operation="add" value="@$buffInjectorPerfotoranDurationBase"/>
-				
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="buffPerfotoranInjectorInitialise"/>
-			</effect_group>
-		</item>
-		<item name="medicalInjectorPropitalRegenerativeStim">
-			<property name="Extends" value="drugPainkillers"/>
-			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovStimPropital.prefab"/>
-			<property name="Stacknumber" value="10"/>
-			<property name="DisplayType" value="injectorPropital"/>
-			<property name="EconomicValue" value="291"/>
-			<property name="UnlockedBy" value="craftingBooksOfASurgeon"/>
-			<property name="Group" value="Science,Medical,TCMedical"/>
-			<property name="SoundPickup" value="steroids_grab"/>
-			<property name="SoundPlace" value="steroids_place"/>
-			<property name="Sound_start" value=""/>
-			<property class="Action0">
-				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
-				<property name="Sound_start" value=""/>
-				<property name="Delay" value="2"/>
-			</property>
-			<effect_group tiered="false" name="Drug Tier 3">
-				<display_value name="dHealthRegenS" value="2.5"/>
-				<display_value name="dMaxHealth" value=".25"/>
-				<display_value name="dInstantHealth" value=".25"/>
-				<display_value name="dDuration" value="480"/>
-				
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="$ASkill_CombatStim_InjectorUsedCount" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="$buffInjectorPropitalDurationBase" operation="set" value="480"/>
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="$buffInjectorPropitalDurationBase" operation="multiply" value="@$ASkill_CombatStim_DurationBonus"/>
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="$buffInjectorPropitalDuration" operation="add" value="@$buffInjectorPropitalDurationBase"/>
-				
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="buffPropitalInjectorInitialise"/>
-			</effect_group>
-		</item>
-		<item name="medicalInjectorSJ12">
-			<property name="Extends" value="drugPainkillers"/>
-			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovStimSJ12.prefab"/>
-			<property name="Stacknumber" value="10"/>
-			<property name="DisplayType" value="injectorTrimadol"/>
-			<property name="EconomicValue" value="1062"/>
-			<property name="UnlockedBy" value="craftingBooksOfASurgeon"/>
-			<property name="Group" value="Science,Medical,TCMedical"/>
-			<property name="SoundPickup" value="steroids_grab"/>
-			<property name="SoundPlace" value="steroids_place"/>
-			<property name="Sound_start" value=""/>
-			<property class="Action0">
-				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
-				<property name="Sound_start" value=""/>
-				<property name="Delay" value="2"/>
-			</property>
-			<effect_group tiered="false" name="Drug Tier 3">
-				<display_value name="dMeleeDamage" value="2"/>
-				<display_value name="dDamageResist" value=".5"/>
-				<display_value name="dMaxStamina" value="1"/>
-				<display_value name="dStaminaRegen" value="1"/>
-				<display_value name="dBuffResistance" value="1"/>
-				<display_value name="dCarryCapacity" value="60"/>
-				<display_value name="dDuration" value="300"/>
-				
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="$ASkill_CombatStim_InjectorUsedCount" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="$buffInjectorTrimadolDurationBase" operation="set" value="300"/>
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="$buffInjectorTrimadolDurationBase" operation="multiply" value="@$ASkill_CombatStim_DurationBonus"/>
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="$buffInjectorTrimadolDuration" operation="add" value="@$buffInjectorTrimadolDurationBase"/>
-				
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="buffTrimadolInjectorInitialise"/>
-			</effect_group>
-		</item>
-		<item name="medicalInjector2A2">
-			<property name="Extends" value="drugPainkillers"/>
-	        <property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovStim2A2.prefab"/>
-			<property name="Stacknumber" value="10"/>
-			<property name="DisplayType" value="injector2A2"/>
-			<property name="EconomicValue" value="1122"/>
-			<property name="UnlockedBy" value="craftingBooksOfASurgeon"/>
-			<property name="Group" value="Science,Medical,TCMedical"/>
-			<property name="SoundPickup" value="steroids_grab"/>
-			<property name="SoundPlace" value="steroids_place"/>
-			<property name="Sound_start" value=""/>
-			<property class="Action0">
-				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
-				<property name="Sound_start" value=""/>
-				<property name="Delay" value="2"/>
-			</property>
-			<effect_group tiered="false" name="Drug Tier 3">
-				<display_value name="dRangedDamage" value="1"/>
-				<display_value name="dRecoilControl" value="-.9"/>
-				<!--display_value name="dChakingHands" value="4"/-->
-				<display_value name="dCarryCapacity" value="60"/>
-				<display_value name="dDuration" value="300"/>
-				
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="$ASkill_CombatStim_InjectorUsedCount" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="$buffInjector2A2DurationBase" operation="set" value="300"/>
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="$buffInjector2A2DurationBase" operation="multiply" value="@$ASkill_CombatStim_DurationBonus"/>
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="$buffInjector2A2Duration" operation="add" value="@$buffInjector2A2DurationBase"/>
-				
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="buff2A2InjectorInitialise"/>
-			</effect_group>
-		</item>
-		<item name="medicalInjectorMULE">
-			<property name="Extends" value="drugPainkillers"/>
-			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovStimMULE.prefab"/>
-			<property name="Stacknumber" value="10"/>
-			<property name="DisplayType" value="injectorMULE"/>
-			<property name="EconomicValue" value="65"/>
-			<property name="UnlockedBy" value="craftingBooksOfASurgeon"/>
-			<property name="Group" value="Science,Medical,TCMedical"/>
-			<property name="SoundPickup" value="steroids_grab"/>
-			<property name="SoundPlace" value="steroids_place"/>
-			<property name="Sound_start" value=""/>
-			<property class="Action0">
-				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
-				<property name="Sound_start" value=""/>
-				<property name="Delay" value="2"/>
-			</property>
-			<effect_group tiered="false" name="Drug Tier 3">
-				<display_value name="dStaminaEff" value=".15"/>
-				<display_value name="dCarryCapacity" value="60"/>
-				<display_value name="dDuration" value="720"/>
-				
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="$buffInjectorMULEDurationBase" operation="set" value="720"/>
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="$buffInjectorMULEDurationBase" operation="multiply" value="@$ASkill_CombatStim_DurationBonus"/>
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="$buffInjectorMULEDuration" operation="add" value="@$buffInjectorMULEDurationBase"/>
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="buffMULEInjectorInitialise"/>
-				
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyCVar" cvar="$ASkill_CombatStim_InjectorUsedCount" operation="add" value="1"/>
-			</effect_group>
-		</item>
-
-		<!-- *** Medics -->
-		<item name="medicalIFAK">
-			<property name="Extends" value="medicalBandage" param1="DescriptionKey"/>
-			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovIFAK.prefab"/>
-			<property name="DisplayType" value="medicalFirstAidKit"/>
-			<property name="Group" value="Science,Medical,TCMedical"/>
-			<property name="EconomicValue" value="150"/>
-			<property name="Stacknumber" value="5"/>
-			<property name="UnlockedBy" value="craftingDoctorMedicalJournals"/>
-			<property name="SoundPickup" value="firstaidkit_grab"/>
-			<property name="SoundPlace" value="firstaidkit_place"/>
-			<property class="Action0">
-				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
-				<!-- <requirement name="CVarCompare" cvar="medicalRegHealthAmount" operation="LTE" value="400"/> -->
-				<property name="Sound_start" value=""/>
-				<property name="Delay" value="4.2"/>
-				<requirement name="StatComparePercCurrentToMax" stat="Health" operation="LT" value="1"/>
-			</property>
-			<property class="Action1">    
-				<!-- <requirement name="CVarCompare" cvar="medicalRegHealthAmount" target="other" operation="LTE" value="400"/> -->
-				<!-- disabled due to target=other requirements not working as expected in actions, targets are set after the requirement is evaluated so this always fails -->
-				<!-- <requirement name="StatComparePercCurrentToMax" stat="Health" target="other" operation="LT" value="1"/> -->
-				<property name="Sound_start" value="player_firstAidKit"/>
-			</property>
+		<!-- EFTX LASER SIGHT -->
+		<item name="modGunEFTXLaserSightSchematic">
+			<property name="Extends" value="schematicNoQualityMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modGunLaserSight"/>
+			<property name="Unlocks" value="modGunEFTXLaserSight"/>
 			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="AnimatorSetBool" property="needle" value="true"></triggered_effect>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AnimatorSetBool" property="needle" value="false"></triggered_effect>
-			</effect_group>
-			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="AnimatorSetBool" property="bandage" value="true">
-					<requirement name="HasBuff" buff="buffInjuryAbrasion"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AnimatorSetBool" property="bandage" value="false"></triggered_effect>
-			</effect_group>
-			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="AnimatorSetBool" property="bandage" value="true">
-					<requirement name="HasBuff" buff="buffLaceration"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AnimatorSetBool" property="bandage" value="false"></triggered_effect>
-			</effect_group>
-			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="AnimatorSetBool" property="bandage" value="true">
-					<requirement name="HasBuff" buff="buffInjuryBleeding"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AnimatorSetBool" property="bandage" value="false"></triggered_effect>
-			</effect_group>
-			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="healAbrasionMult" operation="set" value="3"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffInjuryAbrasionTreated">
-					<requirement name="HasBuff" buff="buffInjuryAbrasion"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalRegHealthAmount" operation="add" value="60"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medRegHealthIncSpeed" operation="set" value="2"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffInjuryBleeding"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffLaceration"/>
-				
-				<display_value name="dhealAbrasionMult" value="3"/>
-				<display_value name="foodHealthAmount" value="60"/>
-				<display_value name="dStopsBleeding" value="1"/>
-				<display_value name="dStopsLaceration" value="1"/>
-				
-			<!-- Used On Other Players -->
-				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="healAbrasionMult" operation="set" value="3"/>
-				<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" target="other" buff="buffInjuryAbrasionTreated">
-					<requirement name="HasBuff" target="other" buff="buffInjuryAbrasion"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="medicalRegHealthAmount" operation="add" value="60"/>
-				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="medRegHealthIncSpeed" operation="set" value="2"/>
-				<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" target="other" buff="buffProcessConsumables"/>
-				<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" target="other" buff="buffInjuryBleeding"/>
-				<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" target="other" buff="buffLaceration"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modGunEFTXLaserSight" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 			</effect_group>
 		</item>
-		<item name="medicalSalewa">
-			<property name="Extends" value="medicalBandage" param1="DescriptionKey"/>
-			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovsalewa.prefab"/>
-			<property name="DisplayType" value="medicalFirstAidKitSalewa"/>
-			<property name="Group" value="Science,Medical,TCMedical"/>
-			<property name="EconomicValue" value="300"/>
-			<property name="Stacknumber" value="5"/>
-			<property name="UnlockedBy" value="craftingDoctorMedicalJournals"/>
-			<property name="SoundPickup" value="firstaidkit_grab"/>
-			<property name="SoundPlace" value="firstaidkit_place"/>
-			<property class="Action0">
-				<!-- <requirement name="CVarCompare" cvar="medicalRegHealthAmount" operation="LTE" value="400"/> -->
-				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
-				<property name="Sound_start" value=""/>
-				<property name="Delay" value="4.5"/>
-				<requirement name="StatComparePercCurrentToMax" stat="Health" operation="LT" value="1"/>
-			</property>
-			<property class="Action1">    
-				<!-- <requirement name="CVarCompare" cvar="medicalRegHealthAmount" target="other" operation="LTE" value="400"/> -->
-				<!-- disabled due to target=other requirements not working as expected in actions, targets are set after the requirement is evaluated so this always fails -->
-				<!-- <requirement name="StatComparePercCurrentToMax" stat="Health" target="other" operation="LT" value="1"/> -->
-				<property name="Sound_start" value=""/>
-			</property>
-			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="AnimatorSetBool" property="needle" value="true"></triggered_effect>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AnimatorSetBool" property="needle" value="false"></triggered_effect>
-			</effect_group>
-			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="AnimatorSetBool" property="bandage" value="true">
-					<requirement name="HasBuff" buff="buffInjuryAbrasion"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AnimatorSetBool" property="bandage" value="false"></triggered_effect>
-			</effect_group>
-			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="AnimatorSetBool" property="bandage" value="true">
-					<requirement name="HasBuff" buff="buffLaceration"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AnimatorSetBool" property="bandage" value="false"></triggered_effect>
-			</effect_group>
-			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="AnimatorSetBool" property="bandage" value="true">
-			<requirement name="HasBuff" buff="buffInjuryBleeding"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AnimatorSetBool" property="bandage" value="false"></triggered_effect>
-			</effect_group>
-			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffInfectionAddCurePerc" operation="add" value="10"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffInfectionAddCure"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="healAbrasionMult" operation="set" value="5"/>
-				<display_value name="dhealAbrasionMult" value="5"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffInjuryAbrasionTreated">
-					<requirement name="HasBuff" buff="buffInjuryAbrasion"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalRegHealthAmount" operation="add" value="75"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medRegHealthIncSpeed" operation="set" value="4"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffInjuryBleeding"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffLaceration"/>
-				
-				<display_value name="dCureInfection" value=".1"/>
-				<display_value name="foodHealthAmount" value="150"/>
-				<display_value name="dStopsBleeding" value="1"/>
-				<display_value name="dStopsLaceration" value="1"/>
-				
-			<!-- Used On Other Players -->
-				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="healAbrasionMult" operation="set" value="5"/>
-				<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" target="other" buff="buffInjuryAbrasionTreated">
-					<requirement name="HasBuff" target="other" buff="buffInjuryAbrasion"/>
-				</triggered_effect>
-				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="medicalRegHealthAmount" operation="add" value="75"/>
-				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="medRegHealthIncSpeed" operation="set" value="4"/>
-				<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" target="other" buff="buffProcessConsumables"/>
-				<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" target="other" buff="buffInjuryBleeding"/>
-				<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" target="other" buff="buffLaceration"/>
-			</effect_group>
-		</item>
-		<item name="medicalCMS">
-			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovCMSkit.prefab"/>
-			<property name="Extends" value="medicalBandage"/>
-			<property name="DisplayType" value="medicalCMSSURV12"/>
-			<property name="DescriptionKey" value="medicalCMSDesc"/>
-			<property name="EconomicValue" value="1250"/>
-			<property name="Stacknumber" value="5"/>
-			<property name="UnlockedBy" value="craftingDoctorMedicalJournals"/>
-			<property name="Group" value="Science,Medical,TCMedical"/>
-			<property name="SoundPickup" value="firstaidkit_grab"/>
-			<property name="SoundPlace" value="firstaidkit_place"/>
-			<property name="Sound_start" value=""/>
-			<property class="Action0">
-				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
-				<property name="Sound_start" value=""/>
-				<property name="Delay" value="16"/>
-				<requirement name="CVarCompare" cvar="$DP_PermanentHealthLoss" operation="LT" value="0"/>
-			</property>
-			<effect_group tiered="false" name="Drug Tier 3">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$DP_PermanentHealthLoss" operation="add" value="10"/>
-				
-				<display_value name="dHealthGain" value="10"/>
-			</effect_group>
-		</item>
-		<item name="medicalSurv12">
-			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/EFTconsumables.unity3d?itemtarkovSurv12kit.prefab"/>
-			<property name="Extends" value="medicalBandage"/>
-			<property name="DisplayType" value="medicalCMSSURV12"/>
-			<property name="DescriptionKey" value="medicalSurv12Desc"/>
-			<property name="EconomicValue" value="6000"/>
-			<property name="Stacknumber" value="5"/>
-			<property name="UnlockedBy" value="craftingDoctorMedicalJournals"/>
-			<property name="Group" value="Science,Medical,TCMedical"/>
-			<property name="SoundPickup" value="firstaidkit_grab"/>
-			<property name="SoundPlace" value="firstaidkit_place"/>
-			<property name="Sound_start" value=""/>
-			<property class="Action0">
-				<property name="ItemActionModules" value="CustomAnimationDelay,KFCommonUtilityLib"/>
-				<property name="Sound_start" value=""/>
-				<property name="Delay" value="22"/>
-				<requirement name="CVarCompare" cvar="$DP_PermanentHealthLoss" operation="LT" value="0"/>
-			</property>
-			<effect_group tiered="false" name="Drug Tier 3">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$DP_PermanentHealthLoss" operation="add" value="25"/>
-				
-				<display_value name="dHealthGain" value="25"/>
-			</effect_group>
-		</item>	
-				
+				<!-- EFTX LASER SIGHT -->
+						
 		<!--- *** Weapon Modifier Magazine-->		
 		<item name="weaponModifiersBipodsForegripsSkillMagazine">
 			<property name="Extends" value="masterSkillMagazine"/>
@@ -862,48 +220,8 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="nerd_outfit_perk"/>
 			<!-- <triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message="Extra Point!"/> -->
 	</effect_group>
-		</item>
-		
-		<item name="DoctorMedicalJournalsSkillMagazine">
-			<property name="Extends" value="masterSkillMagazine"/>
-			<property name="Tags" value="eftxdoctormedicaljournalsCSM,csm"/>
-			<property name="CustomIcon" value="DoctorMedicalJournalsSkillMagazine"/>
-			<property name="DescriptionKey" value="DoctorMedicalJournalsSkillMagazineDesc"/>
-			<property name="Unlocks" value="craftingDoctorMedicalJournals"/>
-			<property name="Stacknumber" value="20"/>
-			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingDoctorMedicalJournals" level="1"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-			</effect_group>
-			<effect_group tiered="false">
-		<requirement name="HasBuff" buff="buffNerdOutfit"/>
-		<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$nerdOutfitSkillPointChance"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingDoctorMedicalJournals" level="1"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="nerd_outfit_perk"/>
-			<!-- <triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message="Extra Point!"/> -->
-	</effect_group>
-		</item>
-		
-		<item name="BooksOfASurgeonSkillMagazine">
-			<property name="Extends" value="masterSkillMagazine"/>
-			<property name="Tags" value="eftxbooksofasurgeonCSM,csm"/>
-			<property name="CustomIcon" value="BooksOfASurgeonSkillMagazine"/>
-			<property name="DescriptionKey" value="BooksOfASurgeonSkillMagazineDesc"/>
-			<property name="Unlocks" value="craftingBooksOfASurgeon"/>
-			<property name="Stacknumber" value="20"/>
-			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingBooksOfASurgeon" level="1"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-			</effect_group>
-			<effect_group tiered="false">
-		<requirement name="HasBuff" buff="buffNerdOutfit"/>
-		<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$nerdOutfitSkillPointChance"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingBooksOfASurgeon" level="1"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="nerd_outfit_perk"/>
-			<!-- <triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message="Extra Point!"/> -->
-	</effect_group>
-		</item>
-		
+		</item>		
+			
 		<item name="HeadLightsandNVGSSkillMagazine">
 			<property name="Extends" value="masterSkillMagazine"/>
 			<property name="Tags" value="eftxheadlightsandnvgsCSM,csm"/>
@@ -1341,206 +659,10 @@
 				<property name="Create_item" value="gunrsh12"/>
 				<property name="Create_item_count" value="1"/>
 			</property>
-		</item>
-		
-				
-		<!-- *** Money -->
-		<item name="bundleMoneyCase">
-			<property name="Extends" value="disassembleAmmoMasterBundle"/>
-			<property name="CreativeMode" value="Player"/>
-			<property name="CustomIcon" value="bundleMoneyCase"/>
-			<property name="ItemTypeIcon" value="bundle"/>
-			<property name="Stacknumber" value="1"/>
-			<property name="DescriptionKey" value="bundleMoneyCaseDesc"/>
-			<property name="SoundPickup" value="cast_grab"/>
-			<property name="SoundPlace" value="cast_place"/>
-			<property class="Action0">
-				<property name="Create_item" value="casinoCoin"/>
-				<property name="Create_item_count" value="500-2500"/>
-			</property>
-		</item>
-		<item name="bundleWallet">
-			<property name="Extends" value="disassembleAmmoMasterBundle"/>
-			<property name="CreativeMode" value="Player"/>
-			<property name="CustomIcon" value="bundleWallet"/>
-			<property name="ItemTypeIcon" value="bundle"/>
-			<property name="Stacknumber" value="1"/>
-			<property name="DescriptionKey" value="bundleWalletDesc"/>
-			<property name="SoundPickup" value="oldcash_grab"/>
-			<property name="SoundPlace" value="oldcash_place"/>
-			<property class="Action0">
-				<property name="Create_item" value="casinoCoin"/>
-				<property name="Create_item_count" value="100-800"/>
-			</property>
-		</item>
-		<item name="bundleCraftableRouble">
-			<property name="Extends" value="disassembleAmmoMasterBundle"/>
-			<property name="CreativeMode" value="Player"/>
-			<property name="CustomIcon" value="resourceRoubleBundle"/>
-			<property name="ItemTypeIcon" value="bundle"/>
-			<property name="Stacknumber" value="100"/>
-			<property name="DescriptionKey" value="bundleCraftableRoubleDesc"/>
-			<property name="SoundPickup" value="oldcash_grab"/>
-			<property name="SoundPlace" value="oldcash_place"/>
-			<property class="Action0">
-				<property name="Create_item" value="casinoCoin"/>
-				<property name="Create_item_count" value="10000"/>
-			</property>
-		</item>
-		<item name="bundleMedics">
-			<property name="Extends" value="disassembleAmmoMasterBundle"/>
-			<property name="CreativeMode" value="Player"/>
-			<property name="CustomIcon" value="bundleMedics"/>
-			<property name="ItemTypeIcon" value="bundle"/>
-			<property name="Stacknumber" value="1"/>
-			<property name="DescriptionKey" value="bundleMedicsDesc"/>
-			<property name="SoundPickup" value="drug_fortbites_grab"/>
-			<property name="SoundPlace" value="drug_fortbites_place"/>
-			<property class="Action0">
-				<property name="Create_item" value="medicalSkillMagazine"/>
-				<property name="Create_item_count" value="0-3"/>
-				<property name="Random_item" value="medicalBandage,medicalFirstAidBandage,medicalPlasterCast,drugVitamins,drugPainkillers,drugHerbalAntibiotics,drugAntibiotics,medicalIFAK,medicalSalewa"/>
-				<property name="Random_item_count" value="2-4,2-4,1-3,1-2,1-2,1-2,1,1"/>
-				<property name="Random_count" value="4"/>
-				<property name="Unique_random_only" value="true"/>
-			</property>
-		</item>
-		<item name="bundleInjectorCase">
-			<property name="Extends" value="disassembleAmmoMasterBundle"/>
-			<property name="CreativeMode" value="Player"/>
-			<property name="CustomIcon" value="bundleInjectorCase"/>
-			<property name="ItemTypeIcon" value="bundle"/>
-			<property name="Stacknumber" value="1"/>
-			<property name="DescriptionKey" value="bundleInjectorCaseDesc"/>
-			<property name="SoundPickup" value="bandage_grab"/>
-			<property name="SoundPlace" value="bandage_place"/>
-			<property class="Action0">
-				<property name="Random_item" value="medicalInjectorAdrenaline,medicalInjectorMorphine,medicalInjectorPerfortran,medicalInjectorPropitalRegenerativeStim,medicalInjectorSJ12,medicalInjector2A2"/>
-				<property name="Random_item_count" value="1-2,1-2,1-2,1-2,1,1"/>
-				<property name="Random_count" value="3"/>
-				<property name="Unique_random_only" value="true"/>
-			</property>
 		</item>		
-		
-		<!-- *** Crafting Bundles -->
-		<item name="bundleEftResourceNitricAcid">
-			<property name="Extends" value="disassembleAmmoMasterBundle"/>
-			<property name="CreativeMode" value="Player"/>
-			<property name="CustomIcon" value="resourceNitricAcid"/>
-			<property name="ItemTypeIcon" value="bundle"/>
-			<property name="Stacknumber" value="1"/>
-			<property name="DescriptionKey" value=""/>
-			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
-			<property name="SoundPickup" value="grandpas_awesome_grab"/>
-			<property name="SoundPlace" value="grandpas_awesome_place"/>
-			<property class="Action0">
-				<property name="Create_item" value="resourceNitricAcid"/>
-				<property name="Create_item_count" value="1950"/>
-			</property>
-		</item>
-		<item name="bundleEftResourceNitricAcid_2">
-			<property name="Extends" value="disassembleAmmoMasterBundle"/>
-			<property name="CreativeMode" value="Player"/>
-			<property name="CustomIcon" value="resourceNitricAcid"/>
-			<property name="ItemTypeIcon" value="bundle"/>
-			<property name="Stacknumber" value="1"/>
-			<property name="DescriptionKey" value=""/>
-			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
-			<property name="SoundPickup" value="grandpas_awesome_grab"/>
-			<property name="SoundPlace" value="grandpas_awesome_place"/>
-			<property class="Action0">
-				<property name="Create_item" value="resourceNitricAcid"/>
-				<property name="Create_item_count" value="780"/>
-			</property>
-		</item>
-		<item name="bundleEftResourceSulfuricAcid">
-			<property name="Extends" value="disassembleAmmoMasterBundle"/>
-			<property name="CreativeMode" value="Player"/>
-			<property name="CustomIcon" value="resourceSulfuricAcid"/>
-			<property name="ItemTypeIcon" value="bundle"/>
-			<property name="Stacknumber" value="1"/>
-			<property name="DescriptionKey" value=""/>
-			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
-			<property name="SoundPickup" value="grandpas_awesome_grab"/>
-			<property name="SoundPlace" value="grandpas_awesome_place"/>
-			<property class="Action0">
-				<property name="Create_item" value="resourceSulfuricAcid"/>
-				<property name="Create_item_count" value="10000"/>
-			</property>
-		</item>
-		<item name="bundleEftResourceSulfuricAcid_2">
-			<property name="Extends" value="disassembleAmmoMasterBundle"/>
-			<property name="CreativeMode" value="Player"/>
-			<property name="CustomIcon" value="resourceSulfuricAcid"/>
-			<property name="ItemTypeIcon" value="bundle"/>
-			<property name="Stacknumber" value="1"/>
-			<property name="DescriptionKey" value=""/>
-			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
-			<property name="SoundPickup" value="grandpas_awesome_grab"/>
-			<property name="SoundPlace" value="grandpas_awesome_place"/>
-			<property class="Action0">
-				<property name="Create_item" value="resourceSulfuricAcid"/>
-				<property name="Create_item_count" value="1250"/>
-			</property>
-		</item>	
-		
-		
-		
-		<item name="schematicsChemician">
-			<property name="Extends" value="schematicNoQualityMaster"/>
-			<property name="CreativeMode" value="Player"/>
-			<property name="CustomIcon" value="schematicsChemician"/>
-			<property name="Tags" value="schematicsChemician"/>
-			<property name="EconomicValue" value="1000"/>
-			<property name="DescriptionKey" value="schematicsChemicianDesc"/>
-			<property name="Unlocks" value="$schematicsChemician_helper"/>
-			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="bundleEftResourceNitricAcid" operation="set" value="1"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="bundleEftResourceNitricAcid_2" operation="set" value="1"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="bundleEftResourceSulfuricAcid" operation="set" value="1"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="bundleEftResourceSulfuricAcid_2" operation="set" value="1"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="resourceCellulosePowder" operation="set" value="1"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-				
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$schematicsChemician_helper" operation="set" value="1"/>
-			</effect_group>
-		</item>
-				
-		
 		</append>		
 			
-	<!-- ### Add Tags To Vanilla Items -->
-	<!-- *** Chemical Items -->
-	<append xpath="/items/item[@name='resourceAcid']">
-		<property name="Tags" value=",chemicalEftItems"/>
-	</append>
-	<append xpath="/items/item[@name='resourceOilShale']">
-		<property name="Tags" value=",chemicalEftItems"/>
-	</append>
-	<set xpath="/items/item[@name='resourceGlue']/property[@name='Tags']/@value">junk,chemicalEftItems</set>
-	<append xpath="/items/item[@name='resourcePotassiumNitratePowder']">
-		<property name="Tags" value=",chemicalEftItems"/>
-	</append>
-	<set xpath="/items/item[@name='resourceOil']/property[@name='Tags']/@value">junk,chemicalEftItems</set>
 	
-	<!-- *** Mechanical Items -->
-	<set xpath="/items/item[@name='resourceScrapBrass']/property[@name='Tags']/@value">brass,craftingEftItems</set>
-	<append xpath="/items/item[@name='resourceForgedIron']">
-		<property name="Tags" value=",craftingEftItems"/>
-	</append>
-	<append xpath="/items/item[@name='resourceForgedSteel']">
-		<property name="Tags" value=",craftingEftItems"/>
-	</append>
-	<set xpath="/items/item[@name='resourceElectricParts']/property[@name='Tags']/@value">junk,craftingEftItems</set>
-	<set xpath="/items/item[@name='resourceMechanicalParts']/property[@name='Tags']/@value">junk,craftingEftItems</set>
-	<set xpath="/items/item[@name='resourceSpring']/property[@name='Tags']/@value">junk,craftingEftItems</set>
-	<set xpath="/items/item[@name='resourceDuctTape']/property[@name='Tags']/@value">junk,craftingEftItems</set>	
-		
-		
-<!-- ***************************************************************************************************************** -->
-<!-- ***************************************************************************************************************** -->
-<!-- ***************************************************************************************************************** -->
-<!-- ***************************************************************************************************************** -->
 <!-- ***************************************************************************************************************** -->
 <!-- ***************************************************************************************************************** -->
 		
@@ -1670,7 +792,7 @@
 		
 		<!-- *** 9x18mm / Russian -->
 		<item name="gunpp9klin"> <!-- Tier 1 -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,nobipod,nom203,CompactReflexSight,ReflexSight,foregrip,sideAttachments,pp91only,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic,handgunSkill,eftSMG"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,nobipod,nom203,CompactReflexSight,ReflexSight,foregrip,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,modGunNoEFTXLaser,pp91only,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic,handgunSkill,eftSMG"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="6"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/smgA.unity3d?guntarkovpp9klin.prefab"/>
@@ -2468,7 +1590,7 @@
 		
 		<!-- *** 9x19mm / NATO -->
 		<item name="gunmp9"> <!-- Tier 3 --> <!-- T3 Grip Bonus -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,ammoEft919mm,reloadPenalty,gun,shortRange,nom203,nobipod,sideAttachments,cmagmp9uzi,mp9only,CompactReflexSight,AssaultScope,ReflexSight,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic,handgunSkill,eftSMG"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,ammoEft919mm,reloadPenalty,gun,shortRange,nom203,nobipod,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,cmagmp9uzi,mp9only,CompactReflexSight,AssaultScope,ReflexSight,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic,handgunSkill,eftSMG"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="6"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/smgA.unity3d?guntarkovmp9.prefab"/>
@@ -2590,7 +1712,7 @@
 		</item>
 		
 		<item name="gunuziprosmg">  
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,nom203,nobipod,sideAttachments,cmagmp9uzi,AR15stocks,HasBufferTube,uziproonly,CompactReflexSight,AssaultScope,ReflexSight,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,eftSMG,canHaveCosmetic,handgunSkill"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,nom203,nobipod,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,cmagmp9uzi,AR15stocks,HasBufferTube,uziproonly,CompactReflexSight,AssaultScope,ReflexSight,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,eftSMG,canHaveCosmetic,handgunSkill"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="6"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/smgA.unity3d?guntarkovuziprosmg.prefab"/>
@@ -2712,7 +1834,7 @@
 		
 		<!-- *** 9x19mm / NATO -->
 		<item name="gunmp5sd"> <!-- Tier 3 --> <!-- T3 Silencer Bonus -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,ammoEft919mm,gun,shortRange,nobipod,sideAttachments,foregrip,noSilencer,cmagmp5,nocmagmp5,mp5only,CompactReflexSight,eftSMG,AssaultScope,ReflexSight,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic,handgunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,ammoEft919mm,gun,shortRange,nobipod,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,foregrip,noSilencer,cmagmp5,nocmagmp5,mp5only,CompactReflexSight,eftSMG,AssaultScope,ReflexSight,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic,handgunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="6"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/smgA.unity3d?guntarkovmp5sd.prefab"/>
@@ -2892,7 +2014,7 @@
 		
 		<!-- *** 9x19mm / NATO -->
 		<item name="gunvector9"> <!-- Tier 4 -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,AR15stocksDirect,NoBufferTube,AR15stocks,ammoEft919mm,gun,shortRange,nobipod,eftSMG,foregrip,sideAttachments,vector9only,CompactReflexSight,AssaultScope,ReflexSight,CantedSight,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic,handgunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,AR15stocksDirect,NoBufferTube,AR15stocks,ammoEft919mm,gun,shortRange,nobipod,eftSMG,foregrip,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,vector9only,CompactReflexSight,AssaultScope,ReflexSight,CantedSight,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic,handgunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="6"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/smgA.unity3d?guntarkovvector9.prefab"/>
@@ -3077,7 +2199,7 @@
 		
 		<!-- *** 9x19mm / NATO -->
 		<item name="gunmpx"> <!-- Tier 4 --> <!-- T3 Grip Bonus -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,ammoEft919mm,gun,shortRange,nobipod,eftSMG,sideAttachments,cmagmpx,mpxonly,CompactReflexSight,AssaultScope,ReflexSight,CantedSight,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic,handgunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,ammoEft919mm,gun,shortRange,nobipod,eftSMG,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,cmagmpx,mpxonly,CompactReflexSight,AssaultScope,ReflexSight,CantedSight,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic,handgunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="6"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/smgA.unity3d?guntarkovmpx.prefab"/>
@@ -3254,7 +2376,7 @@
 		
 		<!-- *** 9x19mm / NATO -->
 		<item name="gunstm9"> <!-- Tier 4 -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,AR15stocksDirect,eftSMG,NoBufferTube,AR15stocks,ammoEft919mm,foregrip,sideAttachments,stm9only,CompactReflexSight,AssaultScope,ReflexSight,CantedSight,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic,handgunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,AR15stocksDirect,eftSMG,NoBufferTube,AR15stocks,ammoEft919mm,foregrip,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,stm9only,CompactReflexSight,AssaultScope,ReflexSight,CantedSight,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic,handgunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="6"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/smgA.unity3d?guntarkovstm9.prefab"/>
@@ -3431,7 +2553,7 @@
 		
 		<!-- *** 9x21mm / Russian -->
 		<item name="gunsr2mveresk"> <!-- Tier 2 --> <!-- T2 Grip Bonus -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,CompactReflexSight,ShortMount,sideAttachments,nom203,sr2monly,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic,handgunSkill,eftSMG"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,CompactReflexSight,ShortMount,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,nom203,sr2monly,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic,handgunSkill,eftSMG"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="6"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/smgA.unity3d?guntarkovsr2mveresk.prefab"/>
@@ -3552,7 +2674,7 @@
 		
 		<!-- *** .45 ACP / NATO -->
 		<item name="gunump45"> <!-- Tier 2 -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,nobipod,sideAttachments,ump45only,CompactReflexSight,AssaultScope,ReflexSight,CantedSight,foregrip,attAgility,perkGunslinger,eftSMG,9mmGun,attachmentsIncluded,canHaveCosmetic,handgunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,nobipod,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,ump45only,CompactReflexSight,AssaultScope,ReflexSight,CantedSight,foregrip,attAgility,perkGunslinger,eftSMG,9mmGun,attachmentsIncluded,canHaveCosmetic,handgunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="6"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/smgA.unity3d?guntarkovump45.prefab"/>
@@ -3850,7 +2972,7 @@
 		
 		<!-- *** .45 ACP / NATO -->
 		<item name="gunvector45"> <!-- Tier 4 -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,AR15stocksDirect,NoBufferTube,AR15stocks,gun,shortRange,nobipod,sideAttachments,eftSMG,foregrip,vector45only,CompactReflexSight,AssaultScope,ReflexSight,CantedSight,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic,handgunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,AR15stocksDirect,NoBufferTube,AR15stocks,gun,shortRange,nobipod,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,eftSMG,foregrip,vector45only,CompactReflexSight,AssaultScope,ReflexSight,CantedSight,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic,handgunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="6"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/smgA.unity3d?guntarkovvector45.prefab"/>
@@ -4034,7 +3156,7 @@
 		
 		<!-- *** 4.6x30mm / NATO -->
 		<item name="gunmp7"> <!-- Tier 3 --> <!-- T3 Grip Bonus -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,nobipod,AR15stocks,HasBufferTube,eftSMG,sideAttachments,mp7only,CompactReflexSight,AssaultScope,ReflexSight,CantedSight,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic,handgunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,nobipod,AR15stocks,HasBufferTube,eftSMG,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,mp7only,CompactReflexSight,AssaultScope,ReflexSight,CantedSight,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic,handgunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="6"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/smgA.unity3d?guntarkovmp7.prefab"/>
@@ -4211,7 +3333,7 @@
 		
 		<!-- *** 5.7x28 / NATO -->
 		<item name="gunp90"> <!-- Tier 3 --> <!-- T3 Grip Bonus -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,nobipod,sideAttachments,p90only,CompactReflexSight,AssaultScope,ReflexSight,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic,handgunSkill,eftSMG"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,nobipod,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,p90only,CompactReflexSight,AssaultScope,ReflexSight,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,canHaveCosmetic,handgunSkill,eftSMG"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="6"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/smgA.unity3d?guntarkovp90.prefab"/>
@@ -4333,7 +3455,7 @@
 		<!-- PISTOLS -->
 		<!-- 7.62x25mm / Russian -->
 		<item name="guntokarevtt"> <!-- Tier 1 -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,nobipod,sideattachments,tokarevonly,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,nooffsetscope,nom203,canHaveCosmetic,handgunSkill,eftPistol"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,nobipod,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,tokarevonly,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,nooffsetscope,nom203,canHaveCosmetic,handgunSkill,eftPistol"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="1"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/PistolB.unity3d?guntarkovtokarevtt.prefab"/>
@@ -4461,7 +3583,7 @@
 		
 		<!-- *** 7.62x25mm / Russian -->
 		<item name="guntokarevgold"> <!-- Tier 1 -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,nobipod,sideattachments,tokarevonly,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,nooffsetscope,nom203,canHaveCosmetic,handgunSkill,eftPistol"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,nobipod,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,tokarevonly,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,nooffsetscope,nom203,canHaveCosmetic,handgunSkill,eftPistol"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="1"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/PistolB.unity3d?guntarkovtokarevgold.prefab"/>
@@ -4588,7 +3710,7 @@
 		
 		<!-- *** 7.62x25mm / Russian -->
 		<item name="guntokarevmachine"> <!-- Tier 1 --> <!-- Custom Silencer Bonus -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,CompactReflexSight,foregrip,sideAttachments,offsetreflex,hydramount,tokarevmachine,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,nooffsetscope,nom203,canHaveCosmetic,handgunSkill,eftPistol"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,CompactReflexSight,foregrip,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,offsetreflex,hydramount,tokarevmachine,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,nooffsetscope,nom203,canHaveCosmetic,handgunSkill,eftPistol"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="6"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/PistolB.unity3d?guntarkovtokarevmachine.prefab"/>
@@ -4841,7 +3963,7 @@
 		
 		<!-- *** 9x18mm / Russian -->
 		<item name="gunpmalphadog"> <!-- Tier 1 --> <!-- Custom Silencer Bonus -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,sideAttachments,scopemount,CompactReflexSight,shortRange,nobipod,makarovonly,offsetreflex,noSilencer,eftPistol,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,nooffsetscope,nom203,canHaveCosmetic,handgunSkill"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,scopemount,CompactReflexSight,shortRange,nobipod,makarovonly,offsetreflex,noSilencer,eftPistol,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,nooffsetscope,nom203,canHaveCosmetic,handgunSkill"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="1"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/PistolB.unity3d?guntarkovpmalphadog.prefab"/>
@@ -5098,7 +4220,7 @@
 		
 		<!-- *** 9x19mm / NATO -->
 		<item name="gunglock17"> <!-- Tier 1 -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,glock17only,ammoEft919mm,shortRange,CompactReflexSight,sideattachments,nobipod,glockonly,cmag,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,nooffsetscope,nom203,canHaveCosmetic,handgunSkill,eftPistol"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,glock17only,ammoEft919mm,shortRange,CompactReflexSight,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,nobipod,glockonly,cmag,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,nooffsetscope,nom203,canHaveCosmetic,handgunSkill,eftPistol"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="1"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/PistolB.unity3d?guntarkovglock17.prefab"/>
@@ -5228,7 +4350,7 @@
 
 		<!-- *** 9x19mm / NATO -->
 		<item name="gunp226"> <!-- Tier 1 -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,ammoEft919mm,nobipod,scopemount,CompactReflexSight,sideAttachments,p226only,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,nooffsetscope,nom203,canHaveCosmetic,handgunSkill,eftPistol"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,ammoEft919mm,nobipod,scopemount,CompactReflexSight,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,p226only,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,nooffsetscope,nom203,canHaveCosmetic,handgunSkill,eftPistol"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="1"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/PistolB.unity3d?guntarkovp226.prefab"/>
@@ -5347,7 +4469,7 @@
 		
 		<!-- *** 9x19mm / NATO -->
 		<item name="gunm9a3"> <!-- Tier 1 -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,ammoEft919mm,nobipod,scopemount,CompactReflexSight,sideAttachments,m9a3only,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,nooffsetscope,nom203,canHaveCosmetic,handgunSkill,eftPistol"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,ammoEft919mm,nobipod,scopemount,CompactReflexSight,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,m9a3only,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,nooffsetscope,nom203,canHaveCosmetic,handgunSkill,eftPistol"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="1"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/PistolB.unity3d?guntarkovm9a3.prefab"/>
@@ -5467,7 +4589,7 @@
 		
 		<!-- *** 9x19mm / NATO -->
 		<item name="gunglock18c"> <!-- Tier 1 --> <!-- Custom Silencer Bonus -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,ammoEft919mm,CompactReflexSight,rexbipod,foregrip,nobipod,noSilencer,glockonly,sideattachments,cmag,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,eftPistol,nooffsetscope,nom203,canHaveCosmetic,handgunSkill"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,ammoEft919mm,CompactReflexSight,rexbipod,foregrip,nobipod,noSilencer,glockonly,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,cmag,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,eftPistol,nooffsetscope,nom203,canHaveCosmetic,handgunSkill"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="1"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/PistolB.unity3d?guntarkovglock18c.prefab"/>
@@ -5585,7 +4707,7 @@
 		
 		<!-- *** 9x21mm / Russian -->
 		<item name="gunsr1mp"> <!-- Tier 1 -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,nobipod,CompactReflexSight,sideAttachments,sr1mponly,offsetreflex,attAgility,eftPistol,perkGunslinger,9mmGun,attachmentsIncluded,nooffsetscope,nom203,canHaveCosmetic,handgunSkill"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,nobipod,CompactReflexSight,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,sr1mponly,offsetreflex,attAgility,eftPistol,perkGunslinger,9mmGun,attachmentsIncluded,nooffsetscope,nom203,canHaveCosmetic,handgunSkill"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="1"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/pistolB.unity3d?guntarkovsr1mp.prefab"/>
@@ -5704,7 +4826,7 @@
 		
 		<!-- *** .45 ACP / NATO -->
 		<item name="gunusp45tac"> <!-- Tier 1 -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,nobipod,sideattachments,usp45only,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,nooffsetscope,nom203,canHaveCosmetic,handgunSkill,eftPistol"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,nobipod,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,usp45only,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,nooffsetscope,nom203,canHaveCosmetic,handgunSkill,eftPistol"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="1"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/PistolB.unity3d?guntarkovusp45tac.prefab"/>
@@ -5824,7 +4946,7 @@
 		
 		<!-- *** .45 ACP / NATO -->
 		<item name="gunm1911"> <!-- Tier 1 -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,nobipod,sideattachments,CompactReflexSight,m1911only,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,nooffsetscope,nom203,canHaveCosmetic,handgunSkill,eftPistol"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,nobipod,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,CompactReflexSight,m1911only,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,nooffsetscope,nom203,canHaveCosmetic,handgunSkill,eftPistol"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="1"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/PistolB.unity3d?guntarkovm1911.prefab"/>
@@ -5943,7 +5065,7 @@
 		
 		<!-- *** .45 ACP / NATO -->
 		<item name="gunm45"> <!-- Tier 1 -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,nobipod,sideattachments,nomount,m1911only,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,nooffsetscope,nom203,canHaveCosmetic,handgunSkill,eftPistol"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,nobipod,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,nomount,m1911only,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,nooffsetscope,nom203,canHaveCosmetic,handgunSkill,eftPistol"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="1"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/PistolB.unity3d?guntarkovm45.prefab"/>
@@ -6063,7 +5185,7 @@
 		
 		<!-- *** .45 ACP / NATO -->
 		<item name="gunusp45match"> <!-- Tier 1 --> <!-- Custom Muzzle Bonus -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,nobipod,sideattachments,noSilencer,usp45only,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,nooffsetscope,nom203,canHaveCosmetic,handgunSkill,eftPistol"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,nobipod,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,noSilencer,usp45only,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,nooffsetscope,nom203,canHaveCosmetic,handgunSkill,eftPistol"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="1"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/PistolB.unity3d?guntarkovusp45match.prefab"/>
@@ -6184,7 +5306,7 @@
 		
 		<!-- *** 5.7x28 / NATO -->
 		<item name="gunfiveseven"> <!-- Tier 1 -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,nobipod,scopemount,CompactReflexSight,57only,sideattachments,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,nooffsetscope,nom203,canHaveCosmetic,handgunSkill,eftPistol"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,nobipod,scopemount,CompactReflexSight,57only,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,attAgility,perkGunslinger,9mmGun,attachmentsIncluded,nooffsetscope,nom203,canHaveCosmetic,handgunSkill,eftPistol"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="1"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/PistolB.unity3d?guntarkovfiveseven.prefab"/>
@@ -6304,7 +5426,7 @@
 		
 		<!-- *** 12.7x33mm / .50AE Desert Eagle -->
 		<item name="gundeserteagle"> <!-- Tier 1 (keeps it's initial T2 stats) -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,revolver,44enforcer,CompactReflexSight,shortRange,nobipod,sideattachments,noSilencer,deserteagleonly,attAgility,perkGunslinger,attachmentsIncluded,nooffsetscope,nom203,canHaveCosmetic,handgunSkill,eftPistol"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,revolver,44enforcer,CompactReflexSight,shortRange,nobipod,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,noSilencer,deserteagleonly,attAgility,perkGunslinger,attachmentsIncluded,nooffsetscope,nom203,canHaveCosmetic,handgunSkill,eftPistol"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="1"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/PistolB.unity3d?guntarkovdeserteagle.prefab"/>
@@ -6424,7 +5546,7 @@
 		
 		<!-- *** 12.7x55mm / Russian -->
 		<item name="gunrsh12"> 
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,revolver,44enforcer,CompactReflexSight,offsetreflex,shortRange,nobipod,sideattachments,noSilencer,rsh12only,attAgility,perkGunslinger,attachmentsIncluded,nooffsetscope,nom203,canHaveCosmetic,handgunSkill,eftPistol"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,revolver,44enforcer,CompactReflexSight,offsetreflex,shortRange,nobipod,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,noSilencer,rsh12only,attAgility,perkGunslinger,attachmentsIncluded,nooffsetscope,nom203,canHaveCosmetic,handgunSkill,eftPistol"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="1"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/PistolB.unity3d?guntarkovrsh12.prefab"/>
@@ -6872,7 +5994,7 @@
 		<!-- NEW GUN -->
 		
 		<item name="gunm590"> <!-- Tier 2 -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,m590only,nogripzenitb25urk1,foregrip,AR15stocks,AR15stocksDirect,NoBufferTube,sideAttachments,shortRange,attStrength,perkBoomstick,attachmentsIncluded,canHaveCosmetic,shotgunSkill,eftShotties"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,m590only,nogripzenitb25urk1,foregrip,AR15stocks,AR15stocksDirect,NoBufferTube,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,shortRange,attStrength,perkBoomstick,attachmentsIncluded,canHaveCosmetic,shotgunSkill,eftShotties"/>
 			<property name="DisplayType" value="rangedShotgun"/>
 			<property name="HoldType" value="5"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/shotgunC.unity3d?guntarkovm590.prefab"/>
@@ -6982,7 +6104,7 @@
 		</item>
 		
 		<item name="gunm870"> 
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,ammoEft12g,foregrip,nogripzenitb25urk1,AR15stocks,HasBufferTube,m870only,CompactReflexSight,ReflexSight,AssaultScope,sideAttachments,eftShotties,shortRange,attStrength,perkBoomstick,attachmentsIncluded,canHaveCosmetic,shotgunSkill"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,ammoEft12g,foregrip,nogripzenitb25urk1,AR15stocks,HasBufferTube,m870only,CompactReflexSight,ReflexSight,AssaultScope,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,eftShotties,shortRange,attStrength,perkBoomstick,attachmentsIncluded,canHaveCosmetic,shotgunSkill"/>
 			<property name="DisplayType" value="rangedShotgun"/>
 			<property name="HoldType" value="5"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/shotgunC.unity3d?guntarkovm870.prefab"/>
@@ -7207,7 +6329,7 @@
 		</item>		
 		
 		<item name="gunmp153"> <!-- Tier 3 -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,mp153only,ammoEft12g,foregrip,AR15stocks,HasBufferTube,CompactReflexSight,ReflexSight,AssaultScope,sideAttachments,shortRange,attStrength,perkBoomstick,eftShotties,attachmentsIncluded,canHaveCosmetic,shotgunSkill"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,mp153only,ammoEft12g,foregrip,AR15stocks,HasBufferTube,CompactReflexSight,ReflexSight,AssaultScope,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,shortRange,attStrength,perkBoomstick,eftShotties,attachmentsIncluded,canHaveCosmetic,shotgunSkill"/>
 			<property name="DisplayType" value="rangedShotgun"/>
 			<property name="HoldType" value="5"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/shotgunC.unity3d?guntarkovmp153.prefab"/>
@@ -7317,7 +6439,7 @@
 		</item>
 		
 		<item name="gunm3benelli"> 
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,m3benellionly,ammoEft12g,foregrip,nogripzenitb25urk1,CompactReflexSight,eftShotties,ReflexSight,AssaultScope,sideAttachments,shortRange,attStrength,perkBoomstick,attachmentsIncluded,canHaveCosmetic,shotgunSkill"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,m3benellionly,ammoEft12g,foregrip,nogripzenitb25urk1,CompactReflexSight,eftShotties,ReflexSight,AssaultScope,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,shortRange,attStrength,perkBoomstick,attachmentsIncluded,canHaveCosmetic,shotgunSkill"/>
 			<property name="DisplayType" value="rangedShotgun"/>
 			<property name="HoldType" value="5"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/shotgunC.unity3d?guntarkovm3benelli.prefab"/>
@@ -7704,7 +6826,7 @@
 		<!-- SHOTGUNS -->
 		<!-- GRENADE LAUNCHERS/ROCKET LAUNCHER -->
 		<item name="gunfn40gl"> 
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,launcher,attPerception,perkDemolitionsExpert,canHaveCosmetic,sideAttachments,explosivesSkill,attachmentsIncluded,eftBoom"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,launcher,attPerception,perkDemolitionsExpert,canHaveCosmetic,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,explosivesSkill,attachmentsIncluded,eftBoom"/>
 			<property name="DisplayType" value="rangedLauncher"/>
 			<property name="HoldType" value="5"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/shotgunC.unity3d?guntarkovfn40gl.prefab"/>
@@ -7808,7 +6930,7 @@
 		</item>
 		
 		<item name="gunchinalake"> 
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,launcher,attPerception,perkDemolitionsExpert,canHaveCosmetic,sideAttachments,explosivesSkill,attachmentsIncluded,eftBoom"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,launcher,attPerception,perkDemolitionsExpert,canHaveCosmetic,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,explosivesSkill,attachmentsIncluded,eftBoom"/>
 			<property name="DisplayType" value="rangedLauncher"/>
 			<property name="HoldType" value="85"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/shotgunC.unity3d?guntarkovchinalake.prefab"/>
@@ -7914,7 +7036,7 @@
 		</item>
 		
 		<item name="gunm32a1mgl"> 
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,launcher,attPerception,perkDemolitionsExpert,canHaveCosmetic,foregrip,AR15stocks,HasBufferTube,sideAttachments,explosivesSkill,attachmentsIncluded,eftBoom"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,launcher,attPerception,perkDemolitionsExpert,canHaveCosmetic,foregrip,AR15stocks,HasBufferTube,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,explosivesSkill,attachmentsIncluded,eftBoom"/>
 			<property name="DisplayType" value="rangedLauncher"/>
 			<property name="HoldType" value="5"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/shotgunC.unity3d?guntarkovm32a1mgl.prefab"/>
@@ -8241,7 +7363,7 @@
 		</item>
 		<!-- *** .300 blk / NATO -->
 		<item name="gunstar15"> <!-- Tier 2 DE -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftRifles,reloadPenalty,gun,AR15stocksDirect,AR15stocks,ammoEft300blk,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,ar15platform,star15only,556stanag,rexbipod,foregrip,nogripzenitb25urk1,sideAttachments,nom203,attPerception,perkDeadEye,attachmentsIncluded,canHaveCosmetic,rifleSkill"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftRifles,reloadPenalty,gun,AR15stocksDirect,AR15stocks,ammoEft300blk,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,ar15platform,star15only,556stanag,rexbipod,foregrip,nogripzenitb25urk1,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,nom203,attPerception,perkDeadEye,attachmentsIncluded,canHaveCosmetic,rifleSkill"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="77"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/556x45and300BLKOUTGuns.unity3d?guntarkovstar15.prefab"/>
@@ -8362,7 +7484,7 @@
 			</effect_group>
 		</item>	
 		<item name="gunm700"> <!-- Tier 2 DE -->
-			<property name="Tags" value="weapon,ranged,eftRifles,holdBreathAiming,reloadPenalty,gun,attPerception,perkDeadEye,attachmentsIncluded,sideAttachments,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,m700only,rexbipod,canHaveCosmetic,rifleSkill"/>
+			<property name="Tags" value="weapon,ranged,eftRifles,holdBreathAiming,reloadPenalty,gun,attPerception,perkDeadEye,attachmentsIncluded,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,m700only,rexbipod,canHaveCosmetic,rifleSkill"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="77"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/762x51NATOGuns.unity3d?guntarkovm700.prefab"/>
@@ -8490,7 +7612,7 @@
 		</item>
 		
 		<item name="gundvl10"> <!-- Tier 2 DE -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftRifles,reloadPenalty,gun,attPerception,perkDeadEye,attachmentsIncluded,sideAttachments,dvl10only,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,walthermrs,okp7,rexbipod,canHaveCosmetic,rifleSkill"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftRifles,reloadPenalty,gun,attPerception,perkDeadEye,attachmentsIncluded,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,dvl10only,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,walthermrs,okp7,rexbipod,canHaveCosmetic,rifleSkill"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="77"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/762x51NATOGuns.unity3d?guntarkovdvl10.prefab"/>
@@ -8611,7 +7733,7 @@
 		</item>
 		
 		<item name="gunt5000"> <!-- Tier 2 DE -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftRifles,reloadPenalty,gun,attPerception,perkDeadEye,attachmentsIncluded,sideAttachments,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,t5000only,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,walthermrs,okp7,rexbipod,canHaveCosmetic,rifleSkill"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftRifles,reloadPenalty,gun,attPerception,perkDeadEye,attachmentsIncluded,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,t5000only,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,walthermrs,okp7,rexbipod,canHaveCosmetic,rifleSkill"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="77"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/762x51NATOGuns.unity3d?guntarkovt5000.prefab"/>
@@ -8732,7 +7854,7 @@
 		</item>
 		
 		<item name="gunFALsa58dmr"> 
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftRifles,reloadPenalty,FALmagazine,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,AR15stocksDirect,AR15stocks,gun,FALonly,sideAttachments,rexbipod,foregrip,attPerception,perkDeadEye,attachmentsIncluded,nooffsetscope,canHaveCosmetic,rifleSkill,m203,perkDemolitionsExpert,launcher,explosivesSkill"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftRifles,reloadPenalty,FALmagazine,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,AR15stocksDirect,AR15stocks,gun,FALonly,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,rexbipod,foregrip,attPerception,perkDeadEye,attachmentsIncluded,nooffsetscope,canHaveCosmetic,rifleSkill,m203,perkDemolitionsExpert,launcher,explosivesSkill"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="77"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/762x51NATOGuns.unity3d?guntarkovFALsa58dmr.prefab"/>
@@ -8912,7 +8034,7 @@
 		
 		<!-- *** 7.62x51mm / NATO -->
 		<item name="gunm1aEBR"> <!-- Tier 3 | DE new -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftRifles,reloadPenalty,ammoEft76251NATO,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,SandBscope34mm,gun,eftDMR,m1am14only,cmag762x51,sideAttachments,rexbipod,foregrip,attPerception,perkDeadEye,attachmentsIncluded,canHaveCosmetic,rifleSkill"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftRifles,reloadPenalty,ammoEft76251NATO,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,SandBscope34mm,gun,eftDMR,m1am14only,cmag762x51,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,rexbipod,foregrip,attPerception,perkDeadEye,attachmentsIncluded,canHaveCosmetic,rifleSkill"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="71"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/762x51NATOGuns.unity3d?guntarkovm1aEBR.prefab"/>
@@ -9033,7 +8155,7 @@
 		</item>
 		
 		<item name="gunrfb"> 
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,eftRifles,FALmagazine,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,SandBscope34mm,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,gun,eftDMR,rfbonly,foregrip,sideattachments,attPerception,perkDeadEye,attachmentsIncluded,canHaveCosmetic,rifleSkill"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,eftRifles,FALmagazine,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,SandBscope34mm,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,gun,eftDMR,rfbonly,foregrip,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,attPerception,perkDeadEye,attachmentsIncluded,canHaveCosmetic,rifleSkill"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="77"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/BullpupAndOthers.unity3d?guntarkovrfb.prefab"/>
@@ -9158,7 +8280,7 @@
 		
 		
 		<item name="gunsr25"> 
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,ammoEft76251NATO,eftRifles,AR15stocksDirect,AR15stocks,NoBufferTube,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,SandBscope34mm,gun,eftDMR,sr25only,cmag762x51,sideAttachments,rexbipod,foregrip,attPerception,perkDeadEye,attachmentsIncluded,canHaveCosmetic,rifleSkill,m203,perkDemolitionsExpert,launcher,explosivesSkill"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,ammoEft76251NATO,eftRifles,AR15stocksDirect,AR15stocks,NoBufferTube,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,SandBscope34mm,gun,eftDMR,sr25only,cmag762x51,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,rexbipod,foregrip,attPerception,perkDeadEye,attachmentsIncluded,canHaveCosmetic,rifleSkill,m203,perkDemolitionsExpert,launcher,explosivesSkill"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="77"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/762x51NATOGuns.unity3d?guntarkovsr25.prefab"/>
@@ -9337,7 +8459,7 @@
 		</item>
 		
 		<item name="gunrsass"> 
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftRifles,reloadPenalty,ammoEft76251NATO,AR15stocksDirect,AR15stocks,NoBufferTube,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,SandBscope34mm,gun,eftDMR,rsassonly,cmag762x51,sideAttachments,rexbipod,foregrip,attPerception,perkDeadEye,attachmentsIncluded,canHaveCosmetic,rifleSkill,m203,perkDemolitionsExpert,launcher,explosivesSkill"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftRifles,reloadPenalty,ammoEft76251NATO,AR15stocksDirect,AR15stocks,NoBufferTube,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,SandBscope34mm,gun,eftDMR,rsassonly,cmag762x51,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,rexbipod,foregrip,attPerception,perkDeadEye,attachmentsIncluded,canHaveCosmetic,rifleSkill,m203,perkDemolitionsExpert,launcher,explosivesSkill"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="77"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/762x51NATOGuns.unity3d?guntarkovrsass.prefab"/>
@@ -9517,7 +8639,7 @@
 		
 		<!-- *** 7.62x51mm / NATO -->
 		<item name="gunhkg28"> <!-- Tier 5 | DE new -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftRifles,reloadPenalty,ammoEft76251NATO,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,SandBscope34mm,gun,eftDMR,417g28only,cmag762x51,sideAttachments,rexbipod,foregrip,attPerception,perkDeadEye,attachmentsIncluded,canHaveCosmetic,rifleSkill,m203,perkDemolitionsExpert,launcher,explosivesSkill"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftRifles,reloadPenalty,ammoEft76251NATO,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,SandBscope34mm,gun,eftDMR,417g28only,cmag762x51,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,rexbipod,foregrip,attPerception,perkDeadEye,attachmentsIncluded,canHaveCosmetic,rifleSkill,m203,perkDemolitionsExpert,launcher,explosivesSkill"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="71"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/762x51NATOGuns.unity3d?guntarkovhkg28.prefab"/>
@@ -9818,7 +8940,7 @@
 		
 		<!-- *** 7.62x54R / Russian -->
 		<item name="gunmosin"> <!-- Tier 2 DE -->
-			<property name="Tags" value="EFTXmosinag,sideAttachments,weapon,ranged,holdBreathAiming,reloadPenalty,gun,eftBoltAction,attPerception,perkDeadEye,attachmentsIncluded,mosinonly,scopePU3_5x,handguard,canHaveCosmetic,rifleSkill,eftRifles"/>
+			<property name="Tags" value="EFTXmosinag,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,weapon,ranged,holdBreathAiming,reloadPenalty,gun,eftBoltAction,attPerception,perkDeadEye,attachmentsIncluded,mosinonly,scopePU3_5x,handguard,canHaveCosmetic,rifleSkill,eftRifles"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="77"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/762x54RGuns.unity3d?guntarkovmosin.prefab"/>
@@ -9941,7 +9063,7 @@
 		</item>
 		
 		<item name="gunsv98"> <!-- Tier 2 DE -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,eftBoltAction,eftBoltActionT3,attPerception,perkDeadEye,attachmentsIncluded,sideAttachments,sv98only,CompactReflexSight,eftRifles,ReflexSight,AssaultScope,Scope30mm,Scope34mm,rexbipod,canHaveCosmetic,rifleSkill"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,eftBoltAction,eftBoltActionT3,attPerception,perkDeadEye,attachmentsIncluded,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,sv98only,CompactReflexSight,eftRifles,ReflexSight,AssaultScope,Scope30mm,Scope34mm,rexbipod,canHaveCosmetic,rifleSkill"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="77"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/762x54RGuns.unity3d?guntarkovsv98.prefab"/>
@@ -10184,7 +9306,7 @@
 		</item>
 		
 		<item name="gunsvd"> <!--  new -->
-			<property name="Tags" value="EFTXsvds,foregrip,m203,sideAttachments,CantedSight,eftRifles,weapon,ranged,holdBreathAiming,reloadPenalty,AR15stocksDirect,AR15stocks,NoBufferTube,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,DoveTail,gun,eftDMR,svdonly,handguard,rexbipod,attPerception,perkDeadEye,attachmentsIncluded,canHaveCosmetic,rifleSkill,perkDemolitionsExpert,launcher,explosivesSkill"/>
+			<property name="Tags" value="EFTXsvds,foregrip,m203,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,CantedSight,eftRifles,weapon,ranged,holdBreathAiming,reloadPenalty,AR15stocksDirect,AR15stocks,NoBufferTube,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,DoveTail,gun,eftDMR,svdonly,handguard,rexbipod,attPerception,perkDeadEye,attachmentsIncluded,canHaveCosmetic,rifleSkill,perkDemolitionsExpert,launcher,explosivesSkill"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="77"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/762x54RGuns.unity3d?guntarkovsvd.prefab"/>
@@ -10362,7 +9484,7 @@
 			</effect_group>
 		</item>
 		<item name="gunaxmc"> 
-			<property name="Tags" value="weapon,ranged,eftRifles,holdBreathAiming,reloadPenalty,338LM,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,SandBscope34mm,gun,eftBoltAction,eftBoltActionT3,axmconly,sideAttachments,rexbipod,attPerception,perkDeadEye,attachmentsIncluded,canHaveCosmetic,rifleSkill"/>
+			<property name="Tags" value="weapon,ranged,eftRifles,holdBreathAiming,reloadPenalty,338LM,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,SandBscope34mm,gun,eftBoltAction,eftBoltActionT3,axmconly,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,rexbipod,attPerception,perkDeadEye,attachmentsIncluded,canHaveCosmetic,rifleSkill"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="77"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/BullpupAndOthers.unity3d?guntarkovaxmc.prefab"/>
@@ -10483,7 +9605,7 @@
 		</item>
 		
 		<item name="gunswordmk18"> 
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftRifles,reloadPenalty,338LM,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,AR15stocksDirect,AR15stocks,NoBufferTube,SandBscope34mm,gun,eftDMR,swordmk18only,sideAttachments,rexbipod,foregrip,attPerception,perkDeadEye,attachmentsIncluded,canHaveCosmetic,rifleSkill"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftRifles,reloadPenalty,338LM,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,AR15stocksDirect,AR15stocks,NoBufferTube,SandBscope34mm,gun,eftDMR,swordmk18only,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,rexbipod,foregrip,attPerception,perkDeadEye,attachmentsIncluded,canHaveCosmetic,rifleSkill"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="77"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/BullpupAndOthers.unity3d?guntarkovswordmk18.prefab"/>
@@ -10608,7 +9730,7 @@
 		<!-- RIFLES -->
 		<!-- MACHINE GUNS -->
 		<item name="gunauga3"> <!-- Tier 3 | Intentonally No Grip Bonus | Bullpup Bonus -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,foregrip,muzzleAR15aac51t,muzzleAR15thunderbeast223cb,eftMGS,muzzleAR15sf3p556,gun,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,augonly,canHaveCosmetic,attachmentsIncluded,sideAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,machinegunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded -->
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,foregrip,muzzleAR15aac51t,muzzleAR15thunderbeast223cb,eftMGS,muzzleAR15sf3p556,gun,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,augonly,canHaveCosmetic,attachmentsIncluded,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,attFortitude,perkMachineGunner,perkBookAutoWeapons,machinegunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded -->
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="71"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/BullpupAndOthers.unity3d?guntarkovauga3.prefab"/>
@@ -10785,7 +9907,7 @@
 		</item>
 		
 		<item name="gung36kv2"> 
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,AR15stocks,HasBufferTube,ammoEft55645NATO,foregrip,muzzleAR15aac51t,muzzleAR15thunderbeast223cb,muzzleAR15sf3p556,gun,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,g36only,canHaveCosmetic,attachmentsIncluded,sideAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,machinegunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded -->
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,AR15stocks,HasBufferTube,ammoEft55645NATO,foregrip,muzzleAR15aac51t,muzzleAR15thunderbeast223cb,muzzleAR15sf3p556,gun,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,g36only,canHaveCosmetic,attachmentsIncluded,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,attFortitude,perkMachineGunner,perkBookAutoWeapons,machinegunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded -->
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="71"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/556x45and300BLKOUTGuns.unity3d?guntarkovg36kv2.prefab"/>
@@ -11144,7 +10266,7 @@
 		
 		<!-- *** 5.56x45 / NATO -->
 		<item name="gunm16a4"> <!-- Tier 3 -->
-			<property name="Tags" value="weapon,ranged,eftMGS,holdBreathAiming,reloadPenalty,AR15stocksDirect,AR15stocks,NoBufferTube,gun,ammoEft55645NATO,muzzleAR15aac51t,muzzleAR15thunderbeast223cb,muzzleAR15sf3p556,ar15platform,m16a4only,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,sideAttachments,rexbipod,foregrip,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,machinegunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded-->
+			<property name="Tags" value="weapon,ranged,eftMGS,holdBreathAiming,reloadPenalty,AR15stocksDirect,AR15stocks,NoBufferTube,gun,ammoEft55645NATO,muzzleAR15aac51t,muzzleAR15thunderbeast223cb,muzzleAR15sf3p556,ar15platform,m16a4only,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,rexbipod,foregrip,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,machinegunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded-->
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="71"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/556x45and300BLKOUTGuns.unity3d?guntarkovm16a4.prefab"/>
@@ -11504,7 +10626,7 @@
 		
 		<!-- *** 5.56x45 / NATO -->
 		<item name="gunmdr556">	<!-- Tier 4 --> <!-- T3 Precision Stock Bonus | Bullpup -0.4 Hip-Spread Bonus -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,ammoEft55645NATO,muzzleAR15aac51t,muzzleAR15thunderbeast223cb,muzzleAR15sf3p556,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,gun,mdronly,mdr556only,sideAttachments,foregrip,nobipod,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,machinegunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded-->
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,ammoEft55645NATO,muzzleAR15aac51t,muzzleAR15thunderbeast223cb,muzzleAR15sf3p556,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,gun,mdronly,mdr556only,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,foregrip,nobipod,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,machinegunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded-->
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="71"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/BullpupAndOthers.unity3d?guntarkovmdr556.prefab"/>
@@ -11699,7 +10821,7 @@
 		
 		<!-- *** 5.56x45 / NATO -->
 		<item name="gunhk416"> <!-- Tier 5 --> <!-- T1 Grip Bonus -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,AR15stocksDirect,AR15stocks,NoBufferTube,ammoEft55645NATO,foregrip,rexbipod,muzzleAR15aac51t,muzzleAR15thunderbeast223cb,muzzleAR15sf3p556,gun,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,ar15platform,hk416only,canHaveCosmetic,attachmentsIncluded,sideAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,machinegunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded -->
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,AR15stocksDirect,AR15stocks,NoBufferTube,ammoEft55645NATO,foregrip,rexbipod,muzzleAR15aac51t,muzzleAR15thunderbeast223cb,muzzleAR15sf3p556,gun,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,ar15platform,hk416only,canHaveCosmetic,attachmentsIncluded,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,attFortitude,perkMachineGunner,perkBookAutoWeapons,machinegunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded -->
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="71"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/556x45and300BLKOUTGuns.unity3d?guntarkovhk416.prefab"/>
@@ -11876,7 +10998,7 @@
 		
 		<!-- *** 5.56x45 / IWI Tavor X95 -->
 		<item name="gunIWItavorx95">
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,ammoEft55645NATO,muzzleAR15aac51t,muzzleAR15thunderbeast223cb,muzzleAR15sf3p556,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,gun,x95only,sideAttachments,foregrip,attFortitude,perkMachineGunner,perkBookAutoWeapons,nom203,canHaveCosmetic,attachmentsIncluded,machinegunSkill"/><!-- attachmentsIncluded-->
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,ammoEft55645NATO,muzzleAR15aac51t,muzzleAR15thunderbeast223cb,muzzleAR15sf3p556,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,gun,x95only,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,foregrip,attFortitude,perkMachineGunner,perkBookAutoWeapons,nom203,canHaveCosmetic,attachmentsIncluded,machinegunSkill"/><!-- attachmentsIncluded-->
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="71"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/556x45and300BLKOUTGuns.unity3d?guntarkovIWItavorx95.prefab"/>
@@ -11897,7 +11019,7 @@
 			<property name="LightValue" value=".45"/>
 			<property name="EconomicValue" value="6000"/>
 			<property name="TraderStageTemplate" value="baseTier0"/>
-			<property name="UnlockedBy" value="gunIWItavorx95"/>
+			<property name="UnlockedBy" value="craftingEFTMachineguns"/>
 			<property name="ShowQuality" value="true"/>
 			<property name="SoundUnholster" value="weapon_unholster"/>
 			<property name="SoundHolster" value="weapon_holster"/>
@@ -12001,7 +11123,7 @@
 		
 		<!-- *** 5.56x45 / IWI Carmel -->
 		<item name="gunIWIcarmel">
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,ammoEft55645NATO,muzzleAR15aac51t,muzzleAR15thunderbeast223cb,muzzleAR15sf3p556,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,gun,carmelonly,sideAttachments,foregrip,attFortitude,perkMachineGunner,perkBookAutoWeapons,nom203,canHaveCosmetic,attachmentsIncluded,machinegunSkill"/><!-- attachmentsIncluded-->
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,ammoEft55645NATO,muzzleAR15aac51t,muzzleAR15thunderbeast223cb,muzzleAR15sf3p556,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,gun,carmelonly,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,foregrip,attFortitude,perkMachineGunner,perkBookAutoWeapons,nom203,canHaveCosmetic,attachmentsIncluded,machinegunSkill"/><!-- attachmentsIncluded-->
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="71"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/556x45and300BLKOUTGuns.unity3d?guntarkovIWIcarmel.prefab"/>
@@ -12253,7 +11375,7 @@
 				
 		<!-- *** .300 blk / NATO -->
 		<item name="gunhoneybadger"> <!-- Tier 4 --> <!-- T3 Silencer Bonus / Maybe Stock Bonus -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,gun,ammoEft300blk,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,honeybadgeronly,noSilencer,556stanag,sideAttachments,rexbipod,foregrip,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,nooffsetscope,machinegunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded-->
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,gun,ammoEft300blk,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,honeybadgeronly,noSilencer,556stanag,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,rexbipod,foregrip,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,nooffsetscope,machinegunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded-->
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="71"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/556x45and300BLKOUTGuns.unity3d?guntarkovhoneybadger.prefab"/>
@@ -12437,7 +11559,7 @@
 		
 		<!-- *** .300 blk / NATO -->
 		<item name="gunmcx"> <!-- Tier 5 -->
-			<property name="Tags" value="weapon,ranged,eftMGS,holdBreathAiming,reloadPenalty,ammoEft300blk,gun,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,mcxonly,556stanag,sideAttachments,rexbipod,foregrip,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,nooffsetscope,machinegunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded-->
+			<property name="Tags" value="weapon,ranged,eftMGS,holdBreathAiming,reloadPenalty,ammoEft300blk,gun,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,mcxonly,556stanag,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,rexbipod,foregrip,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,nooffsetscope,machinegunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded-->
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="71"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/556x45and300BLKOUTGuns.unity3d?guntarkovmcx.prefab"/>
@@ -12619,7 +11741,7 @@
 		</item>		
 		
 		<item name="gunFALsa58br"> 
-			<property name="Tags" value="EFTXsa58fa,foregrip,m203,sideAttachments,eftMGS,rexbipod,weapon,ranged,holdBreathAiming,reloadPenalty,FALmagazine,AR15stocksDirect,AR15stocks,NoBufferTube,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,CantedSight,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,SandBscope34mm,gun,handguard,FALonly,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,machinegunSkill,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded-->
+			<property name="Tags" value="EFTXsa58fa,foregrip,m203,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,eftMGS,rexbipod,weapon,ranged,holdBreathAiming,reloadPenalty,FALmagazine,AR15stocksDirect,AR15stocks,NoBufferTube,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,CantedSight,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,SandBscope34mm,gun,handguard,FALonly,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,machinegunSkill,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded-->
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="71"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/762x51NATOGuns.unity3d?guntarkovFALsa58br.prefab"/>
@@ -12803,7 +11925,7 @@
 		
 		<!-- *** 7.62x51mm / NATO -->
 		<item name="gunmdr762">	<!-- Tier 4 --> <!-- T3 Precision Stock Bonus -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,ammoEft76251NATO,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,SandBscope34mm,gun,mdronly,mdr762only,cmag762x51,sideAttachments,rexbipod,foregrip,nobipod,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,machinegunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded-->
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,ammoEft76251NATO,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,SandBscope34mm,gun,mdronly,mdr762only,cmag762x51,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,rexbipod,foregrip,nobipod,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,machinegunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded-->
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="71"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/BullpupAndOthers.unity3d?guntarkovmdr762.prefab"/>
@@ -12985,7 +12107,7 @@
 		
 		<!-- *** 7.62x51mm / NATO -->
 		<item name="gunscarh"> <!-- Tier 4 new -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,eftMGS,ammoEft76251NATO,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,SandBscope34mm,gun,scarhonly,cmag762x51,sideAttachments,rexbipod,foregrip,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,machinegunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded-->
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,eftMGS,ammoEft76251NATO,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,SandBscope34mm,gun,scarhonly,cmag762x51,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,rexbipod,foregrip,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,machinegunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded-->
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="71"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/762x51NATOGuns.unity3d?guntarkovscarh.prefab"/>
@@ -13167,7 +12289,7 @@
 		
 		<!-- *** 7.62x51mm / NATO -->
 		<item name="gunhk417"> <!-- Tier 4 new -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,eftMGS,ammoEft76251NATO,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,SandBscope34mm,gun,417g28only,cmag762x51,sideAttachments,rexbipod,foregrip,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,machinegunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded-->
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,eftMGS,ammoEft76251NATO,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,SandBscope34mm,gun,417g28only,cmag762x51,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,rexbipod,foregrip,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,machinegunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded-->
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="71"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/762x51NATOGuns.unity3d?guntarkovhk417.prefab"/>
@@ -13350,7 +12472,7 @@
 		
 		<!-- *** 7.62x51mm / NATO -->
 		<item name="gunm14sass"> <!-- Tier 5 new -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,eftMGS,ammoEft76251NATO,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,AR15stocksDirect,AR15stocks,NoBufferTube,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,SandBscope34mm,gun,m1am14only,cmag762x51,sideAttachments,rexbipod,foregrip,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,machinegunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded-->
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,eftMGS,ammoEft76251NATO,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,AR15stocksDirect,AR15stocks,NoBufferTube,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,SandBscope34mm,gun,m1am14only,cmag762x51,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,rexbipod,foregrip,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,machinegunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded-->
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="71"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/762x51NATOGuns.unity3d?guntarkovm14sass.prefab"/>
@@ -13532,7 +12654,7 @@
 		</item>
 		
 		<item name="gunmcxspear"> 
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,ammoEft76251NATO,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,SandBscope34mm,gun,spearonly,cmag762x51,sideAttachments,rexbipod,foregrip,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,machinegunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded-->
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,ammoEft76251NATO,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,SandBscope34mm,gun,spearonly,cmag762x51,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,rexbipod,foregrip,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,machinegunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded-->
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="71"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/762x51NATOGuns.unity3d?guntarkovmcxspear.prefab"/>
@@ -13716,7 +12838,7 @@
 		
 		<!-- *** 12.7x55mm / Russian -->
 		<item name="gunash12"> <!-- Tier 4 --> <!-- T3 Grip Bonus -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,gun,ash12only,sideAttachments,foregrip,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,machinegunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded-->
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,gun,ash12only,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,foregrip,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,machinegunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded-->
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="71"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/BullpupAndOthers.unity3d?guntarkovash12.prefab"/>
@@ -13893,7 +13015,7 @@
 		
 		<!-- 5.45x39mm / Russian -->
 		<item name="gunrpk16"> <!-- Tier 4 -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,AR15stocks,HasBufferTube,foregrip,muzzleak74jetmbr,muzzleak74zenitdtk1,silencerak74tgpa,silencerhexagonAK,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,gun,rpk16only,ammoEft54539,sideAttachments,rexbipod,foregripMG,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,machinegunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded-->
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,AR15stocks,HasBufferTube,foregrip,muzzleak74jetmbr,muzzleak74zenitdtk1,silencerak74tgpa,silencerhexagonAK,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,gun,rpk16only,ammoEft54539,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,rexbipod,foregripMG,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,machinegunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded-->
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="71"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/762x39and545x39Guns.unity3d?guntarkovrpk16.prefab"/>
@@ -14071,7 +13193,7 @@
 		
 		<!-- *** 5.56x45 / NATO -->
 		<item name="gunfnminimi"> <!-- Tier 5 --> <!-- T3 Bipod Bonus -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,ammoEft55645NATO,muzzleAR15aac51t,muzzleAR15thunderbeast223cb,muzzleAR15sf3p556,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,gun,fnminimionly,sideAttachments,foregripMG,attFortitude,perkMachineGunner,perkBookAutoWeapons,nom203,canHaveCosmetic,attachmentsIncluded,machinegunSkill"/><!-- attachmentsIncluded-->
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,ammoEft55645NATO,muzzleAR15aac51t,muzzleAR15thunderbeast223cb,muzzleAR15sf3p556,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,gun,fnminimionly,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,foregripMG,attFortitude,perkMachineGunner,perkBookAutoWeapons,nom203,canHaveCosmetic,attachmentsIncluded,machinegunSkill"/><!-- attachmentsIncluded-->
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="71"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/556x45and300BLKOUTGuns.unity3d?guntarkovfnminimi.prefab"/>
@@ -14354,7 +13476,7 @@
 		</item>
 		
 		<item name="gunm60e6">  <!-- T3 Bipod Bonus -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,gun,m60e6only,ammoEft76251NATO,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,sideAttachments,foregrip,foregripMG,attFortitude,perkMachineGunner,perkBookAutoWeapons,nom203,canHaveCosmetic,attachmentsIncluded,machinegunSkill"/><!-- attachmentsIncluded-->
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,gun,m60e6only,ammoEft76251NATO,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,foregrip,foregripMG,attFortitude,perkMachineGunner,perkBookAutoWeapons,nom203,canHaveCosmetic,attachmentsIncluded,machinegunSkill"/><!-- attachmentsIncluded-->
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="71"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/762x51NATOGuns.unity3d?guntarkovm60e6.prefab"/>
@@ -14502,7 +13624,7 @@
 		
 		<!-- *** 7.62x54R / Russian -->
 		<item name="gunpkp"> <!-- Tier 4 --> <!-- T3 Bipod Bonus -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,gun,pkponly,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,DoveTail,noSilencer,sideAttachments,foregrip,foregripMG,attFortitude,perkMachineGunner,perkBookAutoWeapons,nom203,canHaveCosmetic,attachmentsIncluded,machinegunSkill"/><!-- attachmentsIncluded-->
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,gun,pkponly,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,DoveTail,noSilencer,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,foregrip,foregripMG,attFortitude,perkMachineGunner,perkBookAutoWeapons,nom203,canHaveCosmetic,attachmentsIncluded,machinegunSkill"/><!-- attachmentsIncluded-->
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="71"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/762x54RGuns.unity3d?guntarkovpkp.prefab"/>
@@ -14641,7 +13763,7 @@
 		
 		<!-- 5.45x39 / Russian -->
 		<item name="gunaks74un"> <!-- Tier 2 | 0.08 less aimed accuracy, 0.5 better hip accuracy -->
-            <property name="Tags" value="EFTXaks74unm203,foregrip,eftMGS,sideAttachments,CantedSight,weapon,ranged,holdBreathAiming,reloadPenalty,aks74unonly,AKstocks,AR15stocks,HasBufferTube,muzzleak74jetmbr,muzzleak74zenitdtk1,silencerak74tgpa,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,DoveTail,gun,ammoEft54539,handguard,nobipod,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,machinegunSkill,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded-->
+            <property name="Tags" value="EFTXaks74unm203,foregrip,eftMGS,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,CantedSight,weapon,ranged,holdBreathAiming,reloadPenalty,aks74unonly,AKstocks,AR15stocks,HasBufferTube,muzzleak74jetmbr,muzzleak74zenitdtk1,silencerak74tgpa,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,DoveTail,gun,ammoEft54539,handguard,nobipod,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,machinegunSkill,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded-->
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="71"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/762x39and545x39Guns.unity3d?guntarkovaks74un.prefab"/>
@@ -15187,7 +14309,7 @@
 		</item>
 		
 		<item name="gunak12"> <!-- Tier 4 -->
-			<property name="Tags" value="weapon,ranged,eftMGS,holdBreathAiming,reloadPenalty,AR15stocks,HasBufferTube,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,gun,ammoEft54539,ak12only,sideAttachments,rexbipod,foregrip,nobipod,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,machinegunSkill,gp25,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded-->
+			<property name="Tags" value="weapon,ranged,eftMGS,holdBreathAiming,reloadPenalty,AR15stocks,HasBufferTube,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,gun,ammoEft54539,ak12only,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,rexbipod,foregrip,nobipod,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,machinegunSkill,gp25,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded-->
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="71"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/762x39and545x39Guns.unity3d?guntarkovak12.prefab"/>
@@ -16247,7 +15369,7 @@
 		</item>
 		
 		<item name="gunrd704"> <!-- Tier 5 -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,AR15stocksDirect,AR15stocks,NoBufferTube,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,DoveTail,gun,rd704only,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,ammoEft76239,sideAttachments,rexbipod,foregrip,nobipod,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,machinegunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded-->
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,AR15stocksDirect,AR15stocks,NoBufferTube,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,DoveTail,gun,rd704only,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,ammoEft76239,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,rexbipod,foregrip,nobipod,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,machinegunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded-->
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="71"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/762x39and545x39Guns.unity3d?guntarkovrd704.prefab"/>
@@ -16429,7 +15551,7 @@
 		</item>
 		
 		<item name="gunmk47"> <!-- Tier 5 / NATO -->
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,AR15stocksDirect,AR15stocks,NoBufferTube,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,gun,mk47only,ammoEft76239,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,sideAttachments,rexbipod,foregrip,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,machinegunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded-->
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,AR15stocksDirect,AR15stocks,NoBufferTube,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,CantedSight,gun,mk47only,ammoEft76239,muzzleAR10aac51t,muzzleAR10kacqdc,muzzleAR10thunderbeast30cb,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,rexbipod,foregrip,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,machinegunSkill,m203,attPerception,perkDemolitionsExpert,launcher,explosivesSkill"/><!-- attachmentsIncluded-->
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="71"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/762x39and545x39Guns.unity3d?guntarkovmk47.prefab"/>
@@ -16610,7 +15732,7 @@
 		</item>
 		
 		<item name="gun9a91"> 
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,AR15stocks,HasBufferTube,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,DoveTail,gun,9a91only,sideAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,machinegunSkill"/><!-- attachmentsIncluded-->
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,AR15stocks,HasBufferTube,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,DoveTail,gun,9a91only,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,machinegunSkill"/><!-- attachmentsIncluded-->
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="71"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/BullpupAndOthers.unity3d?guntarkov9a91.prefab"/>
@@ -16732,7 +15854,7 @@
 		</item>
 		
 		<item name="gunvss"> 
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,DoveTail,gun,vssonly,sideAttachments,rexbipod,foregrip,attPerception,perkMachineGunner,attachmentsIncluded,canHaveCosmetic,rifleSkill"/>
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,DoveTail,gun,vssonly,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,rexbipod,foregrip,attPerception,perkMachineGunner,attachmentsIncluded,canHaveCosmetic,rifleSkill"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="77"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/BullpupAndOthers.unity3d?guntarkovvss.prefab"/>
@@ -16856,7 +15978,7 @@
 		</item>
 		
 		<item name="gunasval"> 
-			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,AR15stocks,HasBufferTube,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,DoveTail,gun,asvalonly,sideAttachments,rexbipod,foregrip,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,machinegunSkill"/><!-- attachmentsIncluded-->
+			<property name="Tags" value="weapon,ranged,holdBreathAiming,eftMGS,reloadPenalty,AR15stocks,HasBufferTube,CompactReflexSight,ReflexSight,AssaultScope,Scope30mm,Scope34mm,DoveTail,gun,asvalonly,sideattachments,modGunEFTXLaserSight,modGunNoEFTXLaser,rexbipod,foregrip,attFortitude,perkMachineGunner,perkBookAutoWeapons,canHaveCosmetic,attachmentsIncluded,machinegunSkill"/><!-- attachmentsIncluded-->
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="77"/>
 			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/BullpupAndOthers.unity3d?guntarkovasval.prefab"/>
@@ -17616,13 +16738,7 @@
     </append>
 	
 	
-	
-	<!-- ### Mod-Slots 12 -->
-	<set xpath="/items/item/effect_group[((starts-with(@name, 'gun')) or (starts-with(@name, 'tarkov'))) and not ((starts-with(@name, 'gunExplosives')) or (starts-with(@name, 'gunBow')) or ((contains(@name, 'gun')) and (contains(@name, 'Parts'))))]/passive_effect[@name='ModSlots']/@value">7,8,9,10,11,12</set>
-	<set xpath="/items/item/effect_group[starts-with(@name, 'melee')]/passive_effect[@name='ModSlots']/@value">6,6,7,8,9,10</set>
-	<set xpath="/items/item[starts-with(@name, 'armor')]/effect_group/passive_effect[@name='ModSlots']/@value">3,3,3,4,5,6</set>
-	<set xpath="//item[@name='gunBotT3JunkDrone']/effect_group/passive_effect[@name='ModSlots']/@value">6,6,7,8,9,10</set>
-	
+
 	<!-- ### Widen The Zooming FOV -->
 	<set xpath="/items/item/property[@class='Action1']/property[@name='Zoom_max_out']/@value">60</set>
 	<set xpath="/items/item/property[@class='Action1']/property[@name='Zoom_max_in']/@value">60</set>
@@ -17646,8 +16762,23 @@
 		</effect_group>
 	</append>
 	
-	
-
+	<conditional>
+	<if cond="not mod_loaded('Z1_EFTX_Meds_Plus')">
+	<!-- ### Add Adrenaline Visual And New Recoil System To Guns When Shooting -->
+	<append xpath="/items/item[(starts-with(@name, 'gun')) and not (starts-with(@name, 'gunBow')) and not (starts-with(@name, 'gunBot')) and not ((contains(@name, 'gun')) and (contains(@name, 'Parts')))]">		
+		<!-- *** Recoil Checker -->
+		<effect_group>
+			<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="gunEftCurrentRecoil" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" target="self" buff="buffEftModCheckNegativeRecoil"/>
+			
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" target="self" buff="buffEftModCheckNegativeRecoil"/>
+			<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="gunEftCurrentRecoil" operation="set" value="0"/>
+		</effect_group>
+		</append>
+	</if>
+	</conditional>
+	<conditional>
+	<if cond="mod_loaded('Z1_EFTX_Meds_Plus')">
 	<!-- ### Add Adrenaline Visual And New Recoil System To Guns When Shooting -->
 	<append xpath="/items/item[(starts-with(@name, 'gun')) and not (starts-with(@name, 'gunBow')) and not (starts-with(@name, 'gunBot')) and not ((contains(@name, 'gun')) and (contains(@name, 'Parts')))]">		
 		<!-- *** Recoil Checker -->
@@ -17664,7 +16795,27 @@
 			<triggered_effect trigger="onSelfPrimaryActionRayHit" action="AddBuff" buff="buffEftGunRecoilCap"/>
 			<triggered_effect trigger="onSelfPrimaryActionRayMiss" action="AddBuff" buff="buffEftGunRecoilCap"/>
 		</effect_group>
+	</append>	
+	</if>
+	</conditional>
+	<conditional>
+	<if cond="mod_loaded('IZY_RMP_Demopack')">
+	<append xpath="/items/item[@name='IZYgunT2LGLChinalakeGrenadeLauncher' or
+                                    @name='IZYgunT3LGLXM25' or
+                                    @name='IZYgunT3RocketLauncherRPG7'								
+                                    ]/property[@class='Action0']">
+            <property name="Class" value="BetterLauncher,FullautoLauncher"/>
+			<property name="ItemActionModules" value="InterruptReload,KFCommonUtilityLib;InvariableRPM,KFCommonUtilityLib;DynamicMuzzleFlash,KFCommonUtilityLib;Inspectable,KFCommonUtilityLib;AnimationLocked,KFCommonUtilityLib"/>
 	</append>
-	
-	
+	<append xpath="/items/item[@name='ammoRocketRPGTraning' or
+                                    @name='ammoRocketRPGHE' or
+                                    @name='ammoRocketRPGIncendiary' or
+                                    @name='ammo25mmGrenadeTraining' or
+                                    @name='ammo25mmGrenadeFRAGS' or
+                                    @name='ammo25mmGrenadeHE'									
+                                    ]/property[@class='Action1']">
+            <property name="CustomProjectileType" value="GameObject,FullautoLauncher"/>
+    </append>  	
+	</if>
+	</conditional>
 </configs>
