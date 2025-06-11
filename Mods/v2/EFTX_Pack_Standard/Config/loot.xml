@@ -1417,6 +1417,34 @@
 			<item group="groupModEftSkillMagazinesAll" count="1" loot_prob_template="med"/>
 	</append>		
 	
+	<append xpath="//lootgroup[@name='groupScrapCommon']">
+		<item name="resourceWD40" count="0,1" loot_prob_template="low"/>
+		<item name="resourceMultitool" count="0,1" loot_prob_template="med"/>
+		<item name="resourceToolset" count="0,1" loot_prob_template="med"/>
+		<item name="resourceWeaponRepairKit" count="0,1" loot_prob_template="low"/>
+	</append>	
+	
+	<append xpath="//lootgroup[@name='groupCraftingUncommon']">
+		<item name="resourceWD40" count="0,1" loot_prob_template="low"/>
+		<item name="resourceMultitool" count="0,1" loot_prob_template="med"/>
+		<item name="resourceToolset" count="0,1" loot_prob_template="med"/>	
+	</append>
+	
+	<append xpath="//lootgroup[@name='groupChem01']">
+		<item name="resourceWD40" count="0,1" loot_prob_template="veryLow"/>
+		<item name="resourceMultitool" count="0,1" loot_prob_template="med"/>
+		<item name="resourceToolset" count="0,1" loot_prob_template="med"/>		
+	</append>	
+			
+		<append xpath="//lootgroup[@name='groupFoodTrashCommon']">
+			<item name="modArmorHelmetLight" count="0,1" loot_prob_template="low"/>
+		</append>		
+		
+		<append xpath="//lootgroup[@name='groupFoodTrashUncommon']">
+			<item name="modArmorHelmetLight2" count="0,1" loot_prob_template="veryLowDelayedEft2" force_prob="true"/>
+			<item group="groupModEftSkillMagazinesAll" count="1" loot_prob_template="low"/>
+		</append>
+	
 		<append xpath="//lootgroup[@name='groupToilet01']">	
 			<item group="groupPistolsT1" count="0,1" loot_prob_template="veryLowDelayedEft" force_prob="true" quality="1"/>
 		</append>

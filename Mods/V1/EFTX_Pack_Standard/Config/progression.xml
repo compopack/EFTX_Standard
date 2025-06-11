@@ -413,27 +413,27 @@
 		<!-- SMGS -->
 		<!-- PISTOLS -->
 		<crafting_skill name="craftingPistols" max_level="125" parent="attCrafting" name_key="craftingPistolsName" desc_key="craftingPistolsDesc" long_desc_key="craftingPistolsLongDesc" icon="ui_game_symbol_tool_smithing">
-            <display_entry icon="Pistols1" name_key="Pistols T1" has_quality="false" unlock_level="3,6,9,14,20">
+            <display_entry icon="Pistols1" name_key="Pistols T1" has_quality="false" unlock_level="5,7,10,15,20">
                 <unlock_entry item="gunp226,gunm1911,gunsr1mp" unlock_tier="1" />
             </display_entry>
-			<display_entry icon="Pistols1" name_key="Pistols T1" has_quality="false" unlock_level="3,6,9,14,20">
+			<display_entry icon="Pistols1" name_key="Pistols T1" has_quality="false" unlock_level="5,7,10,15,20">
                 <unlock_entry item="gunpb,gunstechkin,guntokarevtt" unlock_tier="2" />	
             </display_entry>
-			<display_entry icon="Pistols1" name_key="Pistols T1" has_quality="false" unlock_level="3,6,9,14,20">
+			<display_entry icon="Pistols1" name_key="Pistols T1" has_quality="false" unlock_level="5,7,10,15,20">
                 <unlock_entry item="gunglock17,gunm9a3,gunm45,gunusp45match" unlock_tier="3" />
             </display_entry>
-			<display_entry icon="Pistols1" name_key="Pistols T1" has_quality="false" unlock_level="3,6,9,14,20">
+			<display_entry icon="Pistols1" name_key="Pistols T1" has_quality="false" unlock_level="5,7,10,15,20">
                 <unlock_entry item="gunusp45tac,gunfiveseven,gunpmalphadog,gundeserteagle" unlock_tier="4" />
             </display_entry>
-			<display_entry icon="Pistols1" name_key="Pistols T1" has_quality="false" unlock_level="3,6,9,14,20">
+			<display_entry icon="Pistols1" name_key="Pistols T1" has_quality="false" unlock_level="5,7,10,15,20">
                 <unlock_entry item="guntokarevgold,guntokarevmachine,gunglock18c,gunrsh12" unlock_tier="5" />
             </display_entry>
 						
             <effect_group>
-            <passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,125" value="1" tags="gunp226,gunm1911,gunsr1mp"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,125" value="1" tags="gunpb,gunstechkin,guntokarevtt"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="9,125" value="1" tags="gunglock17,gunm9a3,gunm45,gunusp45match"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="14,125" value="1" tags="gunusp45tac,gunfiveseven,gunpmalphadog,gundeserteagle"/>
+            <passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,125" value="1" tags="gunp226,gunm1911,gunsr1mp"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="7,125" value="1" tags="gunpb,gunstechkin,guntokarevtt"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,125" value="1" tags="gunglock17,gunm9a3,gunm45,gunusp45match"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,125" value="1" tags="gunusp45tac,gunfiveseven,gunpmalphadog,gundeserteagle"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,125" value="1" tags="guntokarevgold,guntokarevmachine,gunglock18c,gunrsh12"/>						
 			
 			<passive_effect name="CraftingTier" operation="base_add" level="23,43,63,83,103,125" value="1,2,3,4,5,5" tags="gunp226,gunm1911,gunsr1mp"/>
@@ -772,7 +772,7 @@
 		</perk>
 		<!-- MACHINE GUNS -->
 		<!-- WEAPON MODIFIER BIPODS FOREGRIPS -->
-		<perk name="perkBipodsForegrips" parent="skillEFTXModifiers" max_level="5"  name_key="EFTX Bipods and Foregrips" desc_key="Finding more books on Bipods and Foregrips" icon="ui_game_symbol_map_cursor">
+		<perk name="perkBipodsForegrips" parent="skillEFTXModifiers" max_level="5"  name_key="Bipods and Foregrips" desc_key="Finding more books on Bipods and Foregrips" icon="ui_game_symbol_map_cursor">
 			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="3" desc_key="reqIntellectLevel03"/></level_requirements>
 			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="5" desc_key="reqIntellectLevel05"/></level_requirements>
 			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="6" desc_key="reqIntellectLevel06"/></level_requirements>
@@ -796,7 +796,7 @@
 		</perk>
 		<!-- WEAPON MODIFIER BIPODS FOREGRIPS -->
 		<!-- WEAPON MODIFIER GRENADE LAUNCHER ATTACHMENTS -->
-		<perk name="perkGrenadeLauncherAttachments" parent="skillEFTXExplosives" max_level="5"  name_key="EFTX Grenade Launcher Attachments" desc_key="Find more To bring the Boom Boom" icon="ui_game_symbol_map_cursor">
+		<perk name="perkGrenadeLauncherAttachments" parent="skillEFTXExplosives" max_level="5"  name_key="Grenade Launcher Attachments" desc_key="Find more To bring the Boom Boom" icon="ui_game_symbol_map_cursor">
 			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="3" desc_key="reqIntellectLevel03"/></level_requirements>
 			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="5" desc_key="reqIntellectLevel05"/></level_requirements>
 			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="6" desc_key="reqIntellectLevel06"/></level_requirements>
@@ -820,7 +820,7 @@
 		</perk>		
 		<!-- WEAPON MODIFIER GRENADE LAUNCHER ATTACHMENTS -->
 		<!-- WEAPON MODIFIER SCOPES -->
-		<perk name="perkScopes" parent="skillEFTXModifiers" max_level="5"  name_key="EFTX Scopes" desc_key="I see you" icon="ui_game_symbol_map_cursor">
+		<perk name="perkScopes" parent="skillEFTXModifiers" max_level="5"  name_key="Scopes" desc_key="I see you" icon="ui_game_symbol_map_cursor">
 			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="3" desc_key="reqIntellectLevel03"/></level_requirements>
 			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="5" desc_key="reqIntellectLevel05"/></level_requirements>
 			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="6" desc_key="reqIntellectLevel06"/></level_requirements>
@@ -844,7 +844,7 @@
 		</perk>			
 		<!-- WEAPON MODIFIER SCOPES -->
 		<!-- WEAPON MODIFIER MAGAZINES -->
-		<perk name="perkMagazines" parent="skillEFTXModifiers" max_level="5"  name_key="EFTX Magazines" desc_key="Carry more ammo in guns by finding more magazine books" icon="ui_game_symbol_map_cursor">
+		<perk name="perkMagazines" parent="skillEFTXModifiers" max_level="5"  name_key="Magazines" desc_key="Carry more ammo in guns by finding more magazine books" icon="ui_game_symbol_map_cursor">
 			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="3" desc_key="reqIntellectLevel03"/></level_requirements>
 			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="5" desc_key="reqIntellectLevel05"/></level_requirements>
 			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="6" desc_key="reqIntellectLevel06"/></level_requirements>
@@ -868,7 +868,7 @@
 		</perk>			
 		<!-- WEAPON MODIFIER MAGAZINES -->
 		<!-- WEAPON MODIFIER SILENCERS -->
-		<perk name="perkSilencers" parent="skillEFTXModifiers" max_level="5"  name_key="EFTX Silencers" desc_key="Hunt in silence, Find more of the silencer books" icon="ui_game_symbol_map_cursor">
+		<perk name="perkSilencers" parent="skillEFTXModifiers" max_level="5"  name_key="Silencers" desc_key="Hunt in silence, Find more of the silencer books" icon="ui_game_symbol_map_cursor">
 			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="3" desc_key="reqIntellectLevel03"/></level_requirements>
 			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="5" desc_key="reqIntellectLevel05"/></level_requirements>
 			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="6" desc_key="reqIntellectLevel06"/></level_requirements>
@@ -892,7 +892,7 @@
 		</perk>			
 		<!-- WEAPON MODIFIER SILENCERS -->
 		<!-- WEAPON MODIFIER STOCKS -->
-		<perk name="perkStocks" parent="skillEFTXModifiers" max_level="5"  name_key="EFTX Stocks" desc_key="Find more Stock Books in the world" icon="ui_game_symbol_map_cursor">
+		<perk name="perkStocks" parent="skillEFTXModifiers" max_level="5"  name_key="Stocks" desc_key="Find more Stock Books in the world" icon="ui_game_symbol_map_cursor">
 			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="3" desc_key="reqIntellectLevel03"/></level_requirements>
 			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="5" desc_key="reqIntellectLevel05"/></level_requirements>
 			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="6" desc_key="reqIntellectLevel06"/></level_requirements>
@@ -916,7 +916,7 @@
 		</perk>			
 		<!-- WEAPON MODIFIER STOCKS -->
 		<!-- HEADLIGHTS AND NVGS -->
-		<perk name="perkLights" parent="skillEFTXModifiers" max_level="5"  name_key="EFTX Lights" desc_key="Find more books on Lights and Night vision goggles" icon="ui_game_symbol_map_cursor">
+		<perk name="perkLights" parent="skillEFTXModifiers" max_level="5"  name_key="Lights" desc_key="Find more books on Lights and Night vision goggles" icon="ui_game_symbol_map_cursor">
 			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="3" desc_key="reqIntellectLevel03"/></level_requirements>
 			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="5" desc_key="reqIntellectLevel05"/></level_requirements>
 			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="6" desc_key="reqIntellectLevel06"/></level_requirements>

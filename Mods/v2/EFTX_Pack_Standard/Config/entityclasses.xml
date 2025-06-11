@@ -47,6 +47,7 @@
 	</append>
 	<append xpath="/entity_classes/entity_class[@name='zombieFatCopFeral']" >
 		<property name="LootListOnDeath" value="groupZombiesCopsFeral"/>
+		<property name="TimeStayAfterDeath" value="90"/>
 	</append>
 	<append xpath="/entity_classes/entity_class[@name='zombieFatCopRadiated']" >
 		<property name="LootListOnDeath" value="groupZombieFatCopRadiated"/>
