@@ -132,7 +132,7 @@
 			<ingredient name="resource_item_other_powder_green" count="13"/>
 			<ingredient name="resourceMedCaliberCasing" count="1"/>
 		</recipe>
-		<recipe name="ammoEft300BblkAP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<recipe name="ammoEft300blkAP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
 			<ingredient name="resourceHighCaliberBulletTip" count="1"/>
 			<ingredient name="resource_item_other_powder_green" count="13"/>
 			<ingredient name="resourceMedCaliberCasing" count="1"/>
@@ -413,7 +413,16 @@
 		<recipe name="93x40mmRPG7Warhead" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
 			<ingredient name="resourceMechanicalParts" count="100"/>
 			<ingredient name="ammoRocketFrag" count="10"/>
+			<ingredient name="resourceTP200TNTBrick" count="20"/>
 			<ingredient name="resourceForgedSteel" count="67"/>
+			<ingredient name="resourceMetalPipe" count="6"/>
+		</recipe>
+		<recipe name="ammoEftshg725" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceMechanicalParts" count="80"/>
+			<ingredient name="ammoRocketFrag" count="8"/>
+			<ingredient name="resourceTP200TNTBrick" count="10"/>
+			<ingredient name="resourceForgedSteel" count="45"/>
+			<ingredient name="resourceMetalPipe" count="3"/>
 		</recipe>
 		<recipe name="GrenadeM67" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">	
 			<ingredient name="resourceUZRGMGrenadeFuze" count="1"/>
@@ -456,7 +465,7 @@
 			<ingredient name="ammoEft300blk" count="10"/>
 		</recipe>
 		<recipe name="disassembleAmmo8_x10" count="1">
-			<ingredient name="ammoEft300BblkAP" count="10"/>
+			<ingredient name="ammoEft300blkAP" count="10"/>
 		</recipe>
 		<recipe name="disassembleAmmo9_x10" count="1">
 			<ingredient name="ammoEft300blkHP" count="10"/>
@@ -610,7 +619,7 @@
 			<ingredient name="ammoEft300blk" count="100"/>
 		</recipe>
 		<recipe name="disassembleAmmo8_x100" count="1">
-			<ingredient name="ammoEft300BblkAP" count="100"/>
+			<ingredient name="ammoEft300blkAP" count="100"/>
 		</recipe>
 		<recipe name="disassembleAmmo9_x100" count="1">
 			<ingredient name="ammoEft300blkHP" count="100"/>

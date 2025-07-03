@@ -250,7 +250,7 @@
 		<item name="ammoEftShrapnel25Shotgun" count="1,2"/>
 		<item name="ammoEft54539AP" count="3,6"/>
 		<item name="ammoEft55645NATOAP" count="3,6"/>
-		<item name="ammoEft300BblkAP" count="3,6"/>
+		<item name="ammoEft300blkAP" count="3,6"/>
 		<item name="ammoEft76239AP" count="3,6"/>
 		<item name="ammoEft939AP" count="3,6"/>
 		<item name="ammoEft76251NATOAP" count="2,5"/>
@@ -286,7 +286,7 @@
 		<item name="ammoEftShrapnel25Shotgun" count="2,4"/>	
 		<item name="ammoEft54539AP" count="12,24"/>
 		<item name="ammoEft55645NATOAP" count="12,24"/>
-		<item name="ammoEft300BblkAP" count="12,24"/>
+		<item name="ammoEft300blkAP" count="12,24"/>
 		<item name="ammoEft76239AP" count="12,24"/>
 		<item name="ammoEft939AP" count="12,24"/>
 		<item name="ammoEft76251NATOAP" count="10,20"/>
@@ -322,7 +322,7 @@
 		<item name="ammoEftShrapnel25Shotgun" count="4,8"/>	
 		<item name="ammoEft54539AP" count="24,48"/>
 		<item name="ammoEft55645NATOAP" count="24,48"/>
-		<item name="ammoEft300BblkAP" count="24,48"/>	
+		<item name="ammoEft300blkAP" count="24,48"/>	
 		<item name="ammoEft76239AP" count="24,48"/>
 		<item name="ammoEft939AP" count="24,48"/>
 		<item name="ammoEft76251NATOAP" count="20,40"/>
@@ -378,7 +378,7 @@
 		<item name="ammoEftShrapnel25Shotgun" count="1,2"/>
 		<item name="ammoEft54539AP" count="3,6"/>
 		<item name="ammoEft55645NATOAP" count="3,6"/>
-		<item name="ammoEft300BblkAP" count="3,6"/>
+		<item name="ammoEft300blkAP" count="3,6"/>
 		<item name="ammoEft76239AP" count="3,6"/>
 		<item name="ammoEft939AP" count="3,6"/>
 		<item name="ammoEft76251NATOAP" count="2,5"/>
@@ -403,7 +403,7 @@
 		<item name="ammoEft338HP" count="2,4"/>
 		<item name="ammoEft919mmHP" count="12,24"/>
 		<item name="ammoEft921mmHP" count="12,24"/>
-		<item name="ammoEft45ACPRIP" cout="12,24"/>
+		<item name="ammoEft45ACPRIP" count="12,24"/>
 		<item name="ammoEft4630mmHKHP" count="12,24"/>
 		<item name="ammoEft5728FNHP" count="12,24"/>
 		<item name="ammoEft50aeHP" count="2,4"/>
@@ -431,7 +431,7 @@
 		<item name="ammoEftShrapnel25Shotgun" count="2,4"/>	
 		<item name="ammoEft54539AP" count="12,24"/>
 		<item name="ammoEft55645NATOAP" count="12,24"/>
-		<item name="ammoEft300BblkAP" count="12,24"/>
+		<item name="ammoEft300blkAP" count="12,24"/>
 		<item name="ammoEft76239AP" count="12,24"/>
 		<item name="ammoEft939AP" count="12,24"/>
 		<item name="ammoEft76251NATOAP" count="10,20"/>
@@ -456,7 +456,7 @@
 		<item name="ammoEft338HP" count="3,6"/>
 		<item name="ammoEft919mmHP" count="24,36"/>
 		<item name="ammoEft921mmHP" count="24,36"/>
-		<item name="ammoEft45ACPRIP" cout="24,36"/>
+		<item name="ammoEft45ACPRIP" count="24,36"/>
 		<item name="ammoEft4630mmHKHP" count="24,36"/>
 		<item name="ammoEft5728FNHP" count="24,36"/>
 		<item name="ammoEft50aeHP" count="3,6"/>
@@ -484,7 +484,7 @@
 		<item name="ammoEftShrapnel25Shotgun" count="4,8"/>	
 		<item name="ammoEft54539AP" count="24,48"/>
 		<item name="ammoEft55645NATOAP" count="24,48"/>
-		<item name="ammoEft300BblkAP" count="24,48"/>	
+		<item name="ammoEft300blkAP" count="24,48"/>	
 		<item name="ammoEft76239AP" count="24,48"/>
 		<item name="ammoEft939AP" count="24,48"/>
 		<item name="ammoEft76251NATOAP" count="20,40"/>
@@ -509,7 +509,7 @@
 		<item name="ammoEft338HP" count="3,6"/>
 		<item name="ammoEft919mmHP" count="36,64"/>
 		<item name="ammoEft921mmHP" count="36,64"/>
-		<item name="ammoEft45ACPRIP" cout="36,64"/>
+		<item name="ammoEft45ACPRIP" count="36,64"/>
 		<item name="ammoEft4630mmHKHP" count="36,64"/>
 		<item name="ammoEft5728FNHP" count="36,64"/>
 		<item name="ammoEft50aeHP" count="3,6"/>
@@ -563,7 +563,7 @@
 		<lootgroup name="groupModEftSchematicsAmmoAP" count="1">
 				<item name="schematicsAmmoEft54539AP" count="1"/>
 				<item name="schematicsAmmoEft55645NATOAP" count="1"/>
-				<item name="schematicsAmmoEft300BblkAP" count="1"/>
+				<item name="schematicsAmmoEft300blkAP" count="1"/>
 				<item name="schematicsAmmoEft76239AP" count="1"/>
 				<item name="schematicsAmmoEft939AP" count="1"/>
 				<item name="schematicsAmmoEft76251NATOAP" count="1"/>
@@ -1045,7 +1045,7 @@
 			<item name="ammoEft54539HP" count="50,200" loot_prob_template="QuestT2Prob"/>
 			<item name="ammoEft55645NATOAP" count="50,200" loot_prob_template="QuestT2Prob"/>
 			<item name="ammoEft55645NATOHP" count="50,200" loot_prob_template="QuestT2Prob"/>
-			<item name="ammoEft300BblkAP" count="50,200" loot_prob_template="QuestT2Prob"/>
+			<item name="ammoEft300blkAP" count="50,200" loot_prob_template="QuestT2Prob"/>
 			<item name="ammoEft300blkHP" count="50,200" loot_prob_template="QuestT2Prob"/>
 			<item name="ammoEft76239AP" count="50,200" loot_prob_template="QuestT2Prob"/>
 			<item name="ammoEft76239HP" count="50,200" loot_prob_template="QuestT2Prob"/>
@@ -1071,7 +1071,7 @@
 			<item name="ammoEft54539HP" count="100,200" loot_prob_template="QuestT3Prob"/>
 			<item name="ammoEft55645NATOAP" count="100,200" loot_prob_template="QuestT3Prob"/>
 			<item name="ammoEft55645NATOHP" count="100,200" loot_prob_template="QuestT3Prob"/>
-			<item name="ammoEft300BblkAP" count="100,200" loot_prob_template="QuestT3Prob"/>
+			<item name="ammoEft300blkAP" count="100,200" loot_prob_template="QuestT3Prob"/>
 			<item name="ammoEft300blkHP" count="100,200" loot_prob_template="QuestT3Prob"/>
 			<item name="ammoEft76239AP" count="100,200" loot_prob_template="QuestT3Prob"/>
 			<item name="ammoEft76239HP" count="100,200" loot_prob_template="QuestT3Prob"/>

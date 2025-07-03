@@ -22,7 +22,7 @@
 		<trader_item_group name="ammoGroup2">
 			<item name="ammoEft54539AP" count="225,450"/>
 			<item name="ammoEft55645NATOAP" count="200,400"/>
-			<item name="ammoEft300BblkAP" count="150,300"/>
+			<item name="ammoEft300blkAP" count="150,300"/>
 			<item name="ammoEft76239AP" count="150,300"/>
 			<item name="ammoEft939AP" count="125,250"/>
 			<item name="ammoEft76251NATOAP" count="100,200"/>
@@ -64,12 +64,13 @@
 			<item name="ammoEft4046576" count="1,2"/>
 			<item name="ammoEft4053vog25" count="1,2"/>
 			<item name="93x40mmRPG7Warhead" count="1"/>
+			<item name="ammoEftshg725" count="1"/>
 		</trader_item_group>		
 		</insertAfter>
 		<append xpath="//trader_item_group[@name='schematicsModsCommon']">
 				<item name="schematicsAmmoEft54539AP" count="1"/>
 				<item name="schematicsAmmoEft55645NATOAP" count="1"/>
-				<item name="schematicsAmmoEft300BblkAP" count="1"/>
+				<item name="schematicsAmmoEft300blkAP" count="1"/>
 				<item name="schematicsAmmoEft76239AP" count="1"/>
 				<item name="schematicsAmmoEft939AP" count="1"/>
 				<item name="schematicsAmmoEft76251NATOAP" count="1"/>

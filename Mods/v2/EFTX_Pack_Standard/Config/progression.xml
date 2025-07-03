@@ -3,7 +3,6 @@
 		<skill name="skillEFTXRifles" parent="attPerception" name_key="EFTX Rifles" desc_key="Find more Eftx Rifles" icon="ui_game_symbol_marksmanship"><effect_group/></skill>
 		<skill name="skillEFTXExplosives" parent="attPerception" name_key="EFTX Explosives" desc_key="All The Eftx Explosives" icon="ui_game_symbol_marksmanship"><effect_group/></skill>
 		<skill name="skillEFTXShotguns" parent="attStrength" name_key="EFTX Shotguns" desc_key="Find more Eft Shotguns" icon="ui_game_symbol_marksmanship"><effect_group/></skill>
-		<skill name="skillEFTXMedical" parent="attFortitude" name_key="EFTX Medical" desc_key="Find more Eftx Meds" icon="ui_game_symbol_marksmanship"><effect_group/></skill>
 		<skill name="skillEFTXMGS" parent="attFortitude" name_key="EFTX Machine Guns" desc_key="Find more Eftx Machine Guns" icon="ui_game_symbol_marksmanship"><effect_group/></skill>
 		<skill name="skillEFTXPistols" parent="attAgility" name_key="EFTX Pistols" desc_key="Find more Eftx Pistols" icon="ui_game_symbol_marksmanship"><effect_group/></skill>
 		<skill name="skillEFTXSmgs" parent="attAgility" name_key="EFTX Smgs" desc_key="Find more Eftx Smgs" icon="ui_game_symbol_marksmanship"><effect_group/></skill>
@@ -380,19 +379,19 @@
 		<!-- LIGHTS AND NVGS -->
 		<!-- SMGS -->		
 		<crafting_skill name="craftingSMGS" max_level="200" parent="attCrafting" name_key="craftingSMGSName" desc_key="craftingSMGSDesc" long_desc_key="craftingSMGSLongDesc" icon="ui_game_symbol_tool_smithing">
-            <display_entry icon="SMGT1" name_key="SMGS T1" has_quality="false" unlock_level="6,12,18,24,30">
+            <display_entry icon="SMGT1" name_key="SMGS T1" has_quality="false" unlock_level="6,30,54,76,100,124">
                 <unlock_entry item="gunppsh41,gunpp9klin,gunpp19bizon" unlock_tier="1"/>	
             </display_entry>
-			 <display_entry icon="SMGT1" name_key="SMGS T1" has_quality="false" unlock_level="6,12,18,24,30">
+			 <display_entry icon="SMGT1" name_key="SMGS T1" has_quality="false" unlock_level="12,36,60,82,106,130">
                 <unlock_entry item="gunmp5k,gunmp5,gunuzi,gunpp19vityaz" unlock_tier="2" />	
             </display_entry>	
-			 <display_entry icon="SMGT1" name_key="SMGS T1" has_quality="false" unlock_level="6,12,18,24,30">
+			 <display_entry icon="SMGT1" name_key="SMGS T1" has_quality="false" unlock_level="18,42,66,88,112,136">
                 <unlock_entry item="gunmp9,gunuziprosmg,gunmp5sd,gunvector9" unlock_tier="3" />	
             </display_entry>	
-			 <display_entry icon="SMGT1" name_key="SMGS T1" has_quality="false" unlock_level="6,12,18,24,30">
+			 <display_entry icon="SMGT1" name_key="SMGS T1" has_quality="false" unlock_level="24,48,70,94,118,142">
                 <unlock_entry item="gunmpx,gunstm9,gunsr2mveresk,gunump45" unlock_tier="4" />	
             </display_entry>	
-			 <display_entry icon="SMGT1" name_key="SMGS T1" has_quality="false" unlock_level="6,12,18,24,30">
+			 <display_entry icon="SMGT1" name_key="SMGS T1" has_quality="false" unlock_level="30,54,76,100,124,150">
                 <unlock_entry item="gunthompson,gunvector45,gunmp7,gunp90" unlock_tier="5" />
             </display_entry>	
 						
@@ -413,20 +412,20 @@
 		<!-- SMGS -->
 		<!-- PISTOLS -->
 		<crafting_skill name="craftingPistols" max_level="125" parent="attCrafting" name_key="craftingPistolsName" desc_key="craftingPistolsDesc" long_desc_key="craftingPistolsLongDesc" icon="ui_game_symbol_tool_smithing">
-            <display_entry icon="Pistols1" name_key="Pistols T1" has_quality="false" unlock_level="5,7,10,15,20">
+            <display_entry icon="Pistols1" name_key="Pistols T1" has_quality="true" unlock_level="5,23,43,63,83,103">
                 <unlock_entry item="gunp226,gunm1911,gunsr1mp" unlock_tier="1" />
             </display_entry>
-			<display_entry icon="Pistols1" name_key="Pistols T1" has_quality="false" unlock_level="5,7,10,15,20">
-                <unlock_entry item="gunpb,gunstechkin,guntokarevtt" unlock_tier="2" />	
+            <display_entry icon="Pistols1" name_key="Pistols T2" has_quality="true" unlock_level="7,26,46,66,86,106">
+                <unlock_entry item="gunpb,gunstechkin,guntokarevtt" unlock_tier="1" />    
             </display_entry>
-			<display_entry icon="Pistols1" name_key="Pistols T1" has_quality="false" unlock_level="5,7,10,15,20">
-                <unlock_entry item="gunglock17,gunm9a3,gunm45,gunusp45match" unlock_tier="3" />
+            <display_entry icon="Pistols1" name_key="Pistols T3" has_quality="true" unlock_level="10,29,49,69,89,109">
+                <unlock_entry item="gunglock17,gunm9a3,gunm45,gunusp45match" unlock_tier="1" />
             </display_entry>
-			<display_entry icon="Pistols1" name_key="Pistols T1" has_quality="false" unlock_level="5,7,10,15,20">
-                <unlock_entry item="gunusp45tac,gunfiveseven,gunpmalphadog,gundeserteagle" unlock_tier="4" />
+            <display_entry icon="Pistols1" name_key="Pistols T4" has_quality="true" unlock_level="15,34,54,74,94,114">
+                <unlock_entry item="gunusp45tac,gunfiveseven,gunpmalphadog,gundeserteagle" unlock_tier="1" />
             </display_entry>
-			<display_entry icon="Pistols1" name_key="Pistols T1" has_quality="false" unlock_level="5,7,10,15,20">
-                <unlock_entry item="guntokarevgold,guntokarevmachine,gunglock18c,gunrsh12" unlock_tier="5" />
+            <display_entry icon="Pistols1" name_key="Pistols T5" has_quality="true" unlock_level="20,40,60,80,100,120">
+                <unlock_entry item="guntokarevgold,guntokarevmachine,gunglock18c,gunrsh12" unlock_tier="1" />
             </display_entry>
 						
             <effect_group>
@@ -446,19 +445,19 @@
 		<!-- PISTOLS -->
 		<!-- SHOTGUNS -->
 		<crafting_skill name="craftingEFTShotguns" max_level="150" parent="attCrafting" name_key="craftingEFTShotgunsName" desc_key="craftingEFTShotgunsDesc" long_desc_key="craftingEFTShotgunsLongDesc" icon="ui_game_symbol_tool_smithing">
-            <display_entry icon="Shotguns1" name_key="Shotguns T1" has_quality="false" unlock_level="5,10,15,20,25">
+            <display_entry icon="Shotguns1" name_key="Shotguns T1" has_quality="false" unlock_level="5,30,50,70,90,110">
                 <unlock_entry item="gunks23,gunmp43" unlock_tier="1" />		
             </display_entry>
-			<display_entry icon="Shotguns1" name_key="Shotguns T1" has_quality="false" unlock_level="5,10,15,20,25">
+			<display_entry icon="Shotguns1" name_key="Shotguns T1" has_quality="false" unlock_level="10,35,55,75,95,115">
                 <unlock_entry item="gunmts255,gunm590" unlock_tier="2" />			
             </display_entry>
-			<display_entry icon="Shotguns1" name_key="Shotguns T1" has_quality="false" unlock_level="5,10,15,20,25">
+			<display_entry icon="Shotguns1" name_key="Shotguns T1" has_quality="false" unlock_level="15,40,60,80,100,120">
                 <unlock_entry item="gunm870,gunksg12" unlock_tier="3" />			
             </display_entry>
-			<display_entry icon="Shotguns1" name_key="Shotguns T1" has_quality="false" unlock_level="5,10,15,20,25">
+			<display_entry icon="Shotguns1" name_key="Shotguns T1" has_quality="false" unlock_level="20,45,65,85,105,125">
                 <unlock_entry item="gunmp153,gunm3benelli" unlock_tier="4" />		
             </display_entry>
-			<display_entry icon="Shotguns1" name_key="Shotguns T1" has_quality="false" unlock_level="5,10,15,20,25">
+			<display_entry icon="Shotguns1" name_key="Shotguns T1" has_quality="false" unlock_level="25,50,70,90,110,130">
                 <unlock_entry item="gunsaiga12,gunAA12" unlock_tier="5" />				
             </display_entry>
 						
@@ -478,49 +477,53 @@
         </crafting_skill>
 		<!-- SHOTGUNS -->		
 		<!-- GRENADE LAUNCHERS -->
-		<crafting_skill name="craftingRocketsandLaunchers" max_level="250" parent="attCrafting" name_key="craftingRocketsandLaunchersName" desc_key="craftingRocketsandLaunchersDesc" long_desc_key="craftingRocketsandLaunchersLongDesc" icon="ui_game_symbol_tool_smithing">
-            <display_entry icon="Launchers1" name_key="Launchers T1" has_quality="false" unlock_level="20,30,40,50">
+		<crafting_skill name="craftingRocketsandLaunchers" max_level="350" parent="attCrafting" name_key="craftingRocketsandLaunchersName" desc_key="craftingRocketsandLaunchersDesc" long_desc_key="craftingRocketsandLaunchersLongDesc" icon="ui_game_symbol_tool_smithing">
+            <display_entry icon="Launchers1" name_key="gunfn40gl" has_quality="false" unlock_level="20,60,100,140,180,220">
                 <unlock_entry item="gunfn40gl" unlock_tier="1" />
             </display_entry>
-			<display_entry icon="Launchers1" name_key="Launchers T1" has_quality="false" unlock_level="20,30,40,50">
+			<display_entry icon="Launchers2" name_key="gunchinalake" has_quality="false" unlock_level="30,70,110,150,190,230">
                 <unlock_entry item="gunchinalake" unlock_tier="2" />
             </display_entry>
-			<display_entry icon="Launchers1" name_key="Launchers T1" has_quality="false" unlock_level="20,30,40,50">
+			<display_entry icon="Launchers3" name_key="gunm32a1mgl" has_quality="false" unlock_level="40,80,120,160,200,240">
                 <unlock_entry item="gunm32a1mgl" unlock_tier="3" />
             </display_entry>
-			<display_entry icon="Launchers1" name_key="Launchers T1" has_quality="false" unlock_level="20,30,40,50">
-                <unlock_entry item="gunrpg7" unlock_tier="4" />
+			<display_entry icon="Launchers4" name_key="gunrpg26" has_quality="false" unlock_level="50,90,130,170,210,250">
+                <unlock_entry item="gunrpg26" unlock_tier="4" />
             </display_entry>
-			
+			<display_entry icon="Launchers5" name_key="gunrpg7" has_quality="false" unlock_level="60,100,140,180,220,300">
+                <unlock_entry item="gunrpg7" unlock_tier="5" />
+            </display_entry>
 						
             <effect_group>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,250" value="1" tags="gunfn40gl"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,250" value="1" tags="gunchinalake"/>
-				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="40,250" value="1" tags="gunm32a1mgl"/>
-				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,250" value="1" tags="gunrpg7"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,350" value="1" tags="gunfn40gl"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,350" value="1" tags="gunchinalake"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="40,350" value="1" tags="gunm32a1mgl"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,350" value="1" tags="gunrpg26"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="60,350" value="1" tags="gunrpg7"/>
 				
-				<passive_effect name="CraftingTier" operation="base_add" level="50,80,110,140,170,250" value="1,2,3,4,5,5" tags="gunfn40gl"/>	
-				<passive_effect name="CraftingTier" operation="base_add" level="60,90,120,150,180,250" value="1,2,3,4,5,5" tags="gunchinalake"/>	
-				<passive_effect name="CraftingTier" operation="base_add" level="70,100,130,160,190,250" value="1,2,3,4,5,5" tags="gunm32a1mgl"/>	
-				<passive_effect name="CraftingTier" operation="base_add" level="80,110,140,170,200,250" value="1,2,3,4,5,5" tags="gunrpg7"/>	
+				<passive_effect name="CraftingTier" operation="base_add" level="60,100,140,180,220,350" value="1,2,3,4,5,5" tags="gunfn40gl"/>	
+				<passive_effect name="CraftingTier" operation="base_add" level="70,110,150,190,230,350" value="1,2,3,4,5,5" tags="gunchinalake"/>	
+				<passive_effect name="CraftingTier" operation="base_add" level="80,120,160,200,240,350" value="1,2,3,4,5,5" tags="gunm32a1mgl"/>	
+				<passive_effect name="CraftingTier" operation="base_add" level="90,130,170,210,250,350" value="1,2,3,4,5,5" tags="gunrpg26"/>
+				<passive_effect name="CraftingTier" operation="base_add" level="100,140,180,220,300,350" value="1,2,3,4,5,5" tags="gunrpg7"/>
 				</effect_group>
         </crafting_skill>	
 		<!-- GRENADE LAUNCHERS -->			
 		<!-- RIFLES -->
 		<crafting_skill name="craftingEFTRifles" max_level="200" parent="attCrafting" name_key="craftingEFTRiflesName" desc_key="craftingEFTRiflesDesc" long_desc_key="craftingEFTRiflesLongDesc" icon="ui_game_symbol_tool_smithing">
-            <display_entry icon="Rifles" name_key="Rifles" has_quality="true" unlock_level="10,15,20,25,30">
+            <display_entry icon="Rifles" name_key="Rifles" has_quality="true" unlock_level="10,35,60,85,110,130">
                 <unlock_entry item="gunadar,gunstar15,gunm700" unlock_tier="1" />					
             </display_entry>
-			<display_entry icon="Rifles" name_key="Rifles" has_quality="true" unlock_level="10,15,20,25,30">
+			<display_entry icon="Rifles" name_key="Rifles" has_quality="true" unlock_level="15,40,65,90,115,140">
                 <unlock_entry item="gundvl10,gunt5000,gunFALsa58dmr" unlock_tier="2" />
             </display_entry>
-			<display_entry icon="Rifles" name_key="Rifles" has_quality="true" unlock_level="10,15,20,25,30">
+			<display_entry icon="Rifles" name_key="Rifles" has_quality="true" unlock_level="20,45,70,95,120,150">
                 <unlock_entry item="gunm1aEBR,gunrfb,gunsr25,gunrsass" unlock_tier="3" />				
             </display_entry>
-			<display_entry icon="Rifles" name_key="Rifles" has_quality="true" unlock_level="10,15,20,25,30">
+			<display_entry icon="Rifles" name_key="Rifles" has_quality="true" unlock_level="25,50,75,100,125,160">
                <unlock_entry item="gunhkg28,gunmp18,gunmosin,gunsv98" unlock_tier="4" />
             </display_entry>
-			<display_entry icon="Rifles" name_key="Rifles" has_quality="true" unlock_level="10,15,20,25,30">               			
+			<display_entry icon="Rifles" name_key="Rifles" has_quality="true" unlock_level="30,55,80,105,130,170">               			
 				<unlock_entry item="gunsvt,gunsvd,gunaxmc,gunswordmk18" unlock_tier="5" />
             </display_entry>
 			
@@ -541,19 +544,19 @@
 		<!-- RIFLES -->
 		<!-- MACHINE GUNS -->
 		<crafting_skill name="craftingEFTMachineguns" max_level="200" parent="attCrafting" name_key="craftingEFTMachinegunsName" desc_key="craftingEFTMachinegunsDesc" long_desc_key="craftingEFTMachinegunsLongDesc" icon="ui_game_symbol_tool_smithing">
-            <display_entry icon="Machineguns" name_key="Machineguns" has_quality="true" unlock_level="10,15,20,25,30">
+            <display_entry icon="Machineguns" name_key="Machineguns" has_quality="true" unlock_level="10,35,60,85,110,130">
                 <unlock_entry item="gunauga3,gung36kv2,gunm4a1,gunm16a4,gunl85a2,gunmdr556,gunhk416" unlock_tier="1" />	
             </display_entry>
-			<display_entry icon="Machineguns" name_key="Machineguns" has_quality="true" unlock_level="10,15,20,25,30">
+			<display_entry icon="Machineguns" name_key="Machineguns" has_quality="true" unlock_level="15,40,65,90,115,140">
                <unlock_entry item="gunIWItavorx95,gunIWIcarmel,gunak300velociraptor,gunhoneybadger,gunmcx,gunFALsa58br,gunmdr762,gunscarh" unlock_tier="2" />
             </display_entry>
-			<display_entry icon="Machineguns" name_key="Machineguns" has_quality="true" unlock_level="10,15,20,25,30">
+			<display_entry icon="Machineguns" name_key="Machineguns" has_quality="true" unlock_level="20,45,70,95,120,150">
                <unlock_entry item="gunhk417,gunm14sass,gunaks74un,gunak74n,gunak74m,gunak12,gunak107,gunsks" unlock_tier="3" />	
             </display_entry>
-			<display_entry icon="Machineguns" name_key="Machineguns" has_quality="true" unlock_level="10,15,20,25,30">
+			<display_entry icon="Machineguns" name_key="Machineguns" has_quality="true" unlock_level="25,50,75,100,125,160">
                 <unlock_entry item="gunakmn,gunak103,gunak109,gunrd704,gunmk47,gun9a91,gunvss,gunasval" unlock_tier="4" />
             </display_entry>
-			<display_entry icon="Machineguns" name_key="Machineguns" has_quality="true" unlock_level="10,15,20,25,30">
+			<display_entry icon="Machineguns" name_key="Machineguns" has_quality="true" unlock_level="30,55,80,105,130,170">
                <unlock_entry item="gunfamas,gunmcxspear,gunash12,gunrpk16,gunfnminimi,gunrpd,gunm60e6,gunpkp" unlock_tier="5" />
             </display_entry>
 			
@@ -690,11 +693,11 @@
 			<effect_group>
 			<!-- Increase the chance to find Launcher crafting skill magazines with each perk rank up to crafting skill 250 -->
 			<passive_effect name="LootProb" operation="perc_add" level="1,5" value="2,10" tags="eftxrocketsandLaunchersSCSM">
-				<requirement name="ProgressionLevel" progression_name="craftingRocketsandLaunchers" operation="LT" value="250"/>
+				<requirement name="ProgressionLevel" progression_name="craftingRocketsandLaunchers" operation="LT" value="300"/>
 			</passive_effect>
 			<!-- Once Launcher crafting skill reaches 250, set the probability bonus of finding Launcher crafting skill magazines to 0 -->
 			<passive_effect name="LootProb" operation="base_set" level="1,5" value="1,1" tags="eftxrocketsandLaunchersSCSM">
-				<requirement name="ProgressionLevel" progression_name="craftingRocketsandLaunchers" operation="Equals" value="250"/>
+				<requirement name="ProgressionLevel" progression_name="craftingRocketsandLaunchers" operation="Equals" value="300"/>
 			</passive_effect>
 			<effect_description level="1" desc_key="perkEFTXBoomBoomRank1Desc" long_desc_key="Find more Launcher books to get closer to the boom boom"/>
 			<effect_description level="2" desc_key="perkEFTXBoomBoomRank2Desc" long_desc_key="Find the Books Get the Boom Boom"/>
@@ -811,11 +814,11 @@
 			<passive_effect name="LootProb" operation="base_set" level="1,5" value="1,1" tags="eftxweaponmodifiersgrenadelauncherattachmentsCSM">
 				<requirement name="ProgressionLevel" progression_name="craftingGrenadeLauncherAttachments" operation="Equals" value="100"/>
 			</passive_effect>
-			<effect_description level="1" desc_key="perkEFTXLauncherRank1Desc" long_desc_key="Find more Grenade Launcher Attachments books"/>
-			<effect_description level="2" desc_key="perkEFTXLauncherRank2Desc" long_desc_key="Find the Grenade Launcher Attachments Books"/>
-			<effect_description level="3" desc_key="perkEFTXLauncherRank3Desc" long_desc_key="Find even more Grenade Launcher Attachments books"/>
-			<effect_description level="4" desc_key="perkEFTXLauncherRank4Desc" long_desc_key="You want more Grenade Launcher Attachments books"/>
-			<effect_description level="5" desc_key="perkEFTXLauncherRank5Desc" long_desc_key="Mass Grenade Launcher Attachments book find"/>
+			<effect_description level="1" desc_key="perkEFTXGrenadeLauncherAttachmentsRank1Desc" long_desc_key="Find more Grenade Launcher Attachments books"/>
+			<effect_description level="2" desc_key="perkEFTXGrenadeLauncherAttachmentsRank2Desc" long_desc_key="Find the Grenade Launcher Attachments Books"/>
+			<effect_description level="3" desc_key="perkEFTXGrenadeLauncherAttachmentsRank3Desc" long_desc_key="Find even more Grenade Launcher Attachments books"/>
+			<effect_description level="4" desc_key="perkEFTXGrenadeLauncherAttachmentsRank4Desc" long_desc_key="You want more Grenade Launcher Attachments books"/>
+			<effect_description level="5" desc_key="perkEFTXGrenadeLauncherAttachmentsRank5Desc" long_desc_key="Mass Grenade Launcher Attachments book find"/>
 			</effect_group>
 		</perk>		
 		<!-- WEAPON MODIFIER GRENADE LAUNCHER ATTACHMENTS -->

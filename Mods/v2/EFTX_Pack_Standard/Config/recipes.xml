@@ -2593,6 +2593,16 @@
 		</recipe>
 		<recipe name="gunrpg7" count="1" craft_area="workbench" tags="learnable">
 			<ingredient name="gunExplosivesT3RocketLauncherParts" count="20"/>
+			<ingredient name="resourceWeaponParts" count="11"/>
+			<ingredient name="resourceMetalPipe" count="30"/>
+			<ingredient name="resourceSpring" count="22"/>
+			<ingredient name="resourceOil" count="15"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="1,6" operation="base_add" value="1,5" tags="gunExplosivesT3RocketLauncherParts"/>
+			</effect_group>
+		</recipe>
+		<recipe name="gunrpg26" count="1" craft_area="workbench" tags="learnable">
+			<ingredient name="gunExplosivesT3RocketLauncherParts" count="20"/>
 			<ingredient name="resourceWeaponParts" count="9"/>
 			<ingredient name="resourceMetalPipe" count="25"/>
 			<ingredient name="resourceSpring" count="19"/>

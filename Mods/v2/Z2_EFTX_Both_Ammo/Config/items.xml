@@ -521,14 +521,14 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 			</effect_group>
 		</item>
-		<item name="schematicsAmmoEft300BblkAP">
+		<item name="schematicsAmmoEft300blkAP">
 			<property name="Extends" value="schematicNoQualityMaster"/>
 			<property name="CreativeMode" value="Player"/>
-			<property name="CustomIcon" value="ammoEft300BblkAP"/>
-			<property name="DescriptionKey" value="schematicsAmmoEft300BblkAPDesc"/>
-			<property name="Unlocks" value="ammoEft300BblkAP"/>
+			<property name="CustomIcon" value="ammoEft300blkAP"/>
+			<property name="DescriptionKey" value="schematicsAmmoEft300blkAPDesc"/>
+			<property name="Unlocks" value="ammoEft300blkAP"/>
 			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoEft300BblkAP" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoEft300blkAP" operation="set" value="1"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 			</effect_group>
 		</item>
@@ -933,7 +933,7 @@
 		<item name="disassembleAmmo8_x10">
 			<property name="Extends" value="disassembleAmmoMasterBundle"/>
 			<property name="CreativeMode" value="Player"/>
-			<property name="CustomIcon" value="ammoEft300BblkAP"/>
+			<property name="CustomIcon" value="ammoEft300blkAP"/>
 			<property name="ItemTypeIcon" value="bundle"/>
 			<property name="DescriptionKey" value="disassembleAmmoGroupDesc"/>
 			<property class="Action0">
@@ -1495,7 +1495,7 @@
 		<item name="disassembleAmmo8_x100">
 			<property name="Extends" value="disassembleAmmoMasterBundle"/>
 			<property name="CreativeMode" value="Player"/>
-			<property name="CustomIcon" value="ammoEft300BblkAP"/>
+			<property name="CustomIcon" value="ammoEft300blkAP"/>
 			<property name="ItemTypeIcon" value="bundle"/>
 			<property name="DescriptionKey" value="disassembleAmmoGroupDesc"/>
 			<property class="Action0">
@@ -2312,7 +2312,7 @@
 			</effect_group>
 		</item>
 
-		<item name="ammoEft300BblkAP">
+		<item name="ammoEft300blkAP">
 			<property name="Tags" value="ammo,ammo762mmMC"/>
 			<property name="DisplayType" value="ammoBulletEft"/>
 			<property name="HoldType" value="45"/>
@@ -2327,8 +2327,8 @@
 			<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons"/>
 			<property name="SoundPickup" value="bullets_grab"/>
 			<property name="SoundPlace" value="bullets_place"/>
-			<property name="UnlockedBy" value="schematicsAmmoEft300BblkAP,perkAutoWeaponsDrumMag"/>
-			<property name="DescriptionKey" value="ammoEft300BblkAPDesc"/>
+			<property name="UnlockedBy" value="schematicsammoEft300blkAP,perkAutoWeaponsDrumMag"/>
+			<property name="DescriptionKey" value="ammoEft300blkAPDesc"/>
 			<effect_group name="ammo" tiered="false">
 				<passive_effect name="MaxRange" operation="base_set" value="450" tags="perkDeadEye,perkMachineGunner"/>
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="1" tags="perkDeadEye,perkMachineGunner"/>
@@ -2443,7 +2443,7 @@
 				<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
 				<passive_effect name="DegradationPerUse" operation="perc_add" value=".21"/>
 				<display_value name="dDegradationPerUse" value=".21"/>
-				<passive_effect name="BlockPenetrationFactor" operation="base_set" value="1500" tags="perkDeadEye,perkMachineGunner"/>
+				<passive_effect name="BlockPenetrationFactor" operation="base_set" value="1500" tags="pervvkDeadEye,perkMachineGunner"/>
 				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="ModifyCVar" cvar="$gunEftPropellantAmount" operation="set" value="1.89"/>
 				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="ModifyCVar" cvar="$eftBulletWeightKg" operation="set" value="0.015"/>
 				<passive_effect name="DismemberChance" operation="base_set" value=".25" tags="arm"/>
@@ -3865,12 +3865,6 @@
 				<display_value name="dExRadius" value="8"/>
 				<passive_effect name="ProjectileVelocity" operation="base_set" value="35" tags="perkDemolitionsExpert"/>
 				
-				<!--passive_effect name="ProjectileImpactDamagePercentBlock" operation="base_set" value="0" tags="perkDemolitionsExpert"/>
-				<passive_effect name="ProjectileImpactDamagePercentEntity" operation="base_set" value="0" tags="perkDemolitionsExpert"/-->
-				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
-				<!--passive_effect name="SpreadDegreesVertical" operation="base_set" value="5.5" tags="perkDemolitionsExpert"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="5.5" tags="perkDemolitionsExpert"/-->
-				
 				<passive_effect name="TargetArmor" operation="perc_add" value="-.8"/>
 				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="ModifyCVar" cvar="$gunEftShotgunAmmo" operation="set" value="0"/>
 				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="ModifyCVar" cvar="$gunEftPropellantAmount" operation="set" value="2"/>
@@ -4051,7 +4045,62 @@
 			</effect_group>
 		</item>		
 		
-		<!-- EFT3 DVS AMMO -->	
+		<!-- GUNRPG26 AMMO -->
+		<item name="ammoEftshg725">
+			<property name="Tags" value="ammo,perkDemolitionsExpert"/>
+			<property name="DisplayType" value="ammoLauncher"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#@modfolder(EFTX_Pack_Core):Resources/RPG26.unity3d?patron_725.prefab"/>
+			<property name="HandMeshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mlead_scrap"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="440"/>
+			<property name="TraderStageTemplate" value="ammoTier1"/>
+			<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons"/>
+			<property name="UnlockedBy" value="craftingBigBoomBoom"/>
+			<property name="SoundPickup" value="parts_grab"/>
+			<property name="SoundPlace" value="parts_place"/>
+			<property class="Action1">
+				<property name="Class" value="Projectile"/>
+				<property name="CustomProjectileType" value="GameObject,FullautoLauncher"/>
+				<!--<property name="Explosion.ParticleIndex" value="#@modfolder:Resources/M16M203.unity3d?m203_explosion$M203Frag"/>-->
+				<property name="Explosion.ParticleIndex" value="13"/>
+				<property name="Explosion.AudioName" value="kaboomstick_explosion"/>
+				<property name="Explosion.BlockDamage" value="1250"/>
+				<property name="Explosion.EntityDamage" value="1500"/>
+				<property name="Explosion.RadiusBlocks" value="4"/>
+				<property name="Explosion.RadiusEntities" value="10"/>
+				<property name="Explosion.BlastPower" value="80"/>
+				<property name="Explosion.DamageBonus.water" value="0"/>
+				<property name="Gravity" value="-5"/>
+				<property name="FlyTime" value="14"/>
+				<property name="LifeTime" value="24"/>
+				<property name="DeadTime" value="4"/>
+			</property>
+			<effect_group name="40x46grenade" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="1800"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="300"/>
+				<display_value name="dExBlockDamage" value="300"/>
+				<display_value name="dExEntityDamage" value="1500"/>
+				<display_value name="dExRadius" value="10"/>
+				<passive_effect name="ProjectileVelocity" operation="base_set" value="60" tags="perkDemolitionsExpert"/>
+				<passive_effect name="RoundRayCount" operation="base_set" value="1" tags="perkDemolitionsExpert"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="0" tags="perkDemolitionsExpert"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="0" tags="perkDemolitionsExpert"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value="0" tag="shotgun" invert_tag_check="true"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.25" tags="earth"/>
+				
+				<passive_effect name="TargetArmor" operation="perc_add" value="-1" tags="torso"/>
+				<passive_effect name="TargetArmor" operation="perc_add" value="-1" tags="head"/>
+				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="ModifyCVar" cvar="$gunEftPropellantAmount" operation="set" value="2"/>
+				<triggered_effect trigger="onSelfPrimaryActionUpdate" action="ModifyCVar" cvar="$eftBulletWeightKg" operation="set" value="0.2"/>
+				<passive_effect name="DismemberChance" operation="base_set" value="10" tags="arm"/>
+				<passive_effect name="DismemberChance" operation="base_set" value="10" tags="leg"/>
+			</effect_group>
+		</item>
+		<!-- GUNRPG26 AMMO -->
+		<!-- IMPACT GRENADE AMMO -->	
 		
 		<item name="GrenadeImpactRGN">
 			<property name="Tags" value="ammo,weapon,attPerception,perkDemolitionsExpert,explosivesSkill"/>
@@ -4234,221 +4283,222 @@
 		<append xpath="/items/item[@name='bundlePistolCaseRSH']/property[@class='Action0']/property[@name='Create_item_count']/@value">,25-50,25,50</append>
 		
 		<!-- SMG -->
-		<set xpath="/items/item[@name='gunppsh41']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft76225mmTokarev</set>
-		<set xpath="/items/item[@name='gunpp9klin']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammoEft918mmPM</set>
-		<set xpath="/items/item[@name='gunmp5k']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</set>	
+		<setattribute xpath="/items/item[@name='gunppsh41']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft76225mmTokarev</setattribute>
+		<setattribute xpath="/items/item[@name='gunpp9klin']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammoEft918mmPM</setattribute>
+		<setattribute xpath="/items/item[@name='gunmp5k']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</setattribute>	
 		
-		<set xpath="/items/item[@name='gunpp19bizon']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</set>
+		<setattribute xpath="/items/item[@name='gunpp19bizon']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</setattribute>
 		
-		<set xpath="/items/item[@name='gunmp5']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</set>
-		<set xpath="/items/item[@name='gunmp5']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunmp5']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunmp5']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
-		<set xpath="/items/item[@name='gunuzi']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</set>		
-		<set xpath="/items/item[@name='gunpp19vityaz']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</set>	
-		<set xpath="/items/item[@name='gunmp9']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</set>
-		<set xpath="/items/item[@name='gunuziprosmg']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</set>
+		<setattribute xpath="/items/item[@name='gunuzi']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</setattribute>		
+		<setattribute xpath="/items/item[@name='gunpp19vityaz']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</setattribute>	
+		<setattribute xpath="/items/item[@name='gunmp9']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunuziprosmg']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</setattribute>
 		
-		<set xpath="/items/item[@name='gunmp5sd']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</set>
-		<set xpath="/items/item[@name='gunmp5sd']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunmp5sd']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunmp5sd']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
-		<set xpath="/items/item[@name='gunvector9']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</set>
-		<set xpath="/items/item[@name='gunvector9']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunvector9']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunvector9']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
-		<set xpath="/items/item[@name='gunmpx']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</set>
-		<set xpath="/items/item[@name='gunmpx']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunmpx']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunmpx']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
-		<set xpath="/items/item[@name='gunstm9']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</set>
-		<set xpath="/items/item[@name='gunstm9']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunstm9']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunstm9']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
-		<set xpath="/items/item[@name='gunsr2mveresk']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft921mm,ammoEft921mmAP,ammoEft921mmHP</set>
+		<setattribute xpath="/items/item[@name='gunsr2mveresk']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft921mm,ammoEft921mmAP,ammoEft921mmHP</setattribute>
 		
-		<set xpath="/items/item[@name='gunump45']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletAP,ammoEft45ACP,ammoEft45ACPAP,ammoEft45ACPRIP</set>
-		<set xpath="/items/item[@name='gunump45']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunump45']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletAP,ammoEft45ACP,ammoEft45ACPAP,ammoEft45ACPRIP</setattribute>
+		<setattribute xpath="/items/item[@name='gunump45']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
-		<set xpath="/items/item[@name='gunthompson']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletAP,ammoEft45ACP,ammoEft45ACPAP,ammoEft45ACPRIP</set>
+		<setattribute xpath="/items/item[@name='gunthompson']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletAP,ammoEft45ACP,ammoEft45ACPAP,ammoEft45ACPRIP</setattribute>
 		
-		<set xpath="/items/item[@name='gunvector45']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletAP,ammoEft45ACP,ammoEft45ACPAP,ammoEft45ACPRIP</set>
-		<set xpath="/items/item[@name='gunvector45']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunvector45']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletAP,ammoEft45ACP,ammoEft45ACPAP,ammoEft45ACPRIP</setattribute>
+		<setattribute xpath="/items/item[@name='gunvector45']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
-		<set xpath="/items/item[@name='gunmp7']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft4630mmHK,ammoEft4630mmHKAP,ammoEft4630mmHKHP</set>
-		<set xpath="/items/item[@name='gunmp7']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunmp7']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft4630mmHK,ammoEft4630mmHKAP,ammoEft4630mmHKHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunmp7']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		<!-- SMG -->
 		<!-- PISTOLS -->
-		<set xpath="/items/item[@name='gunp90']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft5728FN,ammoEft5728FNAP,ammoEft5728FNHP</set>
-		<set xpath="/items/item[@name='guntokarevtt']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft76225mmTokarev</set>
-		<set xpath="/items/item[@name='guntokarevgold']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft76225mmTokarev</set>
-		<set xpath="/items/item[@name='guntokarevmachine']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft76225mmTokarev</set>
-		<set xpath="/items/item[@name='gunpb']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammoEft918mmPM</set>
-		<set xpath="/items/item[@name='gunpmalphadog']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammoEft918mmPM</set>
-		<set xpath="/items/item[@name='gunstechkin']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammoEft918mmPM</set>
-		<set xpath="/items/item[@name='gunglock17']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</set>		
-		<set xpath="/items/item[@name='gunp226']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</set>
-		<set xpath="/items/item[@name='gunm9a3']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</set>
-		<set xpath="/items/item[@name='gunglock18c']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</set>
-		<set xpath="/items/item[@name='gunsr1mp']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft921mm,ammoEft921mmAP,ammoEft921mmHP</set>
-		<set xpath="/items/item[@name='gunusp45tac']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletAP,ammoEft45ACP,ammoEft45ACPAP,ammoEft45ACPRIP</set>
-		<set xpath="/items/item[@name='gunm1911']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletAP,ammoEft45ACP,ammoEft45ACPAP,ammoEft45ACPRIP</set>
-		<set xpath="/items/item[@name='gunm45']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletAP,ammoEft45ACP,ammoEft45ACPAP,ammoEft45ACPRIP</set>
-		<set xpath="/items/item[@name='gunusp45match']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletAP,ammoEft45ACP,ammoEft45ACPAP,ammoEft45ACPRIP</set>
-		<set xpath="/items/item[@name='gunfiveseven']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft5728FN,ammoEft5728FNAP,ammoEft5728FNHP</set>
-		<set xpath="/items/item[@name='gundeserteagle']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft50ae,ammoEft50aeHP</set>
-		<set xpath="/items/item[@name='gunrsh12']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft12755PS12,ammoEft12755PS12A,ammoEft12755PS12B</set>
+		<setattribute xpath="/items/item[@name='gunp90']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft5728FN,ammoEft5728FNAP,ammoEft5728FNHP</setattribute>
+		<setattribute xpath="/items/item[@name='guntokarevtt']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft76225mmTokarev</setattribute>
+		<setattribute xpath="/items/item[@name='guntokarevgold']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft76225mmTokarev</setattribute>
+		<setattribute xpath="/items/item[@name='guntokarevmachine']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft76225mmTokarev</setattribute>
+		<setattribute xpath="/items/item[@name='gunpb']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammoEft918mmPM</setattribute>
+		<setattribute xpath="/items/item[@name='gunpmalphadog']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammoEft918mmPM</setattribute>
+		<setattribute xpath="/items/item[@name='gunstechkin']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammoEft918mmPM</setattribute>
+		<setattribute xpath="/items/item[@name='gunglock17']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</setattribute>		
+		<setattribute xpath="/items/item[@name='gunp226']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunm9a3']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunglock18c']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft919mm,ammoEft919mmAP,ammoEft919mmHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunsr1mp']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft921mm,ammoEft921mmAP,ammoEft921mmHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunusp45tac']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletAP,ammoEft45ACP,ammoEft45ACPAP,ammoEft45ACPRIP</setattribute>
+		<setattribute xpath="/items/item[@name='gunm1911']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletAP,ammoEft45ACP,ammoEft45ACPAP,ammoEft45ACPRIP</setattribute>
+		<setattribute xpath="/items/item[@name='gunm45']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletAP,ammoEft45ACP,ammoEft45ACPAP,ammoEft45ACPRIP</setattribute>
+		<setattribute xpath="/items/item[@name='gunusp45match']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletAP,ammoEft45ACP,ammoEft45ACPAP,ammoEft45ACPRIP</setattribute>
+		<setattribute xpath="/items/item[@name='gunfiveseven']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft5728FN,ammoEft5728FNAP,ammoEft5728FNHP</setattribute>
+		<setattribute xpath="/items/item[@name='gundeserteagle']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft50ae,ammoEft50aeHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunrsh12']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammoEft12755PS12,ammoEft12755PS12A,ammoEft12755PS12B</setattribute>
 		<!-- PISTOLS -->
 		<!-- SHOTGUNS -->
-		<set xpath="/items/item[@name='gunks23']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoEftShrapnel25Shotgun,ammoEftBarricadeSlug</set>
-		<set xpath="/items/item[@name='gunmp43']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoEft7mmShotgun,ammoEftFlechetteShotgun,ammoEftAP20Slug</set>
-		<set xpath="/items/item[@name='gunmts255']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoEft7mmShotgun,ammoEftFlechetteShotgun,ammoEftAP20Slug</set>
-		<set xpath="/items/item[@name='gunm590']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoEft7mmShotgun,ammoEftFlechetteShotgun,ammoEftAP20Slug</set>
-		<set xpath="/items/item[@name='gunm870']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoEft7mmShotgun,ammoEftFlechetteShotgun,ammoEftAP20Slug</set>
-		<set xpath="/items/item[@name='gunksg12']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoEft7mmShotgun,ammoEftFlechetteShotgun,ammoEftAP20Slug</set>
-		<set xpath="/items/item[@name='gunmp153']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoEft7mmShotgun,ammoEftFlechetteShotgun,ammoEftAP20Slug</set>
-		<set xpath="/items/item[@name='gunm3benelli']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoEft7mmShotgun,ammoEftFlechetteShotgun,ammoEftAP20Slug</set>
+		<setattribute xpath="/items/item[@name='gunks23']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoEftShrapnel25Shotgun,ammoEftBarricadeSlug</setattribute>
+		<setattribute xpath="/items/item[@name='gunmp43']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoEft7mmShotgun,ammoEftFlechetteShotgun,ammoEftAP20Slug</setattribute>
+		<setattribute xpath="/items/item[@name='gunmts255']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoEft7mmShotgun,ammoEftFlechetteShotgun,ammoEftAP20Slug</setattribute>
+		<setattribute xpath="/items/item[@name='gunm590']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoEft7mmShotgun,ammoEftFlechetteShotgun,ammoEftAP20Slug</setattribute>
+		<setattribute xpath="/items/item[@name='gunm870']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoEft7mmShotgun,ammoEftFlechetteShotgun,ammoEftAP20Slug</setattribute>
+		<setattribute xpath="/items/item[@name='gunksg12']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoEft7mmShotgun,ammoEftFlechetteShotgun,ammoEftAP20Slug</setattribute>
+		<setattribute xpath="/items/item[@name='gunmp153']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoEft7mmShotgun,ammoEftFlechetteShotgun,ammoEftAP20Slug</setattribute>
+		<setattribute xpath="/items/item[@name='gunm3benelli']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoEft7mmShotgun,ammoEftFlechetteShotgun,ammoEftAP20Slug</setattribute>
 		
-		<set xpath="/items/item[@name='gunsaiga12']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoEft7mmShotgun,ammoEftFlechetteShotgun,ammoEftAP20Slug</set>
-		<set xpath="/items/item[@name='gunsaiga12']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunsaiga12']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoEft7mmShotgun,ammoEftFlechetteShotgun,ammoEftAP20Slug</setattribute>
+		<setattribute xpath="/items/item[@name='gunsaiga12']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
-		<set xpath="/items/item[@name='gunAA12']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoEft7mmShotgun,ammoEftFlechetteShotgun,ammoEftAP20Slug</set>
+		<setattribute xpath="/items/item[@name='gunAA12']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoEft7mmShotgun,ammoEftFlechetteShotgun,ammoEftAP20Slug</setattribute>
 		<!-- SHOTGUNS -->
 		<!-- GRENADE LAUNCHERS -->
-		<set xpath="/items/item[@name='gunfn40gl']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammoEft4046381,ammoEft4046576</set>
-		<set xpath="/items/item[@name='gunchinalake']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammoEft4046381,ammoEft4046576</set>
-		<set xpath="/items/item[@name='gunm32a1mgl']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammoEft4046381,ammoEft4046576</set>
+		<setattribute xpath="/items/item[@name='gunfn40gl']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoEft4046381,ammoEft4046576</setattribute>
+		<setattribute xpath="/items/item[@name='gunchinalake']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoEft4046381,ammoEft4046576</setattribute>
+		<setattribute xpath="/items/item[@name='gunm32a1mgl']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoEft4046381,ammoEft4046576</setattribute>
 		<!-- GRENADE LAUNCHERS -->	
 		<!-- ROCKET LAUNCHER -->
-		<set xpath="/items/item[@name='gunrpg7']/property[@class='Action0']/property[@name='Magazine_items']/@value">93x40mmRPG7Warhead</set>
+		<setattribute xpath="/items/item[@name='gunrpg7']/property[@class='Action0']/property[@name='Magazine_items']" name="value">93x40mmRPG7Warhead</setattribute>
+		<setattribute xpath="/items/item[@name='gunrpg26']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoEftshg725</setattribute>
 		<!-- ROCKET LAUNCHER -->			
 		<!-- ASSAULT RIFLES -->
-		<set xpath="/items/item[@name='gunadar']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP</set>
+		<setattribute xpath="/items/item[@name='gunadar']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP</setattribute>
 		
-		<set xpath="/items/item[@name='gunauga3']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP</set>
-		<set xpath="/items/item[@name='gunauga3']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunauga3']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunauga3']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
-		<set xpath="/items/item[@name='gung36kv2']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP</set>
-		<set xpath="/items/item[@name='gung36kv2']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gung36kv2']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP</setattribute>
+		<setattribute xpath="/items/item[@name='gung36kv2']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
-		<set xpath="/items/item[@name='gunm4a1']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP</set>
-		<set xpath="/items/item[@name='gunm4a1']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunm4a1']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunm4a1']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
-		<set xpath="/items/item[@name='gunm16a4']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP</set>
-		<set xpath="/items/item[@name='gunm16a4']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunm16a4']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunm16a4']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
-		<set xpath="/items/item[@name='gunl85a2']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP</set>
-		<set xpath="/items/item[@name='gunl85a2']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunl85a2']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunl85a2']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
-		<set xpath="/items/item[@name='gunmdr556']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP</set>
-		<set xpath="/items/item[@name='gunmdr556']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunmdr556']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunmdr556']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
-		<set xpath="/items/item[@name='gunhk416']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP</set>
-		<set xpath="/items/item[@name='gunhk416']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunhk416']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunhk416']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
-		<set xpath="/items/item[@name='gunIWItavorx95']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP</set>
-		<set xpath="/items/item[@name='gunIWIcarmel']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP</set>
-		<set xpath="/items/item[@name='gunak300velociraptor']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft300blk,ammoEft300BblkAP,ammoEft300blkHP</set>
-		<set xpath="/items/item[@name='gunstar15']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft300blk,ammoEft300BblkAP,ammoEft300blkHP</set>
+		<setattribute xpath="/items/item[@name='gunIWItavorx95']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunIWIcarmel']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunak300velociraptor']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft300blk,ammoEft300blkAP,ammoEft300blkHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunstar15']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft300blk,ammoEft300blkAP,ammoEft300blkHP</setattribute>
 		
-		<set xpath="/items/item[@name='gunhoneybadger']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft300blk,ammoEft300BblkAP,ammoEft300blkHP</set>
-		<set xpath="/items/item[@name='gunhoneybadger']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunhoneybadger']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft300blk,ammoEft300blkAP,ammoEft300blkHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunhoneybadger']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
-		<set xpath="/items/item[@name='gunmcx']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft300blk,ammoEft300BblkAP,ammoEft300blkHP</set>
-		<set xpath="/items/item[@name='gunmcx']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunmcx']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft300blk,ammoEft300blkAP,ammoEft300blkHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunmcx']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
-		<set xpath="/items/item[@name='gunm700']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76251NATO,ammoEft76251NATOAP,ammoEft76251NATOHP</set>
-		<set xpath="/items/item[@name='gundvl10']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76251NATO,ammoEft76251NATOAP,ammoEft76251NATOHP</set>
-		<set xpath="/items/item[@name='gunt5000']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76251NATO,ammoEft76251NATOAP,ammoEft76251NATOHP</set>
+		<setattribute xpath="/items/item[@name='gunm700']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76251NATO,ammoEft76251NATOAP,ammoEft76251NATOHP</setattribute>
+		<setattribute xpath="/items/item[@name='gundvl10']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76251NATO,ammoEft76251NATOAP,ammoEft76251NATOHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunt5000']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76251NATO,ammoEft76251NATOAP,ammoEft76251NATOHP</setattribute>
 		
-		<set xpath="/items/item[@name='gunFALsa58dmr']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76251NATO,ammoEft76251NATOAP,ammoEft76251NATOHP</set>
-		<set xpath="/items/item[@name='gunFALsa58dmr']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunFALsa58dmr']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76251NATO,ammoEft76251NATOAP,ammoEft76251NATOHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunFALsa58dmr']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
-		<set xpath="/items/item[@name='gunm1aEBR']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76251NATO,ammoEft76251NATOAP,ammoEft76251NATOHP</set>
+		<setattribute xpath="/items/item[@name='gunm1aEBR']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76251NATO,ammoEft76251NATOAP,ammoEft76251NATOHP</setattribute>
 		
-		<set xpath="/items/item[@name='gunrfb']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76251NATO,ammoEft76251NATOAP,ammoEft76251NATOHP</set>
+		<setattribute xpath="/items/item[@name='gunrfb']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76251NATO,ammoEft76251NATOAP,ammoEft76251NATOHP</setattribute>
 		
-		<set xpath="/items/item[@name='gunsr25']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76251NATO,ammoEft76251NATOAP,ammoEft76251NATOHP</set>
-		<set xpath="/items/item[@name='gunsr25']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunsr25']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76251NATO,ammoEft76251NATOAP,ammoEft76251NATOHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunsr25']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
-		<set xpath="/items/item[@name='gunrsass']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76251NATO,ammoEft76251NATOAP,ammoEft76251NATOHP</set>
-		<set xpath="/items/item[@name='gunrsass']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunrsass']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76251NATO,ammoEft76251NATOAP,ammoEft76251NATOHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunrsass']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
-		<set xpath="/items/item[@name='gunhkg28']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76251NATO,ammoEft76251NATOAP,ammoEft76251NATOHP</set>
-		<set xpath="/items/item[@name='gunhkg28']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunhkg28']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76251NATO,ammoEft76251NATOAP,ammoEft76251NATOHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunhkg28']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
-		<set xpath="/items/item[@name='gunFALsa58br']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76251NATO,ammoEft76251NATOAP,ammoEft76251NATOHP</set>
-		<set xpath="/items/item[@name='gunFALsa58br']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunFALsa58br']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76251NATO,ammoEft76251NATOAP,ammoEft76251NATOHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunFALsa58br']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
-		<set xpath="/items/item[@name='gunmdr762']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76251NATO,ammoEft76251NATOAP,ammoEft76251NATOHP</set>
-		<set xpath="/items/item[@name='gunmdr762']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunmdr762']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76251NATO,ammoEft76251NATOAP,ammoEft76251NATOHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunmdr762']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
-		<set xpath="/items/item[@name='gunscarh']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76251NATO,ammoEft76251NATOAP,ammoEft76251NATOHP</set>
-		<set xpath="/items/item[@name='gunscarh']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunscarh']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76251NATO,ammoEft76251NATOAP,ammoEft76251NATOHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunscarh']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
-		<set xpath="/items/item[@name='gunhk417']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76251NATO,ammoEft76251NATOAP,ammoEft76251NATOHP</set>
-		<set xpath="/items/item[@name='gunhk417']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunhk417']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76251NATO,ammoEft76251NATOAP,ammoEft76251NATOHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunhk417']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
-		<set xpath="/items/item[@name='gunm14sass']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76251NATO,ammoEft76251NATOAP,ammoEft76251NATOHP</set>
-		<set xpath="/items/item[@name='gunm14sass']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunm14sass']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76251NATO,ammoEft76251NATOAP,ammoEft76251NATOHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunm14sass']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
-		<set xpath="/items/item[@name='gunmcxspear']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76251NATO,ammoEft76251NATOAP,ammoEft76251NATOHP</set>
-		<set xpath="/items/item[@name='gunmcxspear']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunmcxspear']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76251NATO,ammoEft76251NATOAP,ammoEft76251NATOHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunmcxspear']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
-		<set xpath="/items/item[@name='gunmp18']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76254R,ammoEft76254RAP,ammoEft76254RHP</set>
-		<set xpath="/items/item[@name='gunmosin']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76254R,ammoEft76254RAP,ammoEft76254RHP</set>
-		<set xpath="/items/item[@name='gunsv98']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76254R,ammoEft76254RAP,ammoEft76254RHP</set>
-		<set xpath="/items/item[@name='gunsvt']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76254R,ammoEft76254RAP,ammoEft76254RHP</set>
+		<setattribute xpath="/items/item[@name='gunmp18']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76254R,ammoEft76254RAP,ammoEft76254RHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunmosin']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76254R,ammoEft76254RAP,ammoEft76254RHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunsv98']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76254R,ammoEft76254RAP,ammoEft76254RHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunsvt']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76254R,ammoEft76254RAP,ammoEft76254RHP</setattribute>
 		
-		<set xpath="/items/item[@name='gunsvd']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76254R,ammoEft76254RAP,ammoEft76254RHP</set>
-		<set xpath="/items/item[@name='gunsvd']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunsvd']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76254R,ammoEft76254RAP,ammoEft76254RHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunsvd']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
-		<set xpath="/items/item[@name='gunash12']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft12755PS12,ammoEft12755PS12A,ammoEft12755PS12B</set>
-		<set xpath="/items/item[@name='gunash12']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunash12']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft12755PS12,ammoEft12755PS12A,ammoEft12755PS12B</setattribute>
+		<setattribute xpath="/items/item[@name='gunash12']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
-		<set xpath="/items/item[@name='gunrpk16']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft54539,ammoEft54539AP,ammoEft54539HP</set>
-		<set xpath="/items/item[@name='gunrpk16']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunrpk16']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft54539,ammoEft54539AP,ammoEft54539HP</setattribute>
+		<setattribute xpath="/items/item[@name='gunrpk16']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
-		<set xpath="/items/item[@name='gunfnminimi']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP</set>
-		<set xpath="/items/item[@name='gunrpd']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76239,ammoEft76239AP,ammoEft76239HP</set>
-		<set xpath="/items/item[@name='gunm60e6']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76251NATO,ammoEft76251NATOAP,ammoEft76251NATOHP</set>
-		<set xpath="/items/item[@name='gunpkp']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76254R,ammoEft76254RAP,ammoEft76254RHP</set>
+		<setattribute xpath="/items/item[@name='gunfnminimi']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunrpd']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76239,ammoEft76239AP,ammoEft76239HP</setattribute>
+		<setattribute xpath="/items/item[@name='gunm60e6']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76251NATO,ammoEft76251NATOAP,ammoEft76251NATOHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunpkp']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76254R,ammoEft76254RAP,ammoEft76254RHP</setattribute>
 		
-		<set xpath="/items/item[@name='gunaks74un']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft54539,ammoEft54539AP,ammoEft54539HP</set>
-		<set xpath="/items/item[@name='gunaks74un']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunaks74un']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft54539,ammoEft54539AP,ammoEft54539HP</setattribute>
+		<setattribute xpath="/items/item[@name='gunaks74un']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
-		<set xpath="/items/item[@name='gunak74n']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft54539,ammoEft54539AP,ammoEft54539HP</set>
-		<set xpath="/items/item[@name='gunak74n']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381,ammoEft4053vog25</set>
+		<setattribute xpath="/items/item[@name='gunak74n']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft54539,ammoEft54539AP,ammoEft54539HP</setattribute>
+		<setattribute xpath="/items/item[@name='gunak74n']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381,ammoEft4053vog25</setattribute>
 		
-		<set xpath="/items/item[@name='gunak74m']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft54539,ammoEft54539AP,ammoEft54539HP</set>
-		<set xpath="/items/item[@name='gunak74m']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381,ammoEft4053vog25</set>
+		<setattribute xpath="/items/item[@name='gunak74m']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft54539,ammoEft54539AP,ammoEft54539HP</setattribute>
+		<setattribute xpath="/items/item[@name='gunak74m']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381,ammoEft4053vog25</setattribute>
 		
-		<set xpath="/items/item[@name='gunak12']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft54539,ammoEft54539AP,ammoEft54539HP</set>
-		<set xpath="/items/item[@name='gunak12']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381,ammoEft4053vog25</set>
+		<setattribute xpath="/items/item[@name='gunak12']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft54539,ammoEft54539AP,ammoEft54539HP</setattribute>
+		<setattribute xpath="/items/item[@name='gunak12']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381,ammoEft4053vog25</setattribute>
 		
-		<set xpath="/items/item[@name='gunak107']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft54539,ammoEft54539AP,ammoEft54539HP</set>
-		<set xpath="/items/item[@name='gunak107']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381,ammoEft4053vog25</set>
+		<setattribute xpath="/items/item[@name='gunak107']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft54539,ammoEft54539AP,ammoEft54539HP</setattribute>
+		<setattribute xpath="/items/item[@name='gunak107']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381,ammoEft4053vog25</setattribute>
 		
-		<set xpath="/items/item[@name='gunsks']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76239,ammoEft76239AP,ammoEft76239HP</set>
+		<setattribute xpath="/items/item[@name='gunsks']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76239,ammoEft76239AP,ammoEft76239HP</setattribute>
 		
-		<set xpath="/items/item[@name='gunakmn']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76239,ammoEft76239AP,ammoEft76239HP</set>
-		<set xpath="/items/item[@name='gunakmn']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381,ammoEft4053vog25</set>
+		<setattribute xpath="/items/item[@name='gunakmn']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76239,ammoEft76239AP,ammoEft76239HP</setattribute>
+		<setattribute xpath="/items/item[@name='gunakmn']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381,ammoEft4053vog25</setattribute>
 		
-		<set xpath="/items/item[@name='gunak103']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76239,ammoEft76239AP,ammoEft76239HP</set>
-		<set xpath="/items/item[@name='gunak103']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381,ammoEft4053vog25</set>
+		<setattribute xpath="/items/item[@name='gunak103']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76239,ammoEft76239AP,ammoEft76239HP</setattribute>
+		<setattribute xpath="/items/item[@name='gunak103']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381,ammoEft4053vog25</setattribute>
 		
-		<set xpath="/items/item[@name='gunak109']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76239,ammoEft76239AP,ammoEft76239HP</set>
-		<set xpath="/items/item[@name='gunak109']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381,ammoEft4053vog25</set>
+		<setattribute xpath="/items/item[@name='gunak109']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76239,ammoEft76239AP,ammoEft76239HP</setattribute>
+		<setattribute xpath="/items/item[@name='gunak109']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381,ammoEft4053vog25</setattribute>
 		
-		<set xpath="/items/item[@name='gunrd704']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76239,ammoEft76239AP,ammoEft76239HP</set>
-		<set xpath="/items/item[@name='gunrd704']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunrd704']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76239,ammoEft76239AP,ammoEft76239HP</setattribute>
+		<setattribute xpath="/items/item[@name='gunrd704']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
-		<set xpath="/items/item[@name='gunmk47']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76239,ammoEft76239AP,ammoEft76239HP</set>
-		<set xpath="/items/item[@name='gunmk47']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunmk47']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft76239,ammoEft76239AP,ammoEft76239HP</setattribute>
+		<setattribute xpath="/items/item[@name='gunmk47']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
-		<set xpath="/items/item[@name='gun9a91']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft939,ammoEft939AP,ammoEft939HP</set>
-		<set xpath="/items/item[@name='gunvss']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft939,ammoEft939AP,ammoEft939HP</set>
-		<set xpath="/items/item[@name='gunasval']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft939,ammoEft939AP,ammoEft939HP</set>
-		<set xpath="/items/item[@name='gunaxmc']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft338,ammoEft338AP,ammoEft338HP</set>
-		<set xpath="/items/item[@name='gunswordmk18']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft338,ammoEft338AP,ammoEft338HP</set>
+		<setattribute xpath="/items/item[@name='gun9a91']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft939,ammoEft939AP,ammoEft939HP</setattribute>
+		<setattribute xpath="/items/item[@name='gunvss']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft939,ammoEft939AP,ammoEft939HP</setattribute>
+		<setattribute xpath="/items/item[@name='gunasval']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft939,ammoEft939AP,ammoEft939HP</setattribute>
+		<setattribute xpath="/items/item[@name='gunaxmc']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft338,ammoEft338AP,ammoEft338HP</setattribute>
+		<setattribute xpath="/items/item[@name='gunswordmk18']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft338,ammoEft338AP,ammoEft338HP</setattribute>
 		
-		<set xpath="/items/item[@name='gunfamas']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP</set>
-		<set xpath="/items/item[@name='gunfamas']/property[@class='Action3']/property[@name='Magazine_items']/@value">ammoEft4046381</set>
+		<setattribute xpath="/items/item[@name='gunfamas']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammoEft55645NATO,ammoEft55645NATOAP,ammoEft55645NATOHP</setattribute>
+		<setattribute xpath="/items/item[@name='gunfamas']/property[@class='Action3']/property[@name='Magazine_items']" name="value">ammoEft4046381</setattribute>
 		
 	<!-- ASSAULT RIFLES -->	
 	
@@ -4460,7 +4510,7 @@
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoEft54539HP" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoEft55645NATOAP" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoEft55645NATOHP" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoEft300BblkAP" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoEft300blkAP" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoEft300blkHP" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoEft76239AP" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoEft76239HP" operation="set" value="1"/>
@@ -4502,5 +4552,826 @@
                 <passive_effect name="MaxRange" operation="base_set" value="50" tags="perkBoomstick"/>
     </append>
 	
-	
+<!-- ************************************************************************************************ -->
+<!--						STALLIONS EDITS															  -->
+<!-- ************************************************************************************************ -->
+			<setattribute xpath="/items/item[@name='resourceCellulosePowder']/property[@name='Stacknumber']" name="value">6000</setattribute>
+            <setattribute xpath="/items/item[@name='resourceCellulosePowder']/property[@name='EconomicValue']" name="value">1</setattribute>
+            <setattribute xpath="/items/item[@name='resourceCellulosePowder']/property[@name='EconomicBundleSize']" name="value">10</setattribute>
+            <!-- *********************************************************************************************************************************************** -->
+            <setattribute xpath="/items/item[@name='resourceNitricAcid']/property[@name='Stacknumber']" name="value">10000</setattribute>
+            <setattribute xpath="/items/item[@name='resourceNitricAcid']/property[@name='EconomicValue']" name="value">15</setattribute>
+            <setattribute xpath="/items/item[@name='resourceNitricAcid']/property[@name='EconomicBundleSize']" name="value">100</setattribute>
+            <!-- *********************************************************************************************************************************************** -->
+            <setattribute xpath="/items/item[@name='resourceSulfuricAcid']/property[@name='Stacknumber']" name="value">10000</setattribute>
+            <setattribute xpath="/items/item[@name='resourceSulfuricAcid']/property[@name='EconomicValue']" name="value">15</setattribute>
+            <setattribute xpath="/items/item[@name='resourceSulfuricAcid']/property[@name='EconomicBundleSize']" name="value">100</setattribute>
+            <!-- *********************************************************************************************************************************************** -->
+            <setattribute xpath="/items/item[@name='resource_item_other_powder']/property[@name='Stacknumber']" name="value">6000</setattribute>
+            <setattribute xpath="/items/item[@name='resource_item_other_powder']/property[@name='EconomicValue']" name="value">10</setattribute>
+            <!-- *********************************************************************************************************************************************** -->
+            <setattribute xpath="/items/item[@name='resource_item_other_powder_green']/property[@name='Stacknumber']" name="value">6000</setattribute>
+            <setattribute xpath="/items/item[@name='resource_item_other_powder_green']/property[@name='EconomicValue']" name="value">10</setattribute>
+            <!-- *********************************************************************************************************************************************** -->
+            <setattribute xpath="/items/item[@name='resource_item_other_powder_red']/property[@name='Stacknumber']" name="value">6000</setattribute>
+            <setattribute xpath="/items/item[@name='resource_item_other_powder_red']/property[@name='EconomicValue']" name="value">10</setattribute>
+            <!-- *********************************************************************************************************************************************** -->
+            <setattribute xpath="/items/item[@name='resourceClassicMatches']/property[@name='Stacknumber']" name="value">250</setattribute>
+            <setattribute xpath="/items/item[@name='resourceClassicMatches']/property[@name='EconomicValue']" name="value">10</setattribute>
+            <!-- *********************************************************************************************************************************************** -->
+            <setattribute xpath="/items/item[@name='resourceCanisterWithPurifiedWater']/property[@name='Stacknumber']" name="value">25</setattribute>
+            <setattribute xpath="/items/item[@name='resourceCanisterWithPurifiedWater']/property[@name='EconomicValue']" name="value">500</setattribute>
+            <!-- *********************************************************************************************************************************************** -->
+            <setattribute xpath="/items/item[@name='resourceOxBbleach']/property[@name='Stacknumber']" name="value">25</setattribute>
+            <setattribute xpath="/items/item[@name='resourceOxBbleach']/property[@name='EconomicValue']" name="value">150</setattribute>
+            <!-- *********************************************************************************************************************************************** -->
+            <setattribute xpath="/items/item[@name='bundleEftResourceNitricAcid']/property[@name='Stacknumber']" name="value">5</setattribute>
+			<append xpath="//items/item[@name='bundleEftResourceNitricAcid']">
+			<property name="EconomicValue" value="300"/>
+			<property name="EconomicBundleSize" value="1"/>
+			</append>
+            <setattribute xpath="/items/item[@name='bundleEftResourceNitricAcid']/property[@name='EconomicValue']" name="value">150</setattribute>
+            <setattribute xpath="/items/item[@name='bundleEftResourceNitricAcid']/property[@class='Action0']/property[@name='Create_item_count']" name="value">1950</setattribute>
+            <!-- *********************************************************************************************************************************************** -->
+            <setattribute xpath="/items/item[@name='bundleEftResourceNitricAcid_2']/property[@name='Stacknumber']" name="value">5</setattribute>
+			<append xpath="//items/item[@name='bundleEftResourceNitricAcid_2']">
+			<property name="EconomicValue" value="300"/>
+			<property name="EconomicBundleSize" value="1"/>
+			</append>
+            <setattribute xpath="/items/item[@name='bundleEftResourceNitricAcid_2']/property[@name='EconomicValue']" name="value">150</setattribute>
+            <setattribute xpath="/items/item[@name='bundleEftResourceNitricAcid_2']/property[@class='Action0']/property[@name='Create_item_count']" name="value">780</setattribute>
+            <!-- *********************************************************************************************************************************************** -->
+            <setattribute xpath="/items/item[@name='bundleEftResourceSulfuricAcid']/property[@name='Stacknumber']" name="value">5</setattribute>
+			<append xpath="//items/item[@name='bundleEftResourceSulfuricAcid']">
+			<property name="EconomicValue" value="300"/>
+			<property name="EconomicBundleSize" value="1"/>
+			</append>
+            <setattribute xpath="/items/item[@name='bundleEftResourceSulfuricAcid']/property[@name='EconomicValue']" name="value">150</setattribute>
+            <setattribute xpath="/items/item[@name='bundleEftResourceSulfuricAcid']/property[@class='Action0']/property[@name='Create_item_count']" name="value">10000</setattribute>
+            <!-- *********************************************************************************************************************************************** -->
+            <setattribute xpath="/items/item[@name='bundleEftResourceSulfuricAcid_2']/property[@name='Stacknumber']" name="value">5</setattribute>
+			<append xpath="//items/item[@name='bundleEftResourceSulfuricAcid_2']">
+			<property name="EconomicValue" value="300"/>
+			<property name="EconomicBundleSize" value="1"/>
+			</append>
+            <setattribute xpath="/items/item[@name='bundleEftResourceSulfuricAcid_2']/property[@name='EconomicValue']" name="value">150</setattribute>
+            <setattribute xpath="/items/item[@name='bundleEftResourceSulfuricAcid_2']/property[@class='Action0']/property[@name='Create_item_count']" name="value">1250</setattribute>
+            <!-- *********************************************************************************************************************************************** -->
+            <setattribute xpath="/items/item[@name='resourceLowCaliberCasing']/property[@name='Stacknumber']" name="value">1000</setattribute>
+            <setattribute xpath="/items/item[@name='resourceLowCaliberCasing']/property[@name='EconomicValue']" name="value">10</setattribute>
+            <!-- *********************************************************************************************************************************************** -->
+            <setattribute xpath="/items/item[@name='resourceMedCaliberCasing']/property[@name='Stacknumber']" name="value">1000</setattribute>
+            <setattribute xpath="/items/item[@name='resourceMedCaliberCasing']/property[@name='EconomicValue']" name="value">15</setattribute>
+            <!-- *********************************************************************************************************************************************** -->
+            <setattribute xpath="/items/item[@name='resourceHighCaliberCasing']/property[@name='Stacknumber']" name="value">1000</setattribute>
+            <setattribute xpath="/items/item[@name='resourceHighCaliberCasing']/property[@name='EconomicValue']" name="value">20</setattribute>
+            <!-- *********************************************************************************************************************************************** -->
+            <setattribute xpath="/items/item[@name='resourceEmptyShotgunShell']/property[@name='Stacknumber']" name="value">1000</setattribute>
+            <setattribute xpath="/items/item[@name='resourceEmptyShotgunShell']/property[@name='EconomicValue']" name="value">10</setattribute>
+            <!-- *********************************************************************************************************************************************** -->
+            <setattribute xpath="/items/item[@name='resourceLowCaliberBulletTip']/property[@name='Stacknumber']" name="value">1000</setattribute>
+            <setattribute xpath="/items/item[@name='resourceLowCaliberBulletTip']/property[@name='EconomicValue']" name="value">10</setattribute>
+            <!-- *********************************************************************************************************************************************** -->
+            <setattribute xpath="/items/item[@name='resourceMedCaliberBulletTip']/property[@name='Stacknumber']" name="value">1000</setattribute>
+            <setattribute xpath="/items/item[@name='resourceMedCaliberBulletTip']/property[@name='EconomicValue']" name="value">15</setattribute>
+            <!-- *********************************************************************************************************************************************** -->
+            <setattribute xpath="/items/item[@name='resourceHighCaliberBulletTip']/property[@name='Stacknumber']" name="value">1000</setattribute>
+            <setattribute xpath="/items/item[@name='resourceHighCaliberBulletTip']/property[@name='EconomicValue']" name="value">20</setattribute>
+            <!-- *********************************************************************************************************************************************** -->
+            <setattribute xpath="/items/item[@name='resourceOFZ30x165mmShell']/property[@name='Stacknumber']" name="value">50</setattribute>
+            <setattribute xpath="/items/item[@name='resourceOFZ30x165mmShell']/property[@name='EconomicValue']" name="value">500</setattribute>
+            <!-- *********************************************************************************************************************************************** -->
+            <setattribute xpath="/items/item[@name='resourceTP200TNTBrick']/property[@name='Stacknumber']" name="value">500</setattribute>
+            <setattribute xpath="/items/item[@name='resourceTP200TNTBrick']/property[@name='EconomicValue']" name="value">60</setattribute>
+            <!-- *********************************************************************************************************************************************** -->
+            <setattribute xpath="/items/item[@name='resourceUZRGMGrenadeFuze']/property[@name='Stacknumber']" name="value">500</setattribute>
+            <setattribute xpath="/items/item[@name='resourceUZRGMGrenadeFuze']/property[@name='EconomicValue']" name="value">45</setattribute>
+            <!-- *********************************************************************************************************************************************** -->
+			
+			<!-- AMMOEFT54539 -->
+            <setattribute xpath="/items/item[@name='ammoEft54539']/property[@name='Stacknumber']" name="value">350</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft54539']/property[@name='EconomicValue']" name="value">10</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft54539']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">100</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft54539']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">55</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft54539']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft54539']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <!-- AMMOEFT54539 -->
+            <!-- AMMOEFT54539AP -->
+            <setattribute xpath="/items/item[@name='ammoEft54539AP']/property[@name='Stacknumber']" name="value">350</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft54539AP']/property[@name='EconomicValue']" name="value">15</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft54539AP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">125</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft54539AP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">50</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft54539AP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft54539AP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+		    <append xpath="/items/item[@name='ammoEft54539AP']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.5"/>
+            <effect_group name="perkPenetrator" tiered="false">
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkDeadEye,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkDeadEye,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkDeadEye,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkDeadEye,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
+	        </effect_group>
+			</append>
+            <!-- AMMOEFT54539AP -->
+            <!-- AMMOEFT54539HP -->
+            <setattribute xpath="/items/item[@name='ammoEft54539HP']/property[@name='Stacknumber']" name="value">350</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft54539HP']/property[@name='EconomicValue']" name="value">30</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft54539HP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">75</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft54539HP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">61</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft54539HP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft54539HP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <append xpath="/items/item[@name='ammoEft54539HP']">
+			<passive_effect name="TargetArmor" operation="perc_add" value=".5" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value=".5"/>
+			</append>
+            <!-- AMMOEFT54539HP -->
+            <!-- AMMOEFT55645NATO -->
+            <setattribute xpath="/items/item[@name='ammoEft55645NATO']/property[@name='Stacknumber']" name="value">300</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft55645NATO']/property[@name='EconomicValue']" name="value">10</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft55645NATO']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">100</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft55645NATO']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">57</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft55645NATO']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft55645NATO']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <!-- AMMOEFT55645NATO -->
+            <!-- AMMOEFT55645NATOAP -->
+            <setattribute xpath="/items/item[@name='ammoEft55645NATOAP']/property[@name='Stacknumber']" name="value">300</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft55645NATOAP']/property[@name='EconomicValue']" name="value">15</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft55645NATOAP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">125</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft55645NATOAP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">52</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft55645NATOAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft55645NATOAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			<append xpath="/items/item[@name='ammoEft55645NATOAP']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.5"/>
+	        <effect_group name="perkPenetrator" tiered="false">
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkDeadEye,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkDeadEye,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkDeadEye,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkDeadEye,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
+	        </effect_group>
+			</append>
+            <!-- AMMOEFT55645NATOAP -->
+            <!-- AMMOEFT55645NATOHP -->
+            <setattribute xpath="/items/item[@name='ammoEft55645NATOHP']/property[@name='Stacknumber']" name="value">300</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft55645NATOHP']/property[@name='EconomicValue']" name="value">30</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft55645NATOHP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">75</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft55645NATOHP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">63</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft55645NATOHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft55645NATOHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <append xpath="/items/item[@name='ammoEft55645NATOHP']">
+			<passive_effect name="TargetArmor" operation="perc_add" value=".5" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value=".5"/>
+			</append>
+            <!-- AMMOEFT55645NATOHP -->
+            <!-- AMMOEFT300BLK -->
+            <setattribute xpath="/items/item[@name='ammoEft300blk']/property[@name='Stacknumber']" name="value">350</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft300blk']/property[@name='EconomicValue']" name="value">10</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft300blk']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">100</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft300blk']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">54</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft300blk']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">6</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft300blk']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <!-- AMMOEFT300BLK -->
+            <!-- ammoEft300blkAP -->
+            <setattribute xpath="/items/item[@name='ammoEft300blkAP']/property[@name='Stacknumber']" name="value">350</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft300blkAP']/property[@name='EconomicValue']" name="value">15</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft300blkAP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">125</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft300blkAP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">49</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft300blkAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">6</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft300blkAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+		    <append xpath="/items/item[@name='ammoEft300blkAP']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.5"/>
+	        <effect_group name="perkPenetrator" tiered="false">
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkDeadEye,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkDeadEye,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkDeadEye,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkDeadEye,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
+	        </effect_group>
+			</append>
+            <!-- ammoEft300blkAP -->
+            <!-- AMMOEFT300BLKHP -->
+            <setattribute xpath="/items/item[@name='ammoEft300blkHP']/property[@name='Stacknumber']" name="value">350</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft300blkHP']/property[@name='EconomicValue']" name="value">30</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft300blkHP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">75</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft300blkHP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">60</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft300blkHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">6</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft300blkHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			<append xpath="/items/item[@name='ammoEft300blkHP']">
+            <passive_effect name="TargetArmor" operation="perc_add" value=".5" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value=".5"/>
+			</append>
+            <!-- AMMOEFT300BLKHP -->
+            <!-- AMMOEFT76239 -->
+            <setattribute xpath="/items/item[@name='ammoEft76239']/property[@name='Stacknumber']" name="value">300</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76239']/property[@name='EconomicValue']" name="value">10</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76239']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">125</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76239']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">63</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76239']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">6</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76239']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <!-- AMMOEFT76239 -->
+            <!-- AMMOEFT76239AP -->
+            <setattribute xpath="/items/item[@name='ammoEft76239AP']/property[@name='Stacknumber']" name="value">300</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76239AP']/property[@name='EconomicValue']" name="value">15</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76239AP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">150</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76239AP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">57</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76239AP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">6</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76239AP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			<append xpath="/items/item[@name='ammoEft76239AP']">
+		    <passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.5"/>
+	        <effect_group name="perkPenetrator" tiered="false">
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkDeadEye,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkDeadEye,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkDeadEye,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkDeadEye,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
+	        </effect_group>
+			</append>
+            <!-- AMMOEFT76239AP -->
+            <!-- AMMOEFT76239HP -->
+            <setattribute xpath="/items/item[@name='ammoEft76239HP']/property[@name='Stacknumber']" name="value">300</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76239HP']/property[@name='EconomicValue']" name="value">30</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76239HP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">100</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76239HP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">70</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76239HP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">6</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76239HP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <append xpath="/items/item[@name='ammoEft76239HP']">
+			<passive_effect name="TargetArmor" operation="perc_add" value=".5" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value=".5"/>
+			</append>
+            <!-- AMMOEFT76239HP -->
+            <!-- AMMOEFT939 -->
+            <setattribute xpath="/items/item[@name='ammoEft939']/property[@name='Stacknumber']" name="value">250</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft939']/property[@name='EconomicValue']" name="value">10</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft939']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">100</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft939']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">59</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft939']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">6</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft939']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <!-- AMMOEFT939 -->
+            <!-- AMMOEFT939AP -->
+            <setattribute xpath="/items/item[@name='ammoEft939AP']/property[@name='Stacknumber']" name="value">250</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft939AP']/property[@name='EconomicValue']" name="value">15</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft939AP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">125</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft939AP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">54</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft939AP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">6</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft939AP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+		    <append xpath="/items/item[@name='ammoEft939AP']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.5"/>
+	        <effect_group name="perkPenetrator" tiered="false">
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkDeadEye,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkDeadEye,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkDeadEye,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkDeadEye,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
+	        </effect_group>
+			</append>
+            <!-- AMMOEFT939AP -->
+            <!-- AMMOEFT939HP -->
+            <setattribute xpath="/items/item[@name='ammoEft939HP']/property[@name='Stacknumber']" name="value">250</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft939HP']/property[@name='EconomicValue']" name="value">30</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft939HP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">75</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft939HP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">65</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft939HP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">6</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft939HP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			<append xpath="/items/item[@name='ammoEft939HP']">
+            <passive_effect name="TargetArmor" operation="perc_add" value=".5" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value=".5"/>
+			</append>
+            <!-- AMMOEFT939HP -->
+            <!-- AMMOEFT76251NATO -->
+            <setattribute xpath="/items/item[@name='ammoEft76251NATO']/property[@name='Stacknumber']" name="value">200</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76251NATO']/property[@name='EconomicValue']" name="value">10</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76251NATO']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">150</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76251NATO']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">103</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76251NATO']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">8</setattribute>			
+            <setattribute xpath="/items/item[@name='ammoEft76251NATO']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>			
+            <!-- AMMOEFT76251NATO -->
+            <!-- AMMOEFT76251NATOAP -->
+            <setattribute xpath="/items/item[@name='ammoEft76251NATOAP']/property[@name='Stacknumber']" name="value">200</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76251NATOAP']/property[@name='EconomicValue']" name="value">15</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76251NATOAP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">200</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76251NATOAP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">93</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76251NATOAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">8</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76251NATOAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+		    <append xpath="/items/item[@name='ammoEft76251NATOAP']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.5"/>
+	        <effect_group name="perkPenetrator" tiered="false">
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkDeadEye,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkDeadEye,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkDeadEye,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkDeadEye,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
+	        </effect_group>
+			</append>
+            <!-- AMMOEFT76251NATOAP -->
+            <!-- AMMOEFT76251NATOHP -->
+            <setattribute xpath="/items/item[@name='ammoEft76251NATOHP']/property[@name='Stacknumber']" name="value">200</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76251NATOHP']/property[@name='EconomicValue']" name="value">30</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76251NATOHP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">125</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76251NATOHP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">114</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76251NATOHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">8</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76251NATOHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <append xpath="/items/item[@name='ammoEft76251NATOHP']">
+			<passive_effect name="TargetArmor" operation="perc_add" value=".5" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value=".5"/>
+			</append>
+            <!-- AMMOEFT76251NATOHP -->
+            <!-- AMMOEFT76254R -->
+            <setattribute xpath="/items/item[@name='ammoEft76254R']/property[@name='Stacknumber']" name="value">200</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76254R']/property[@name='EconomicValue']" name="value">10</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76254R']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">150</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76254R']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">99</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76254R']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">8</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76254R']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <!-- AMMOEFT76254R -->
+            <!-- AMMOEFT76254RAP -->
+            <setattribute xpath="/items/item[@name='ammoEft76254RAP']/property[@name='Stacknumber']" name="value">200</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76254RAP']/property[@name='EconomicValue']" name="value">15</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76254RAP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">200</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76254RAP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">90</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76254RAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">8</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76254RAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+		    <append xpath="/items/item[@name='ammoEft76254RAP']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.5"/>
+	        <effect_group name="perkPenetrator" tiered="false">
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkDeadEye,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkDeadEye,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkDeadEye,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkDeadEye,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
+	        </effect_group>
+			</append>
+            <!-- AMMOEFT76254RAP -->
+            <!-- AMMOEFT76254RHP -->
+            <setattribute xpath="/items/item[@name='ammoEft76254RHP']/property[@name='Stacknumber']" name="value">200</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76254RHP']/property[@name='EconomicValue']" name="value">30</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76254RHP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">125</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76254RHP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">109</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76254RHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">8</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76254RHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			<append xpath="/items/item[@name='ammoEft76254RHP']">
+            <passive_effect name="TargetArmor" operation="perc_add" value=".5" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value=".5"/>
+			</append>
+            <!-- AMMOEFT76254RHP -->
+            <!-- AMMOEFT12755PS12 -->
+            <setattribute xpath="/items/item[@name='ammoEft12755PS12']/property[@name='Stacknumber']" name="value">100</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft12755PS12']/property[@name='EconomicValue']" name="value">10</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft12755PS12']/effect_group[@name='ammo']/passive_effect[@name='MaxRange' and @value='1000']" name="value">150</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft12755PS12']/effect_group[@name='ammo']/passive_effect[@name='MaxRange' and @value='250']" name="value">100</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft12755PS12']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">132</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft12755PS12']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">10</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft12755PS12']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <!-- AMMOEFT12755PS12 -->
+            <!-- AMMOEFT12755PS12A -->
+            <setattribute xpath="/items/item[@name='ammoEft12755PS12A']/property[@name='Stacknumber']" name="value">100</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft12755PS12A']/property[@name='EconomicValue']" name="value">15</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft12755PS12A']/effect_group[@name='ammo']/passive_effect[@name='MaxRange' and @value='950']" name="value">200</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft12755PS12A']/effect_group[@name='ammo']/passive_effect[@name='MaxRange' and @value='250']" name="value">125</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft12755PS12A']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">146</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft12755PS12A']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">10</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft12755PS12A']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <append xpath="/items/item[@name='ammoEft12755PS12A']">
+			<passive_effect name="TargetArmor" operation="perc_add" value=".5" tags="perkGunslinger,perkMachineGunner"/><display_value name="dTargetArmor" value=".5"/>
+			</append>
+            <!-- AMMOEFT12755PS12A -->
+            <!-- AMMOEFT12755PS12B -->
+            <setattribute xpath="/items/item[@name='ammoEft12755PS12B']/property[@name='Stacknumber']" name="value">100</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft12755PS12B']/property[@name='EconomicValue']" name="value">30</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft12755PS12B']/effect_group[@name='ammo']/passive_effect[@name='MaxRange' and @value='1100']" name="value">100</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft12755PS12B']/effect_group[@name='ammo']/passive_effect[@name='MaxRange' and @value='250']" name="value">75</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft12755PS12B']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">119</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft12755PS12B']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">10</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft12755PS12B']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			<append xpath="/items/item[@name='ammoEft12755PS12B']">
+            <passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkGunslinger,perkMachineGunner"/><display_value name="dTargetArmor" value="-.5"/>
+        	<effect_group name="perkPenetrator" tiered="false">
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkGunslinger,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkGunslinger,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkGunslinger,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkGunslinger,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
+            </effect_group>
+			</append>
+            <!-- AMMOEFT12755PS12B -->
+            <!-- AMMOEFT338 -->
+            <setattribute xpath="/items/item[@name='ammoEft338']/property[@name='Stacknumber']" name="value">100</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft338']/property[@name='EconomicValue']" name="value">10</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft338']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">125</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft338']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">157</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft338']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">8</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft338']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <!-- AMMOEFT338 -->
+            <!-- AMMOEFT338AP -->
+            <setattribute xpath="/items/item[@name='ammoEft338AP']/property[@name='Stacknumber']" name="value">100</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft338AP']/property[@name='EconomicValue']" name="value">15</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft338AP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">200</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft338AP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">142</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft338AP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">8</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft338AP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			<append xpath="/items/item[@name='ammoEft338AP']">
+		    <passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.5"/>
+	        <effect_group name="perkPenetrator" tiered="false">
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkDeadEye,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkDeadEye,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkDeadEye,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkDeadEye,perkMachineGunner">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
+	        </effect_group>
+			</append>
+            <!-- AMMOEFT338AP -->
+            <!-- AMMOEFT338HP -->
+            <setattribute xpath="/items/item[@name='ammoEft338HP']/property[@name='Stacknumber']" name="value">100</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft338HP']/property[@name='EconomicValue']" name="value">15</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft338HP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">100</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft338HP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">173</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft338HP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">8</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft338HP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			<append xpath="/items/item[@name='ammoEft338HP']">
+            <passive_effect name="TargetArmor" operation="perc_add" value=".5" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value=".5"/>
+			</append>
+            <!-- AMMOEFT338HP -->
+            <!-- AMMOEFT76225MMTOKAREV -->
+            <setattribute xpath="/items/item[@name='ammoEft76225mmTokarev']/property[@name='Stacknumber']" name="value">450</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76225mmTokarev']/property[@name='EconomicValue']" name="value">10</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76225mmTokarev']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">100</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76225mmTokarev']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">31</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76225mmTokarev']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft76225mmTokarev']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <!-- AMMOEFT76225MMTOKAREV -->
+            <!-- AMMOEFT918MMPM -->
+            <setattribute xpath="/items/item[@name='ammoEft918mmPM']/property[@name='Stacknumber']" name="value">500</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft918mmPM']/property[@name='EconomicValue']" name="value">10</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft918mmPM']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">80</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft918mmPM']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">30</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft918mmPM']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">8</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft918mmPM']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <!-- AMMOEFT918MMPM -->
+            <!-- AMMOEFT919MM -->
+            <setattribute xpath="/items/item[@name='ammoEft919mm']/property[@name='Stacknumber']" name="value">400</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft919mm']/property[@name='EconomicValue']" name="value">10</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft919mm']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">100</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft919mm']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">32</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft919mm']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft919mm']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <!-- AMMOEFT919MM -->
+            <!-- AMMOEFT919MMAP -->
+            <setattribute xpath="/items/item[@name='ammoEft919mmAP']/property[@name='Stacknumber']" name="value">400</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft919mmAP']/property[@name='EconomicValue']" name="value">15</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft919mmAP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">125</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft919mmAP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">29</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft919mmAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft919mmAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <append xpath="/items/item[@name='ammoEft919mmAP']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.5"/>
+            <effect_group name="perkPenetrator" tiered="false">
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
+	        </effect_group>
+			</append>
+            <!-- AMMOEFT919MMAP -->
+            <!-- AMMOEFT919MMHP -->
+            <setattribute xpath="/items/item[@name='ammoEft919mmHP']/property[@name='Stacknumber']" name="value">400</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft919mmHP']/property[@name='EconomicValue']" name="value">30</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft919mmHP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">80</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft919mmHP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">36</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft919mmHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft919mmHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <append xpath="/items/item[@name='ammoEft919mmHP']">
+			<passive_effect name="TargetArmor" operation="perc_add" value=".5" tags="perkGunslinger"/><display_value name="dTargetArmor" value=".5"/>
+			</append>
+            <!-- AMMOEFT919MMHP -->
+            <!-- AMMOEFT921MM -->
+            <setattribute xpath="/items/item[@name='ammoEft921mm']/property[@name='Stacknumber']" name="value">350</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft921mm']/property[@name='EconomicValue']" name="value">10</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft921mm']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">100</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft921mm']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">34</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft921mm']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft921mm']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <!-- AMMOEFT921MM -->
+            <!-- AMMOEFT921MMAP -->
+            <setattribute xpath="/items/item[@name='ammoEft921mmAP']/property[@name='Stacknumber']" name="value">350</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft921mmAP']/property[@name='EconomicValue']" name="value">15</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft921mmAP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">120</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft921mmAP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">31</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft921mmAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft921mmAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <append xpath="/items/item[@name='ammoEft921mmAP']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.5"/>
+            <effect_group name="perkPenetrator" tiered="false">
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
+	        </effect_group>
+			</append>
+            <!-- AMMOEFT921MMAP -->
+            <!-- AMMOEFT921MMHP -->
+            <setattribute xpath="/items/item[@name='ammoEft921mmHP']/property[@name='Stacknumber']" name="value">350</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft921mmHP']/property[@name='EconomicValue']" name="value">30</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft921mmHP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">85</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft921mmHP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">36</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft921mmHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft921mmHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			<append xpath="/items/item[@name='ammoEft921mmHP']">
+            <passive_effect name="TargetArmor" operation="perc_add" value=".5" tags="perkGunslinger"/><display_value name="dTargetArmor" value=".5"/>
+			</append>
+            <!-- AMMOEFT921MMHP -->
+            <!-- AMMOEFT45ACP -->
+            <setattribute xpath="/items/item[@name='ammoEft45ACP']/property[@name='Stacknumber']" name="value">350</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft45ACP']/property[@name='EconomicValue']" name="value">10</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft45ACP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">110</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft45ACP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">37</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft45ACP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">4</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft45ACP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <!-- AMMOEFT45ACP -->
+            <!-- AMMOEFT45ACPAP -->
+            <setattribute xpath="/items/item[@name='ammoEft45ACPAP']/property[@name='Stacknumber']" name="value">350</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft45ACPAP']/property[@name='EconomicValue']" name="value">15</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft45ACPAP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">135</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft45ACPAP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">34</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft45ACPAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">4</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft45ACPAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <append xpath="/items/item[@name='ammoEft45ACPAP']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.5"/>
+            <effect_group name="perkPenetrator" tiered="false">
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
+	        </effect_group>
+			</append>
+            <!-- AMMOEFT45ACPAP -->
+            <!-- AMMOEFT45ACPRIP -->
+            <setattribute xpath="/items/item[@name='ammoEft45ACPRIP']/property[@name='Stacknumber']" name="value">350</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft45ACPRIP']/property[@name='EconomicValue']" name="value">30</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft45ACPRIP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">90</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft45ACPRIP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">41</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft45ACPRIP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">4</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft45ACPRIP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <append xpath="/items/item[@name='ammoEft45ACPRIP']">
+			<passive_effect name="TargetArmor" operation="perc_add" value=".5" tags="perkGunslinger"/><display_value name="dTargetArmor" value=".5"/>
+			</append>
+            <!-- AMMOEFT45ACPRIP -->
+            <!-- AMMOEFT4630MMHK -->
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHK']/property[@name='Stacknumber']" name="value">550</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHK']/property[@name='EconomicValue']" name="value">10</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHK']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">150</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHK']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">33</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHK']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHK']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <!-- AMMOEFT4630MMHK -->
+            <!-- AMMOEFT4630MMHKAP -->
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHKAP']/property[@name='Stacknumber']" name="value">550</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHKAP']/property[@name='EconomicValue']" name="value">15</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHKAP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">175</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHKAP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">30</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHKAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHKAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <append xpath="/items/item[@name='ammoEft4630mmHKAP']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.5"/>
+            <effect_group name="perkPenetrator" tiered="false">
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
+	        </effect_group>
+			</append>
+            <!-- AMMOEFT4630MMHKAP -->
+            <!-- AMMOEFT4630MMHKHP -->
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHKHP']/property[@name='Stacknumber']" name="value">550</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHKHP']/property[@name='EconomicValue']" name="value">30</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHKHP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">100</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHKHP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">37</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHKHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4630mmHKHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <append xpath="/items/item[@name='ammoEft4630mmHKHP']">
+			<passive_effect name="TargetArmor" operation="perc_add" value=".5" tags="perkGunslinger"/><display_value name="dTargetArmor" value=".5"/>
+			</append>
+            <!-- AMMOEFT4630MMHKHP -->
+            <!-- AMMOEFT5728FN -->
+            <setattribute xpath="/items/item[@name='ammoEft5728FN']/property[@name='Stacknumber']" name="value">550</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft5728FN']/property[@name='EconomicValue']" name="value">10</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft5728FN']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">150</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft5728FN']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">36</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft5728FN']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft5728FN']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <!-- AMMOEFT5728FN -->
+            <!-- AMMOEFT5728FNAP -->
+            <setattribute xpath="/items/item[@name='ammoEft5728FNAP']/property[@name='Stacknumber']" name="value">550</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft5728FNAP']/property[@name='EconomicValue']" name="value">15</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft5728FNAP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">200</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft5728FNAP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">33</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft5728FNAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft5728FNAP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <append xpath="/items/item[@name='ammoEft5728FNAP']">
+			<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkGunslinger"/><display_value name="dTargetArmor" value="-.5"/>
+            <effect_group name="perkPenetrator" tiered="false">
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
+		        <passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkGunslinger,9mmGun">
+			    <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
+	        </effect_group>
+			</append>
+            <!-- AMMOEFT5728FNAP -->
+            <!-- AMMOEFT5728FNHP -->
+            <setattribute xpath="/items/item[@name='ammoEft5728FNHP']/property[@name='Stacknumber']" name="value">550</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft5728FNHP']/property[@name='EconomicValue']" name="value">30</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft5728FNHP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">100</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft5728FNHP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">40</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft5728FNHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft5728FNHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <append xpath="/items/item[@name='ammoEft5728FNHP']">
+			<passive_effect name="TargetArmor" operation="perc_add" value=".5" tags="perkGunslinger"/><display_value name="dTargetArmor" value=".5"/>
+			</append>
+            <!-- AMMOEFT5728FNHP -->
+            <!-- AMMOEFT50AE -->
+            <setattribute xpath="/items/item[@name='ammoEft50ae']/property[@name='Stacknumber']" name="value">100</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft50ae']/property[@name='EconomicValue']" name="value">10</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft50ae']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">250</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft50ae']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">107</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft50ae']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft50ae']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <!-- AMMOEFT50AE -->
+            <!-- AMMOEFT50AEHP -->
+            <setattribute xpath="/items/item[@name='ammoEft50aeHP']/property[@name='Stacknumber']" name="value">200</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft50aeHP']/property[@name='EconomicValue']" name="value">15</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft50aeHP']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">175</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft50aeHP']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">118</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft50aeHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft50aeHP']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			<append xpath="/items/item[@name='ammoEft50aeHP']">
+            <passive_effect name="TargetArmor" operation="perc_add" value=".5" tags="perkGunslinger,perkMachineGunner"/><display_value name="dTargetArmor" value=".5"/>
+			</append>
+            <!-- AMMOEFT50AEHP -->
+            <!-- AMMOEFT7MMSHOTGUN -->
+            <setattribute xpath="/items/item[@name='ammoEft7mmShotgun']/property[@name='Stacknumber']" name="value">150</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft7mmShotgun']/property[@name='EconomicValue']" name="value">10</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft7mmShotgun']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">48</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft7mmShotgun']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">34</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft7mmShotgun']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">2</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft7mmShotgun']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <!-- AMMOEFT7MMSHOTGUN -->
+            <!-- AMMOEFTFLECHETTESHOTGUN -->
+            <setattribute xpath="/items/item[@name='ammoEftFlechetteShotgun']/property[@name='Stacknumber']" name="value">150</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEftFlechetteShotgun']/property[@name='EconomicValue']" name="value">15</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEftFlechetteShotgun']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">42</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEftFlechetteShotgun']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">30</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEftFlechetteShotgun']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">2</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEftFlechetteShotgun']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			<append xpath="/items/item[@name='ammoEftFlechetteShotgun']">
+		    <passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkBoomstick"/><display_value name="dTargetArmor" value="-.5"/>
+	        <effect_group name="perkPenetrator" tiered="false">
+	        	<passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkBoomstick">
+	        	<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
+	        	<passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkBoomstick">
+	        	<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
+	        	<passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkBoomstick">
+	        	<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
+	        	<passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkBoomstick">
+	        	<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
+	        </effect_group>
+			</append>
+            <!-- AMMOEFTFLECHETTESHOTGUN -->
+            <!-- AMMOEFTAP20SLUG -->
+            <setattribute xpath="/items/item[@name='ammoEftAP20Slug']/property[@name='Stacknumber']" name="value">150</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEftAP20Slug']/property[@name='EconomicValue']" name="value">30</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEftAP20Slug']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">77</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEftAP20Slug']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">75</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEftAP20Slug']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">21</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEftAP20Slug']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			<append xpath="/items/item[@name='ammoEftAP20Slug']">
+		    <passive_effect name="TargetArmor" operation="perc_add" value="-.75" tags="perkBoomstick"/><display_value name="dTargetArmor" value="-.75"/><!--75% Armor Penetration-->
+	        <effect_group name="perkPenetrator" tiered="false">
+	        	<passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkBoomstick">
+	        	<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
+	        	<passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkBoomstick">
+	        	<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
+	        	<passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkBoomstick">
+	        	<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
+	        	<passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkBoomstick">
+	        	<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
+	        </effect_group>
+			</append>
+            <!-- AMMOEFTAP20SLUG -->
+            <!-- AMMOEFTSHRAPNEL25SHOTGUN -->
+            <setattribute xpath="/items/item[@name='ammoEftShrapnel25Shotgun']/property[@name='Stacknumber']" name="value">150</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEftShrapnel25Shotgun']/property[@name='EconomicValue']" name="value">35</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEftShrapnel25Shotgun']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">44</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEftShrapnel25Shotgun']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">36</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEftShrapnel25Shotgun']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">3</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEftShrapnel25Shotgun']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <!-- AMMOEFTSHRAPNEL25SHOTGUN -->
+            <!-- AMMOEFTBARRICADESLUG -->
+            <setattribute xpath="/items/item[@name='ammoEftBarricadeSlug']/property[@name='Stacknumber']" name="value">150</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEftBarricadeSlug']/property[@name='EconomicValue']" name="value">40</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEftBarricadeSlug']/effect_group[@name='ammo']/passive_effect[@name='MaxRange']" name="value">70</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEftBarricadeSlug']/effect_group[@name='ammo']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">273</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEftBarricadeSlug']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">26</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEftBarricadeSlug']/effect_group[@name='ammo']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+			<append xpath="/items/item[@name='ammoEftBarricadeSlug']">
+		    <passive_effect name="TargetArmor" operation="perc_add" value="-.75" tags="perkBoomstick"/><display_value name="dTargetArmor" value="-.75"/><!--75% Armor Penetration-->
+	        <effect_group name="perkPenetrator" tiered="false">
+	        	<passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkBoomstick">
+	        	<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
+	        	<passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkBoomstick">
+	        	<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
+	        	<passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkBoomstick">
+	        	<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
+	        	<passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkBoomstick">
+	        	<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
+	        </effect_group>
+			</append>
+            <!-- AMMOEFTBARRICADESLUG -->
+
+			<!-- AMMOEFT4046381 -->
+            <setattribute xpath="/items/item[@name='ammoEft4046381']/property[@name='Stacknumber']" name="value">20</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4046381']/property[@name='EconomicValue']" name="value">2987</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4046381']/effect_group[@name='40x46grenade']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">250</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4046381']/effect_group[@name='40x46grenade']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">25</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4046381']/effect_group[@name='40x46grenade']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <!-- AMMOEFT4046381 -->
+            <!-- AMMOEFT4046576 -->
+            <setattribute xpath="/items/item[@name='ammoEft4046576']/property[@name='Stacknumber']" name="value">20</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4046576']/property[@name='EconomicValue']" name="value">2623</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4046576']/effect_group[@name='40x46grenade2']/passive_effect[@name='MaxRange']" name="value">88</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4046576']/effect_group[@name='40x46grenade2']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">130</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4046576']/effect_group[@name='40x46grenade2']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">10</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4046576']/effect_group[@name='40x46grenade2']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <!-- AMMOEFT4046576 -->
+            <!-- AMMOEFT4053VOG25 -->
+            <setattribute xpath="/items/item[@name='ammoEft4053vog25']/property[@name='Stacknumber']" name="value">20</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4053vog25']/property[@name='EconomicValue']" name="value">3623</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4053vog25']/effect_group[@name='40x46grenade']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">250</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4053vog25']/effect_group[@name='40x46grenade']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">25</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEft4053vog25']/effect_group[@name='40x46grenade']/passive_effect[@name='BlockDamage' and @operation='base_add']" name="value">60</setattribute>
+            <!-- AMMOEFT4053VOG25 -->
+            <!-- 93X40MMRPG7WARHEAD -->
+            <setattribute xpath="/items/item[@name='93x40mmRPG7Warhead']/property[@name='Stacknumber']" name="value">10</setattribute>
+            <setattribute xpath="/items/item[@name='93x40mmRPG7Warhead']/property[@name='EconomicValue']" name="value">52252</setattribute>
+            <setattribute xpath="/items/item[@name='93x40mmRPG7Warhead']/effect_group[@name='40x46grenade']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">800</setattribute>
+            <setattribute xpath="/items/item[@name='93x40mmRPG7Warhead']/effect_group[@name='40x46grenade']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">800</setattribute>
+            <!-- 93X40MMRPG7WARHEAD -->
+            <!-- AMMOEFTSHG725 -->
+            <setattribute xpath="/items/item[@name='ammoEftshg725']/property[@name='Stacknumber']" name="value">10</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEftshg725']/property[@name='EconomicValue']" name="value">52252</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEftshg725']/effect_group[@name='40x46grenade']/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">1800</setattribute>
+            <setattribute xpath="/items/item[@name='ammoEftshg725']/effect_group[@name='40x46grenade']/passive_effect[@name='BlockDamage' and @operation='base_set']" name="value">300</setattribute>
+            <!-- AMMOEFTSHG725 -->
+            <!-- GRENADEIMPACTRGN -->
+            <setattribute xpath="/items/item[@name='GrenadeImpactRGN']/property[@name='Stacknumber']" name="value">25</setattribute>
+            <setattribute xpath="/items/item[@name='GrenadeImpactRGN']/property[@name='EconomicValue']" name="value">1250</setattribute>
+            <setattribute xpath="/items/item[@name='GrenadeImpactRGN']/effect_group/display_value[@name='dExRadius']" name="value">3</setattribute>
+            <setattribute xpath="/items/item[@name='GrenadeImpactRGN']/effect_group/display_value[@name='dExBlockDamage']" name="value">10</setattribute>
+            <setattribute xpath="/items/item[@name='GrenadeImpactRGN']/effect_group/display_value[@name='dExEntityDamage']" name="value">1000</setattribute>
+            <!-- GRENADEIMPACTRGN -->
+            <!-- GRENADEM67 -->
+            <setattribute xpath="/items/item[@name='GrenadeM67']/property[@name='Stacknumber']" name="value">25</setattribute>
+            <setattribute xpath="/items/item[@name='GrenadeM67']/property[@name='EconomicValue']" name="value">1250</setattribute>
+            <setattribute xpath="/items/item[@name='GrenadeM67']/effect_group/display_value[@name='dExRadius']" name="value">5</setattribute>
+            <setattribute xpath="/items/item[@name='GrenadeM67']/effect_group/display_value[@name='dExBlockDamage']" name="value">10</setattribute>
+            <setattribute xpath="/items/item[@name='GrenadeM67']/effect_group/display_value[@name='dExEntityDamage']" name="value">1000</setattribute>
+            <!-- GRENADEM67 -->		
 </configs>
