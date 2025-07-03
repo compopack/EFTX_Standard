@@ -1,0 +1,932 @@
+<configs>
+	<append xpath="/progression/skills" >
+		<skill name="skillEFTXRifles" parent="attPerception" name_key="EFTX Rifles" desc_key="Find more Eftx Rifles" icon="ui_game_symbol_marksmanship"><effect_group/></skill>
+		<skill name="skillEFTXExplosives" parent="attPerception" name_key="EFTX Explosives" desc_key="All The Eftx Explosives" icon="ui_game_symbol_marksmanship"><effect_group/></skill>
+		<skill name="skillEFTXShotguns" parent="attStrength" name_key="EFTX Shotguns" desc_key="Find more Eft Shotguns" icon="ui_game_symbol_marksmanship"><effect_group/></skill>
+		<skill name="skillEFTXMGS" parent="attFortitude" name_key="EFTX Machine Guns" desc_key="Find more Eftx Machine Guns" icon="ui_game_symbol_marksmanship"><effect_group/></skill>
+		<skill name="skillEFTXPistols" parent="attAgility" name_key="EFTX Pistols" desc_key="Find more Eftx Pistols" icon="ui_game_symbol_marksmanship"><effect_group/></skill>
+		<skill name="skillEFTXSmgs" parent="attAgility" name_key="EFTX Smgs" desc_key="Find more Eftx Smgs" icon="ui_game_symbol_marksmanship"><effect_group/></skill>
+		<skill name="skillEFTXModifiers" parent="attIntellect" name_key="EFTX Modifiers" desc_key="Find more Eftx Modifiers" icon="ui_game_symbol_marksmanship"><effect_group/></skill>
+	</append>
+					
+	<append xpath="/progression/crafting_skills">
+	<!-- WEAPON MODIFIERS -->
+		<crafting_skill name="craftingBipodsForegrips" max_level="50" parent="attCrafting" name_key="craftingBipodsForegripsName" desc_key="craftingBipodsForegripsDesc" long_desc_key="craftingBipodsForegripsLongDesc" icon="ui_game_symbol_tool_smithing">
+            <display_entry icon="modbipodrailRexana,modgriphksturmgriff" name_key="Bipods 1" has_quality="false" unlock_level="10">
+                <unlock_entry item="modbipodrailRexana" unlock_tier="1" />
+				<unlock_entry item="modgriphksturmgriff" unlock_tier="1" />
+            </display_entry>
+			<display_entry icon="modhandguardUziRailedForegrip,modSKStactickit" name_key="Foregrips 3" has_quality="false" unlock_level="20">
+               <unlock_entry item="modhandguardUziRailedForegrip" unlock_tier="1" />
+               <unlock_entry item="modSKStactickit" unlock_tier="1" />
+            </display_entry>
+			<display_entry icon="modgripmagpulrvg,modgripzenitrk1" name_key="Foregrips 5" has_quality="false" unlock_level="30">
+               <unlock_entry item="modgripmagpulrvg" unlock_tier="1" />
+               <unlock_entry item="modgripzenitrk1" unlock_tier="1" />
+            </display_entry>
+			<display_entry icon="modgripzenitb25urk1,modstock_ak_hera_arms_cqr47" name_key="Foregrips 7" has_quality="false" unlock_level="40">
+                <unlock_entry item="modgripzenitb25urk1" unlock_tier="1" /> 
+			    <unlock_entry item="modstock_ak_hera_arms_cqr47" unlock_tier="1" />
+            </display_entry>
+			<display_entry icon="modstock_ak_promag_archangel_opfor_aa47,modstock_ak_izhmash_ak_evo" name_key="Foregrips 9" has_quality="false" unlock_level="50">
+                <unlock_entry item="modstock_ak_promag_archangel_opfor_aa47" unlock_tier="1" />
+                 <unlock_entry item="modstock_ak_izhmash_ak_evo" unlock_tier="1" />
+            </display_entry>
+			
+            <effect_group>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,50" value="1" tags="modbipodrailRexana,modgriphksturmgriff"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,50" value="1" tags="modhandguardUziRailedForegrip,modSKStactickit"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,50" value="1" tags="modgripmagpulrvg,modgripzenitrk1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="40,50" value="1" tags="modgripzenitb25urk1,modstock_ak_hera_arms_cqr47"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,50" value="1" tags="modstock_ak_promag_archangel_opfor_aa47,modstock_ak_izhmash_ak_evo"/>
+            </effect_group>
+        </crafting_skill>
+
+		<crafting_skill name="craftingGrenadeLauncherAttachments" max_level="100" parent="attCrafting" name_key="craftingGrenadeLauncherAttachmentsName" desc_key="craftingGrenadeLauncherAttachmentsDesc" long_desc_key="craftingGrenadeLauncherAttachmentsLongDesc" icon="ui_game_symbol_tool_smithing">
+            <display_entry icon="modm203grenadelaunchers" name_key="M203 Grenade Launcher Attachment" has_quality="false" unlock_level="50">
+                <unlock_entry item="modm203grenadelaunchers" unlock_tier="1" />
+            </display_entry>
+			<display_entry icon="modgp25grenadelauncher" name_key="GP25 Grenade Launcher Attachment" has_quality="false" unlock_level="100">
+                <unlock_entry item="modgp25grenadelauncher" unlock_tier="1" />
+            </display_entry>
+			 <effect_group>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,100" value="1" tags="modm203grenadelaunchers"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="100,100" value="1" tags="modgp25grenadelauncher"/>                
+            </effect_group>
+        </crafting_skill>
+		
+		<crafting_skill name="craftingScopes" max_level="125" parent="attCrafting" name_key="craftingScopesName" desc_key="craftingScopesDesc" long_desc_key="craftingScopesLongDesc" icon="ui_game_symbol_tool_smithing">
+            <display_entry icon="modscopeaimpointAcroP1canted,modscopeaimpointMicroH2canted,modscopeaimpointMicroT1canted,modscopeBelOMOpk06canted,modscopeburrisfastfirecanted,modscopeSIGromeo4canted,modscopeRMRcanted,modscopeleupolddeltapointcanted,modscopePU3_5x,modscopeaimpointAcroP1" name_key="Scopes 1" has_quality="false" unlock_level="5,10,15,20,25">
+                <unlock_entry item="modscopeaimpointAcroP1canted,modscopeaimpointMicroH2canted" unlock_tier="1" />
+				<unlock_entry item="modscopeaimpointMicroT1canted,modscopeBelOMOpk06canted" unlock_tier="2" />
+				<unlock_entry item="modscopeburrisfastfirecanted,modscopeSIGromeo4canted" unlock_tier="3" />
+				<unlock_entry item="modscopeRMRcanted,modscopeleupolddeltapointcanted" unlock_tier="4" />
+				<unlock_entry item="modscopePU3_5x,modscopeaimpointAcroP1" unlock_tier="5" />
+            </display_entry>
+			<display_entry icon="modscopeaimpointMicroH2,modscopeaimpointMicroT1,modscopeBelOMOpk06,modscopeburrisfastfire,modscopeSIGromeo4,modscopeRMR,modscopeleupolddeltapoint,modscopeAimPointCompM4,modscopeAimPointPro,modscopeaksionEKP818" name_key="Scopes 2" has_quality="false" unlock_level="30,35,40,45,50">                
+				<unlock_entry item="modscopeaimpointMicroH2,modscopeaimpointMicroT1" unlock_tier="1" />
+				<unlock_entry item="modscopeBelOMOpk06,modscopeburrisfastfire" unlock_tier="2" />
+				<unlock_entry item="modscopeSIGromeo4,modscopeRMR" unlock_tier="3" />
+				<unlock_entry item="modscopeleupolddeltapoint,modscopeAimPointCompM4" unlock_tier="4" />
+				<unlock_entry item="modscopeAimPointPro,modscopeaksionEKP818" unlock_tier="5" />
+            </display_entry>
+			<display_entry icon="modscopeaksionEKP1s03,modscopeaksionEKP802,modscopeBelOMOdovetailPKAA,modscopeElcanSpecterHCO,modscopeLeapersUTG,modscopeNPZPK1,modscopeOKP7dovetail,modscopeSIGRomeo8T,modscopeSRS02,modscopeValdayKrechet" name_key="Scopes 3" has_quality="false" unlock_level="55,60,65,70,75">               
+			   <unlock_entry item="modscopeaksionEKP1s03,modscopeaksionEKP802" unlock_tier="1" />
+			   <unlock_entry item="modscopeBelOMOdovetailPKAA,modscopeElcanSpecterHCO" unlock_tier="2" />
+			   <unlock_entry item="modscopeLeapersUTG,modscopeNPZPK1" unlock_tier="3" />
+			   <unlock_entry item="modscopeOKP7dovetail,modscopeSIGRomeo8T" unlock_tier="4" />
+			   <unlock_entry item="modscopeSRS02,modscopeValdayKrechet" unlock_tier="5" />
+            </display_entry>
+			<display_entry icon="modscopeValdayPK120,modscopeVOMZPiladP1,modscopeVortexRazorAMGUH1,modscopewalthermrsreflex,modscopeWilcoxBossXeHP,modscopeokp7reflex,modscopeEOTech553holo,modscopeFNP90ringreflex,modscopeElcanSpecterDR,modscopeKibaArmsPrism,modscopeNPZ1p78,modscopeNPZ1p29,modscopeBelOMOPSO1M2,modscopemonstrumcompact,modscopeSwampFoxPrism,modscopeeotechhhshybrid,modscopeacogta01NSN4x32,modscopeacogta11D35x" name_key="Scopes 4" has_quality="false" unlock_level="80,85,90,95,100">                
+				<unlock_entry item="modscopeValdayPK120,modscopeVOMZPiladP1,modscopeVortexRazorAMGUH1,modscopewalthermrsreflex" unlock_tier="1" />
+				<unlock_entry item="modscopeWilcoxBossXeHP,modscopeokp7reflex,modscopeEOTech553holo,modscopeFNP90ringreflex" unlock_tier="2" />
+				<unlock_entry item="modscopeElcanSpecterDR,modscopeKibaArmsPrism,modscopeNPZ1p78,modscopeNPZ1p29" unlock_tier="3" />
+				<unlock_entry item="modscopeBelOMOPSO1M2,modscopemonstrumcompact,modscopeSwampFoxPrism" unlock_tier="4" />
+				<unlock_entry item="modscopeeotechhhshybrid,modscopeacogta01NSN4x32,modscopeacogta11D35x" unlock_tier="5" />
+            </display_entry>
+			<display_entry icon="modscopeLeupoldMark4Hamr,modscopeSIGBravo4,modscopeValdayPS320,modscopeSBPMII18x2430mm,modscopeSBPMII320x5034mm,modscopeSBPMII525x5634mm,modscopeBFTac3014x2430mm,modscopeEOTVudu16x2430mm,modscopeLeupoldMark4LR30mm,modscopeMarchTactical30mm,modscopeSIGTango6T16x2430mm,modscopeRazorHDGen216x2430mm,modscopeNFATACR735x5634mm,modscopeHensoldtFF416x5634mm,modscopeNCStarADO,modscopeKMZ1p69Weaver,modscopeKMZ1p69Dovetail" name_key="Scopes 5" has_quality="false" unlock_level="105,110,115,120,125"> 			
+                <unlock_entry item="modscopeLeupoldMark4Hamr,modscopeSIGBravo4,modscopeValdayPS320" unlock_tier="1" />
+				<unlock_entry item="modscopeSBPMII18x2430mm,modscopeSBPMII320x5034mm,modscopeSBPMII525x5634mm" unlock_tier="2" />
+				<unlock_entry item="modscopeBFTac3014x2430mm,modscopeEOTVudu16x2430mm,modscopeLeupoldMark4LR30mm" unlock_tier="3" />
+				<unlock_entry item="modscopeMarchTactical30mm,modscopeSIGTango6T16x2430mm,modscopeRazorHDGen216x2430mm" unlock_tier="4" />
+				<unlock_entry item="modscopeNFATACR735x5634mm,modscopeHensoldtFF416x5634mm,modscopeNCStarADO,modscopeKMZ1p69Weaver,modscopeKMZ1p69Dovetail" unlock_tier="5" />
+            </display_entry>
+            <effect_group>
+			
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,125" value="1" tags="modscopeaimpointAcroP1canted,modscopeaimpointMicroH2canted"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,125" value="1" tags="modscopeaimpointMicroT1canted,modscopeBelOMOpk06canted"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,125" value="1" tags="modscopeburrisfastfirecanted,modscopeSIGromeo4canted"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,125" value="1" tags="modscopeRMRcanted,modscopeleupolddeltapointcanted"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="25,125" value="1" tags="modscopePU3_5x,modscopeaimpointAcroP1"/>
+								
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,125" value="1" tags="modscopeaimpointMicroH2,modscopeaimpointMicroT1"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="35,125" value="1" tags="modscopeBelOMOpk06,modscopeburrisfastfire"/>				
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="40,125" value="1" tags="modscopeSIGromeo4,modscopeRMR"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="45,125" value="1" tags="modscopeleupolddeltapoint,modscopeAimPointCompM4"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,125" value="1" tags="modscopeAimPointPro,modscopeaksionEKP818"/>
+				
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="55,125" value="1" tags="modscopeaksionEKP1s03,modscopeaksionEKP802"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="60,125" value="1" tags="modscopeBelOMOdovetailPKAA,modscopeElcanSpecterHCO"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="65,125" value="1" tags="modscopeLeapersUTG,modscopeNPZPK1"/>	
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="70,125" value="1" tags="modscopeOKP7dovetail,modscopeSIGRomeo8T"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="75,125" value="1" tags="modscopeSRS02,modscopeValdayKrechet"/>
+				
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="80,125" value="1" tags="modscopeValdayPK120,modscopeVOMZPiladP1,modscopeVortexRazorAMGUH1,modscopewalthermrsreflex"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="85,125" value="1" tags="modscopeWilcoxBossXeHP,modscopeokp7reflex,modscopeEOTech553holo,modscopeFNP90ringreflex"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="90,125" value="1" tags="modscopeElcanSpecterDR,modscopeKibaArmsPrism,modscopeNPZ1p78,modscopeNPZ1p29"/>	
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="95,125" value="1" tags="modscopeBelOMOPSO1M2,modscopemonstrumcompact,modscopeSwampFoxPrism"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="100,125" value="1" tags="modscopeeotechhhshybrid,modscopeacogta01NSN4x32,modscopeacogta11D35x"/>
+				
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="105,125" value="1" tags="modscopeLeupoldMark4Hamr,modscopeSIGBravo4,modscopeValdayPS320"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="110,125" value="1" tags="modscopeSBPMII18x2430mm,modscopeSBPMII320x5034mm,modscopeSBPMII525x5634mm"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="115,125" value="1" tags="modscopeBFTac3014x2430mm,modscopeEOTVudu16x2430mm,modscopeLeupoldMark4LR30mm"/>	
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="120,125" value="1" tags="modscopeMarchTactical30mm,modscopeSIGTango6T16x2430mm,modscopeRazorHDGen216x2430mm"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="125,125" value="1" tags="modscopeNFATACR735x5634mm,modscopeHensoldtFF416x5634mm,modscopeNCStarADO,modscopeKMZ1p69Weaver,modscopeKMZ1p69Dovetail"/>
+               		
+            </effect_group>
+        </crafting_skill>
+		
+		<crafting_skill name="craftingMagazines" max_level="125" parent="attCrafting" name_key="craftingMagazinesName" desc_key="craftingMagazinesDesc" long_desc_key="craftingMagazinesLongDesc" icon="ui_game_symbol_tool_smithing">
+            <display_entry icon="modmagppsh41drum71,modmagttcustomdrum75,modmagpmmakeshiftdrum84,modmagpp9extended30,modmagpp9snaildrum90,modmagpp19vityazdrum50,modmagsr2mtape60,modmaguzi50std,modmagmp5std30,modmagmp5xproductdrum50,modmagmp5Cmag100,modmagmp9Cmag100,modmagglock9x19bigstick33,modmagglock9x19sgmtdrum50" name_key="SMG/Pistol Magazines 1" has_quality="false" unlock_level="5,10,15,20,25">
+                <unlock_entry item="modmagppsh41drum71,modmagttcustomdrum75" unlock_tier="1" />
+				<unlock_entry item="modmagpmmakeshiftdrum84,modmagpp9extended30,modmagpp9snaildrum90" unlock_tier="2" />
+				<unlock_entry item="modmagpp19vityazdrum50,modmagsr2mtape60,modmaguzi50std" unlock_tier="3" />
+				<unlock_entry item="modmagmp5std30,modmagmp5xproductdrum50,modmagmp5Cmag100" unlock_tier="4" />
+				<unlock_entry item="modmagmp9Cmag100,modmagglock9x19bigstick33,modmagglock9x19sgmtdrum50" unlock_tier="5" />
+            </display_entry>
+			<display_entry icon="modmagglock9x19Cmag100,modmagmpxbasepad41,modmagmpxf5mfgdrum50,modmagmpxCmag100,modmagump45casket60,modmagump45customCmag100,modmagthompsondrum100,modmagglock45drum60,modmagglock45Cmag100,modmagmp7std40,modmagmp7box70,modmagP90ZakuPlate,modmagP90ZakuDrumChopped,modmagP90ZakuDrum" name_key="SMG/Pistol Magazines 2" has_quality="false" unlock_level="30,35,40,45,50">
+                <unlock_entry item="modmagglock9x19Cmag100,modmagmpxbasepad41" unlock_tier="1" />				
+				<unlock_entry item="modmagmpxf5mfgdrum50,modmagmpxCmag100,modmagump45casket60" unlock_tier="2" />				
+				<unlock_entry item="modmagump45customCmag100,modmagthompsondrum100,modmagglock45drum60" unlock_tier="3" />				
+				<unlock_entry item="modmagglock45Cmag100,modmagmp7std40,modmagmp7box70" unlock_tier="4" />				
+				<unlock_entry item="modmagP90ZakuPlate,modmagP90ZakuDrumChopped,modmagP90ZakuDrum" unlock_tier="5" />
+            </display_entry>
+			<display_entry icon="modmag_870_remington_magazine_extension_12g_10,modmag_m3_benelli_std_12g_7,modmag_m3_tonisystem_magazine_extension_12g_13,modmag_mr153_izhmeh_12g_8,modmag_saiga12_maxrounds_powermag_20_12x76_20,modmag_aa12_mps_aa12_drum_mag_12g_20,modmag_aa12_drum_mag_12g_32" name_key="Shotgun Magazines 3" has_quality="false" unlock_level="55,60,65,70,75">
+               <unlock_entry item="modmag_870_remington_magazine_extension_12g_10" unlock_tier="1" />			   
+			   <unlock_entry item="modmag_m3_benelli_std_12g_7" unlock_tier="2" />			   
+			   <unlock_entry item="modmag_m3_tonisystem_magazine_extension_12g_13" unlock_tier="3" />			   
+			   <unlock_entry item="modmag_mr153_izhmeh_12g_8,modmag_saiga12_maxrounds_powermag_20_12x76_20" unlock_tier="4" />			   
+			   <unlock_entry item="modmag_aa12_mps_aa12_drum_mag_12g_20,modmag_aa12_drum_mag_12g_32" unlock_tier="5" />
+            </display_entry>
+			<display_entry icon="modmagak74std30,modmagAK74extended45,modmagAK74_6L31_60,modmagRPK16drum95,modmagSKSextended35,modmagSKSdrum75,modmagakmstd30,modmagAK762extended40,modmagAK762molotdrum75,modmagAK762steeldrum100,modmag762x39RPDBox200,modscopeokp7reflex,modmag762NATOjunglefighter35,modmagSA58FAL30,modmagSA58FALXproduct50,modmag762NATOM14xproduct50,modmag762NATOX25drum50,modmag762NATOCmag100" name_key="Rifles Magazines 4" has_quality="false" unlock_level="80,85,90,95,100">
+                <unlock_entry item="modmagak74std30,modmagAK74extended45,modmagAK74_6L31_60" unlock_tier="1" />				
+				<unlock_entry item="modmagRPK16drum95,modmagSKSextended35,modmagSKSdrum75" unlock_tier="2" />					
+				<unlock_entry item="modmagakmstd30,modmagAK762extended40,modmagAK762molotdrum75,modmagAK762steeldrum100" unlock_tier="3" />				
+				<unlock_entry item="modmag762x39RPDBox200,modscopeokp7reflex,modmag762NATOjunglefighter35,modmagSA58FAL30" unlock_tier="4" />				
+				<unlock_entry item="modmagSA58FALXproduct50,modmag762NATOM14xproduct50,modmag762NATOX25drum50,modmag762NATOCmag100" unlock_tier="5" />
+            </display_entry>
+			<display_entry icon="modmagM60TriBoxWelded250,modmagSVDstd20,modmagSVDmakeshiftdrum50,modmag762x54RPKBox200,modmagAUGextended42,modmagAUGdrum60,modmagstanagstd30,modmagstanag556x45pmag40,modmagstanag556x45pmagd60,modmagstanag556x45sf60,modmagstanag556x45sf100,modmag556AKmolot45,modmagvssval30,modmagvssval45,modmagAsh12extended40,modmagAsh12extended60,modmag338SwordMK18Pmag20" name_key="Rifles Magazines 5" has_quality="false" unlock_level="105,110,115,120,125">
+                <unlock_entry item="modmagM60TriBoxWelded250,modmagSVDstd20,modmagSVDmakeshiftdrum50" unlock_tier="1" />				
+				<unlock_entry item="modmag762x54RPKBox200,modmagAUGextended42,modmagAUGdrum60" unlock_tier="2" />				
+				<unlock_entry item="modmagstanagstd30,modmagstanag556x45pmag40,modmagstanag556x45pmagd60" unlock_tier="3" />				
+				<unlock_entry item="modmagstanag556x45sf60,modmagstanag556x45sf100,modmag556AKmolot45,modmagvssval30" unlock_tier="4" />				
+				<unlock_entry item="modmagvssval45,modmagAsh12extended40,modmagAsh12extended60,modmag338SwordMK18Pmag20" unlock_tier="5" />
+            </display_entry>			
+            <effect_group>
+			
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,125" value="1" tags="modmagppsh41drum71,modmagttcustomdrum75"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,125" value="1" tags="modmagpmmakeshiftdrum84,modmagpp9extended30,modmagpp9snaildrum90"/>				
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,125" value="1" tags="modmagpp19vityazdrum50,modmagsr2mtape60,modmaguzi50std"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,125" value="1" tags="modmagmp5std30,modmagmp5xproductdrum50,modmagmp5Cmag100"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="25,125" value="1" tags="modmagmp9Cmag100,modmagglock9x19bigstick33,modmagglock9x19sgmtdrum50"/>
+				
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,125" value="1" tags="modmagglock9x19Cmag100,modmagmpxbasepad41"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="35,125" value="1" tags="modmagmpxf5mfgdrum50,modmagmpxCmag100,modmagump45casket60"/>				
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="40,125" value="1" tags="modmagump45customCmag100,modmagthompsondrum100,modmagglock45drum60"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="45,125" value="1" tags="modmagglock45Cmag100,modmagmp7std40,modmagmp7box70"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,125" value="1" tags="modmagP90ZakuPlate,modmagP90ZakuDrumChopped,modmagP90ZakuDrum"/>
+				
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="55,125" value="1" tags="modmag_870_remington_magazine_extension_12g_10"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="60,125" value="1" tags="modmag_m3_benelli_std_12g_7"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="65,125" value="1" tags="modmag_m3_tonisystem_magazine_extension_12g_13"/>	
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="70,125" value="1" tags="modmag_mr153_izhmeh_12g_8,modmag_saiga12_maxrounds_powermag_20_12x76_20"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="75,125" value="1" tags="modmag_aa12_mps_aa12_drum_mag_12g_20,modmag_aa12_drum_mag_12g_32"/>
+				
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="80,125" value="1" tags="modmagak74std30,modmagAK74extended45,modmagAK74_6L31_60"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="85,125" value="1" tags="modmagRPK16drum95,modmagSKSextended35,modmagSKSdrum75"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="90,125" value="1" tags="modmagakmstd30,modmagAK762extended40,modmagAK762molotdrum75,modmagAK762steeldrum100"/>	
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="95,125" value="1" tags="modmag762x39RPDBox200,modscopeokp7reflex,modmag762NATOjunglefighter35,modmagSA58FAL30"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="100,125" value="1" tags="modmagSA58FALXproduct50,modmag762NATOM14xproduct50,modmag762NATOX25drum50,modmag762NATOCmag100"/>
+				
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="105,125" value="1" tags="modmagM60TriBoxWelded250,modmagSVDstd20,modmagSVDmakeshiftdrum50"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="110,125" value="1" tags="modmag762x54RPKBox200,modmagAUGextended42,modmagAUGdrum60"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="115,125" value="1" tags="modmagstanagstd30,modmagstanag556x45pmag40,modmagstanag556x45pmagd60"/>	
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="120,125" value="1" tags="modmagstanag556x45sf60,modmagstanag556x45sf100,modmag556AKmolot45,modmagvssval30"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="125,125" value="1" tags="modmagvssval45,modmagAsh12extended40,modmagAsh12extended60,modmag338SwordMK18Pmag20"/>
+				</effect_group>
+        </crafting_skill>
+		
+		<crafting_skill name="craftingSilencers" max_level="125" parent="attCrafting" name_key="craftingSilencersName" desc_key="craftingSilencersDesc" long_desc_key="craftingSilencersLongDesc" icon="ui_game_symbol_tool_smithing">
+            <display_entry icon="modsilencertt33makeshift,modmuzzlettlaserdtk,modsilencerstechkinstd,modsilencerpp9klin,modmuzzlemp5btqdbrake,modmuzzlemp5noveske,modsilencerco46multi,modsilencerco9osprey,modsilencersigsrd9,modsilencerUziPro,modmuzzlevityazbrakecompensator" name_key="SMG/Pistol Silencers 1" has_quality="false" unlock_level="5,10,15,20,25">
+                <unlock_entry item="modsilencertt33makeshift,modmuzzlettlaserdtk" unlock_tier="1" />				
+				<unlock_entry item="modsilencerstechkinstd,modsilencerpp9klin" unlock_tier="2" />				
+				<unlock_entry item="modmuzzlemp5btqdbrake,modmuzzlemp5noveske" unlock_tier="3" />				
+				<unlock_entry item="modsilencerco46multi,modsilencerco9osprey" unlock_tier="4" />				
+				<unlock_entry item="modsilencersigsrd9,modsilencerUziPro,modmuzzlevityazbrakecompensator" unlock_tier="5" />
+            </display_entry>
+			<display_entry icon="modsilencermpxsd,modmuzzlestm9brake,modmuzzlegl17carver4port,modmuzzlep226tjcustom,modsilencersr1mpstd,modsilencersr2msv1381,modsilencerco45komega,modsilencerump45bt,modmuzzle1911anarchyoutdoors,modsilencermp7rotex2,modsilencerp90attenuator,modsilencer57gemtech" name_key="SMG/Pistol Silencers 2" has_quality="false" unlock_level="30,35,40,45,50">
+                <unlock_entry item="modsilencermpxsd,modmuzzlestm9brake" unlock_tier="1" />				
+				<unlock_entry item="modmuzzlegl17carver4port,modmuzzlep226tjcustom" unlock_tier="2" />				
+				<unlock_entry item="modsilencersr1mpstd,modsilencersr2msv1381" unlock_tier="3" />				
+				<unlock_entry item="modsilencerco45komega,modsilencerump45bt,modmuzzle1911anarchyoutdoors" unlock_tier="4" />				
+				<unlock_entry item="modsilencermp7rotex2,modsilencerp90attenuator,modsilencer57gemtech" unlock_tier="5" />
+            </display_entry>
+			<display_entry icon="modsilencerSGhexagon12k,modsilencercoSalvo12,modchokeremingtontactical,modmuzzleSGgk02muzzlebrake,modmuzzletromixmonsterclaw,modchokeAA12,modsilencerAA12marauder" name_key="Shotgun Silencers 3" has_quality="false" unlock_level="55,60,65,70,75">
+               <unlock_entry item="modsilencerSGhexagon12k" unlock_tier="1" />			   
+			   <unlock_entry item="modsilencercoSalvo12" unlock_tier="2" />			   
+			   <unlock_entry item="modchokeremingtontactical" unlock_tier="3" />			   
+			   <unlock_entry item="modmuzzleSGgk02muzzlebrake,modmuzzletromixmonsterclaw" unlock_tier="4" />			   
+			   <unlock_entry item="modchokeAA12,modsilencerAA12marauder" unlock_tier="5" />
+            </display_entry>
+			<display_entry icon="modsilencerak74tgpa,modmuzzleak74hexagonreactor,modsilencerak74hexagonwaffle,modmuzzleak74jetmbr,modmuzzleak74zenitdtk1,modsilencerhexagonAK,modsilencerak12std,modmuzzleak12std,modmuzzlerpdbrakecompensator,modmuzzle_mosin_tacfire_tanker_style_762x54r,modsilencer_mosin_bramit_std_762x54r,modsilencerSV98std,modmuzzleSV98mk2SRVV,modSVDmuzzlebrakecompensator,modsilencerSVDrotor43,modmuzzlepkzenitdtk,modmuzzleash12std,modsilencerash12std,modsilencergriffinm4sdk,modsilencersocomrc2" name_key="Rifles Silencers 4" has_quality="false" unlock_level="80,85,90,95,100">
+                <unlock_entry item="modsilencerak74tgpa,modmuzzleak74hexagonreactor,modsilencerak74hexagonwaffle" unlock_tier="1" />				
+				<unlock_entry item="modmuzzleak74jetmbr,modmuzzleak74zenitdtk1,modsilencerhexagonAK,modsilencerak12std" unlock_tier="2" />				
+				<unlock_entry item="modmuzzleak12std,modmuzzlerpdbrakecompensator,modmuzzle_mosin_tacfire_tanker_style_762x54r,modsilencer_mosin_bramit_std_762x54r,modsilencerSV98std" unlock_tier="3" />				
+				<unlock_entry item="modmuzzleSV98mk2SRVV,modSVDmuzzlebrakecompensator,modsilencerSVDrotor43,modmuzzlepkzenitdtk" unlock_tier="4" />				
+				<unlock_entry item="modmuzzleash12std,modsilencerash12std,modsilencergriffinm4sdk,modsilencersocomrc2" unlock_tier="5" />
+            </display_entry>			
+			<display_entry icon="modmuzzle_ar15_ferfrans_muzzle_brake_556x45,modmuzzle_ar15_double_star_carlson_tac_comp_556x45,modmuzzle_ar15_alientech_gubich_muzzle_brake_556x45,modmuzzleAR10thunderbeast30cb,modmuzzleAR15thunderbeast223cb,modsilencerthunderbeastultra5,modsilencersdnaacmulti,modmuzzle_ar10_precision_armament_m11_severe_duty_muzzle_brake_762x51,modmuzzleAR10kacqdc,modsilencerprskacqdc,modmuzzle_ar10_lantac_dgn762b_muzzle_brake_762x51,modsilencerbtg28qd762,modsilencerSIGclutchlokQD,modmuzzlesigtwoportbrake,modsilencersigsrd762ti,modsilencersigsrdqd,modmuzzleAI338LMtactical,modsilencerAI338LMsoundmoderator" name_key="Rifles Silencers 5" has_quality="false" unlock_level="105,110,115,120,125">
+                <unlock_entry item="modmuzzle_ar15_ferfrans_muzzle_brake_556x45,modmuzzle_ar15_double_star_carlson_tac_comp_556x45,modmuzzle_ar15_alientech_gubich_muzzle_brake_556x45" unlock_tier="1" />				
+				<unlock_entry item="modmuzzleAR10thunderbeast30cb,modmuzzleAR15thunderbeast223cb,modsilencerthunderbeastultra5" unlock_tier="2" />				
+				<unlock_entry item="modsilencersdnaacmulti,modmuzzle_ar10_precision_armament_m11_severe_duty_muzzle_brake_762x51,modmuzzleAR10kacqdc,modsilencerprskacqdc" unlock_tier="3" />				
+				<unlock_entry item="modmuzzle_ar10_lantac_dgn762b_muzzle_brake_762x51,modsilencerbtg28qd762,modsilencerSIGclutchlokQD,modmuzzlesigtwoportbrake" unlock_tier="4" />				
+				<unlock_entry item="modsilencersigsrd762ti,modsilencersigsrdqd,modmuzzleAI338LMtactical,modsilencerAI338LMsoundmoderator" unlock_tier="5" />
+            </display_entry>				
+						
+            <effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,125" value="1" tags="modsilencertt33makeshift,modmuzzlettlaserdtk"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,125" value="1" tags="modsilencerstechkinstd,modsilencerpp9klin"/>				
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,125" value="1" tags="modmuzzlemp5btqdbrake,modmuzzlemp5noveske"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,125" value="1" tags="modsilencerco46multi,modsilencerco9osprey"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="25,125" value="1" tags="modsilencersigsrd9,modsilencerUziPro,modmuzzlevityazbrakecompensator"/>
+				
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,125" value="1" tags="modsilencermpxsd,modmuzzlestm9brake"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="35,125" value="1" tags="modmuzzlegl17carver4port,modmuzzlep226tjcustom"/>				
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="40,125" value="1" tags="modsilencersr1mpstd,modsilencersr2msv1381"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="45,125" value="1" tags="modsilencerco45komega,modsilencerump45bt,modmuzzle1911anarchyoutdoors"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,125" value="1" tags="modsilencermp7rotex2,modsilencerp90attenuator,modsilencer57gemtech"/>
+				
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="55,125" value="1" tags="modsilencerSGhexagon12k"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="60,125" value="1" tags="modsilencercoSalvo12"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="65,125" value="1" tags="modchokeremingtontactical"/>	
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="70,125" value="1" tags="modmuzzleSGgk02muzzlebrake,modmuzzletromixmonsterclaw"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="75,125" value="1" tags="modchokeAA12,modsilencerAA12marauder"/>
+				
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="80,125" value="1" tags="modsilencerak74tgpa,modmuzzleak74hexagonreactor,modsilencerak74hexagonwaffle"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="85,125" value="1" tags="modmuzzleak74jetmbr,modmuzzleak74zenitdtk1,modsilencerhexagonAK,modsilencerak12std"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="90,125" value="1" tags="modmuzzleak12std,modmuzzlerpdbrakecompensator,modmuzzle_mosin_tacfire_tanker_style_762x54r,modsilencer_mosin_bramit_std_762x54r,modsilencerSV98std"/>	
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="95,125" value="1" tags="modmuzzleSV98mk2SRVV,modSVDmuzzlebrakecompensator,modsilencerSVDrotor43,modmuzzlepkzenitdtk"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="100,125" value="1" tags="modmuzzleash12std,modsilencerash12std,modsilencergriffinm4sdk,modsilencersocomrc2"/>
+				
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="105,125" value="1" tags="modmuzzle_ar15_ferfrans_muzzle_brake_556x45,modmuzzle_ar15_double_star_carlson_tac_comp_556x45,modmuzzle_ar15_alientech_gubich_muzzle_brake_556x45"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="110,125" value="1" tags="modmuzzleAR10thunderbeast30cb,modmuzzleAR15thunderbeast223cb,modsilencerthunderbeastultra5"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="115,125" value="1" tags="modsilencersdnaacmulti,modmuzzle_ar10_precision_armament_m11_severe_duty_muzzle_brake_762x51,modmuzzleAR10kacqdc,modsilencerprskacqdc"/>	
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="120,125" value="1" tags="modmuzzle_ar10_lantac_dgn762b_muzzle_brake_762x51,modsilencerbtg28qd762,modsilencerSIGclutchlokQD,modmuzzlesigtwoportbrake"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="125,125" value="1" tags="modsilencersigsrd762ti,modsilencersigsrdqd,modmuzzleAI338LMtactical,modsilencerAI338LMsoundmoderator"/>	   
+				</effect_group>
+        </crafting_skill>
+		
+		<crafting_skill name="craftingStocks" max_level="125" parent="attCrafting" name_key="craftingStocksName" desc_key="craftingStocksDesc" long_desc_key="craftingStocksLongDesc" icon="ui_game_symbol_tool_smithing">
+            <display_entry icon="modstockttmachinecustom,modstockstechkinwire,modstockglockfdglr17,modstockmp5kpdw,modstockmp5a2,modstockp90dibuttpad" name_key="Pistol Stocks 1" has_quality="false" unlock_level="5,10,15,20,25">
+                <unlock_entry item="modstockttmachinecustom" unlock_tier="1" />
+				<unlock_entry item="modstockstechkinwire" unlock_tier="2" />
+				<unlock_entry item="modstockglockfdglr17" unlock_tier="3" />
+				<unlock_entry item="modstockmp5kpdw" unlock_tier="4" />
+				<unlock_entry item="modstockmp5a2,modstockp90dibuttpad" unlock_tier="5" />
+            </display_entry>
+			<display_entry icon="modstockakzenitpt1,modstockakzenitpt3,modstockakzhukovmagpul,modstocka2ar15prsgen2tan,modstocka2ar15prsgen3,modstockar15b5precision" name_key="SMG/Rifles Stocks 2" has_quality="false" unlock_level="30,35,40,45,50">                
+				<unlock_entry item="modstockakzenitpt1" unlock_tier="1" />
+				<unlock_entry item="modstockakzenitpt3" unlock_tier="2" />
+				<unlock_entry item="modstockakzhukovmagpul" unlock_tier="3" />
+				<unlock_entry item="modstocka2ar15prsgen2tan" unlock_tier="4" />
+			   <unlock_entry item="modstocka2ar15prsgen3,modstockar15b5precision" unlock_tier="5" />
+            </display_entry>
+			<display_entry icon="modstockar15troym7a1,modstockar15glcore,modstockar15acesocomgen4,modstockar15hke1,modstockar15ergof93pro,modstockIWICarmelErgo" name_key="SMG/Rifles Stocks 3" has_quality="false" unlock_level="55,60,65,70,75">               
+			   <unlock_entry item="modstockar15troym7a1" unlock_tier="1" />
+			   <unlock_entry item="modstockar15glcore" unlock_tier="2" />
+			   <unlock_entry item="modstockar15acesocomgen4" unlock_tier="3" />
+			   <unlock_entry item="modstockar15hke1" unlock_tier="4" />
+				<unlock_entry item="modstockar15ergof93pro,modstockIWICarmelErgo" unlock_tier="5" />
+            </display_entry>
+			<display_entry icon="modstockfnminimilightweight,modstocksigtelescoping,modstockmaximcqb,modstockpmmulss,modstockSA58paraSPR" name_key="SMG/Rifles Stocks 4" has_quality="false" unlock_level="80,85,90,95,100">                
+				<unlock_entry item="modstockfnminimilightweight" unlock_tier="1" />
+				<unlock_entry item="modstocksigtelescoping" unlock_tier="2" />
+				<unlock_entry item="modstockmaximcqb" unlock_tier="3" />
+				<unlock_entry item="modstockpmmulss" unlock_tier="4" />
+				<unlock_entry item="modstockSA58paraSPR" unlock_tier="5" />
+            </display_entry>			
+			<display_entry icon="modstockSA58paraBRS,modstockVLtorVSS11,modstock417hke2,modstockpkzenitpt2,modstockm3benelliurbino" name_key="SMG/Rifles Stocks 5" has_quality="false" unlock_level="105,110,115,120,125">  			
+				<unlock_entry item="modstockSA58paraBRS" unlock_tier="1" />
+				<unlock_entry item="modstockVLtorVSS11" unlock_tier="2" />
+				<unlock_entry item="modstock417hke2" unlock_tier="3" />
+				<unlock_entry item="modstockpkzenitpt2" unlock_tier="4" />
+				<unlock_entry item="modstockm3benelliurbino" unlock_tier="5" />
+            </display_entry>
+			 <effect_group>
+			    <passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,125" value="1" tags="modstockttmachinecustom"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,125" value="1" tags="modstockstechkinwire"/>				
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,125" value="1" tags="modstockglockfdglr17"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,125" value="1" tags="modstockmp5kpdw"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="25,125" value="1" tags="modstockmp5a2,modstockp90dibuttpad"/>
+				
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,125" value="1" tags="modstockakzenitpt1"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="35,125" value="1" tags="modstockakzenitpt3"/>				
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="40,125" value="1" tags="modstockakzhukovmagpul"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="45,125" value="1" tags="modstocka2ar15prsgen2tan"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,125" value="1" tags="modstocka2ar15prsgen3,modstockar15b5precision"/>
+				
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="55,125" value="1" tags="modstockar15troym7a1"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="60,125" value="1" tags="modstockar15glcore"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="65,125" value="1" tags="modstockar15acesocomgen4"/>	
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="70,125" value="1" tags="modstockar15hke1"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="75,125" value="1" tags="modstockar15ergof93pro,modstockIWICarmelErgo"/>
+				
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="80,125" value="1" tags="modstockfnminimilightweight"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="85,125" value="1" tags="modstocksigtelescoping"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="90,125" value="1" tags="modstockmaximcqb"/>	
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="95,125" value="1" tags="modstockpmmulss"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="100,125" value="1" tags="modstockSA58paraSPR"/>
+				
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="105,125" value="1" tags="modstockSA58paraBRS"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="110,125" value="1" tags="modstockVLtorVSS11"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="115,125" value="1" tags="modstock417hke2"/>	
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="120,125" value="1" tags="modstockpkzenitpt2"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="125,125" value="1" tags="modstockm3benelliurbino"/>                     
+			</effect_group>	
+        </crafting_skill>
+		
+		<!-- WEAPON MODIFIERS -->		
+		<!-- LIGHTS AND NVGS -->
+		<crafting_skill name="craftingheadLightsandNVG" max_level="25" parent="attCrafting" name_key="craftingheadLightsandNVGName" desc_key="craftingheadLightsandNVGDesc" long_desc_key="craftingheadLightsandNVGLongDesc" icon="ui_game_symbol_tool_smithing">
+			<display_entry icon="modArmorHelmetLight" name_key="modArmorHelmetLight2" has_quality="false" unlock_level="5">
+				<unlock_entry item="modArmorHelmetLight2" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="modArmorHelmetLight" name_key="modArmorHelmetLight3" has_quality="false" unlock_level="10">
+				<unlock_entry item="modArmorHelmetLight3" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="modArmorNightVision" name_key="modArmorNightVision" has_quality="false" unlock_level="15">
+				<unlock_entry item="modArmorNightVision" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="modArmorHelmetLight" name_key="modArmorNightVision2" has_quality="false" unlock_level="20">
+				<unlock_entry item="modArmorNightVision2" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="modArmorHelmetLight" name_key="modArmorNightVision3" has_quality="false" unlock_level="25">
+				<unlock_entry item="modArmorNightVision3" unlock_tier="1" />
+			</display_entry>
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,25" value="1" tags="modArmorHelmetLight2"/> 
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,25" value="1" tags="modArmorHelmetLight3"/> 
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,25" value="1" tags="modArmorNightVision"/> 
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,25" value="1" tags="modArmorNightVision2"/> 
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="25,25" value="1" tags="modArmorNightVision3"/> 
+				</effect_group>		
+		</crafting_skill>
+		<!-- LIGHTS AND NVGS -->
+		<!-- SMGS -->		
+		<crafting_skill name="craftingSMGS" max_level="200" parent="attCrafting" name_key="craftingSMGSName" desc_key="craftingSMGSDesc" long_desc_key="craftingSMGSLongDesc" icon="ui_game_symbol_tool_smithing">
+            <display_entry icon="gunppsh41,gunpp9klin,gunpp19bizon" name_key="SMGS T1" has_quality="true" unlock_level="6,30,60,90,120,148">
+                <unlock_entry item="gunppsh41,gunpp9klin,gunpp19bizon" unlock_tier="1"/>	
+            </display_entry>
+			 <display_entry icon="gunmp5k,gunmp5,gunuzi,gunpp19vityaz" name_key="SMGS T1" has_quality="true" unlock_level="12,36,66,96,126,154">
+                <unlock_entry item="gunmp5k,gunmp5,gunuzi,gunpp19vityaz" unlock_tier="1" />	
+            </display_entry>	
+			 <display_entry icon="gunmp9,gunuziprosmg,gunmp5sd,gunvector9" name_key="SMGS T1" has_quality="true" unlock_level="18,42,72,102,132,160">
+                <unlock_entry item="gunmp9,gunuziprosmg,gunmp5sd,gunvector9" unlock_tier="1" />	
+            </display_entry>	
+			 <display_entry icon="gunmpx,gunstm9,gunsr2mveresk,gunump45" name_key="SMGS T1" has_quality="true" unlock_level="24,48,78,108,138,166">
+                <unlock_entry item="gunmpx,gunstm9,gunsr2mveresk,gunump45" unlock_tier="1" />	
+            </display_entry>	
+			 <display_entry icon="gunthompson,gunvector45,gunmp7,gunp90" name_key="SMGS T1" has_quality="true" unlock_level="30,54,84,114,142,172">
+                <unlock_entry item="gunthompson,gunvector45,gunmp7,gunp90" unlock_tier="1" />
+            </display_entry>	
+						
+            <effect_group>
+			    <passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,200" value="1" tags="gunppsh41,gunpp9klin,gunpp19bizon"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="12,200" value="1" tags="gunmp5k,gunmp5,gunuzi,gunpp19vityaz"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="18,200" value="1" tags="gunmp9,gunuziprosmg,gunmp5sd,gunvector9"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="24,200" value="1" tags="gunmpx,gunstm9,gunsr2mveresk,gunump45"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,200" value="1" tags="gunthompson,gunvector45,gunmp7,gunp90"/>				
+												
+                <passive_effect name="CraftingTier" operation="base_add" level="30,60,90,120,148,200" value="1,2,3,4,5,5" tags="gunppsh41,gunpp9klin,gunpp19bizon"/>
+				<passive_effect name="CraftingTier" operation="base_add" level="36,66,96,126,154,200" value="1,2,3,4,5,5" tags="gunmp5k,gunmp5,gunuzi,gunpp19vityaz"/>
+				<passive_effect name="CraftingTier" operation="base_add" level="42,72,102,132,160,200" value="1,2,3,4,5,5" tags="gunmp9,gunuziprosmg,gunmp5sd,gunvector9"/>
+				<passive_effect name="CraftingTier" operation="base_add" level="48,78,108,138,166,200" value="1,2,3,4,5,5" tags="gunmpx,gunstm9,gunsr2mveresk,gunump45"/>
+				<passive_effect name="CraftingTier" operation="base_add" level="54,84,114,142,172,200" value="1,2,3,4,5,5" tags="gunthompson,gunvector45,gunmp7,gunp90"/>
+				</effect_group>
+        </crafting_skill>		
+		<!-- SMGS -->
+		<!-- PISTOLS -->
+		<crafting_skill name="craftingPistols" max_level="125" parent="attCrafting" name_key="craftingPistolsName" desc_key="craftingPistolsDesc" long_desc_key="craftingPistolsLongDesc" icon="ui_game_symbol_tool_smithing">
+            <display_entry icon="gunp226,gunm1911,gunsr1mp" name_key="Pistols T1" has_quality="true" unlock_level="5,23,43,63,83,103">
+                <unlock_entry item="gunp226,gunm1911,gunsr1mp" unlock_tier="1" />
+            </display_entry>
+            <display_entry icon="gunpb,gunstechkin,guntokarevtt" name_key="Pistols T2" has_quality="true" unlock_level="7,26,46,66,86,106">
+                <unlock_entry item="gunpb,gunstechkin,guntokarevtt" unlock_tier="2" />    
+            </display_entry>
+            <display_entry icon="gunglock17,gunm9a3,gunm45,gunusp45match" name_key="Pistols T3" has_quality="true" unlock_level="10,29,49,69,89,109">
+                <unlock_entry item="gunglock17,gunm9a3,gunm45,gunusp45match" unlock_tier="3" />
+            </display_entry>
+            <display_entry icon="gunusp45tac,gunfiveseven,gunpmalphadog,gundeserteagle" name_key="Pistols T4" has_quality="true" unlock_level="15,34,54,74,94,114">
+                <unlock_entry item="gunusp45tac,gunfiveseven,gunpmalphadog,gundeserteagle" unlock_tier="4" />
+            </display_entry>
+            <display_entry icon="guntokarevgold,guntokarevmachine,gunglock18c,gunrsh12" name_key="Pistols T5" has_quality="true" unlock_level="20,40,60,80,100,120">
+                <unlock_entry item="guntokarevgold,guntokarevmachine,gunglock18c,gunrsh12" unlock_tier="5" />
+            </display_entry>
+						
+            <effect_group>
+            <passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,125" value="1" tags="gunp226,gunm1911,gunsr1mp"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="7,125" value="1" tags="gunpb,gunstechkin,guntokarevtt"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,125" value="1" tags="gunglock17,gunm9a3,gunm45,gunusp45match"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,125" value="1" tags="gunusp45tac,gunfiveseven,gunpmalphadog,gundeserteagle"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,125" value="1" tags="guntokarevgold,guntokarevmachine,gunglock18c,gunrsh12"/>						
+			
+			<passive_effect name="CraftingTier" operation="base_add" level="23,43,63,83,103,125" value="1,2,3,4,5,5" tags="gunp226,gunm1911,gunsr1mp"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="26,46,66,86,106,125" value="1,2,3,4,5,5" tags="gunpb,gunstechkin,guntokarevtt"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="29,49,69,89,109,125" value="1,2,3,4,5,5" tags="gunglock17,gunm9a3,gunm45,gunusp45match"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="34,54,74,94,114,125" value="1,2,3,4,5,5" tags="gunusp45tac,gunfiveseven,gunpmalphadog,gundeserteagle"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="40,60,80,100,120,125" value="1,2,3,4,5,5" tags="guntokarevgold,guntokarevmachine,gunglock18c,gunrsh12"/>
+			</effect_group>
+        </crafting_skill>
+		<!-- PISTOLS -->
+		<!-- SHOTGUNS -->
+		<crafting_skill name="craftingEFTShotguns" max_level="200" parent="attCrafting" name_key="craftingEFTShotgunsName" desc_key="craftingEFTShotgunsDesc" long_desc_key="craftingEFTShotgunsLongDesc" icon="ui_game_symbol_tool_smithing">
+            <display_entry icon="gunks23,gunmp43" name_key="Shotguns T1" has_quality="true" unlock_level="5,30,55,80,105,130">
+                <unlock_entry item="gunks23,gunmp43" unlock_tier="1" />		
+            </display_entry>
+			<display_entry icon="gunmts255,gunm590" name_key="Shotguns T1" has_quality="true" unlock_level="10,35,60,85,110,135">
+                <unlock_entry item="gunmts255,gunm590" unlock_tier="2" />			
+            </display_entry>
+			<display_entry icon="gunm870,gunksg12" name_key="Shotguns T1" has_quality="true" unlock_level="15,40,65,90,115,140">
+                <unlock_entry item="gunm870,gunksg12" unlock_tier="3" />			
+            </display_entry>
+			<display_entry icon="gunmp153,gunm3benelli" name_key="Shotguns T1" has_quality="true" unlock_level="20,45,70,95,120,145">
+                <unlock_entry item="gunmp153,gunm3benelli" unlock_tier="4" />		
+            </display_entry>
+			<display_entry icon="gunsaiga12,gunAA12" name_key="Shotguns T1" has_quality="true" unlock_level="25,50,75,100,125,150">
+                <unlock_entry item="gunsaiga12,gunAA12" unlock_tier="5" />				
+            </display_entry>
+						
+            <effect_group>
+            <passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,200" value="1" tags="gunks23,gunmp43"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,200" value="1" tags="gunmts255,gunm590"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,200" value="1" tags="gunm870,gunksg12"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,200" value="1" tags="gunmp153,gunm3benelli"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="25,200" value="1" tags="gunsaiga12,gunAA12"/>
+								
+			<passive_effect name="CraftingTier" operation="base_add" level="30,55,80,105,130,200" value="1,2,3,4,5,5" tags="gunks23,gunmp43"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="35,60,85,110,135,200" value="1,2,3,4,5,5" tags="gunmts255,gunm590"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="40,65,90,115,140,200" value="1,2,3,4,5,5" tags="gunm870,gunksg12"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="45,70,95,120,145,200" value="1,2,3,4,5,5" tags="gunmp153,gunm3benelli"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="50,75,100,125,150,200" value="1,2,3,4,5,5" tags="gunsaiga12,gunAA12"/>
+			</effect_group>
+        </crafting_skill>
+		<!-- SHOTGUNS -->		
+		<!-- GRENADE LAUNCHERS -->
+		<crafting_skill name="craftingRocketsandLaunchers" max_level="350" parent="attCrafting" name_key="craftingRocketsandLaunchersName" desc_key="craftingRocketsandLaunchersDesc" long_desc_key="craftingRocketsandLaunchersLongDesc" icon="ui_game_symbol_tool_smithing">
+            <display_entry icon="gunfn40gl" name_key="gunfn40gl" has_quality="true" unlock_level="20,60,105,145,185,225">
+                <unlock_entry item="gunfn40gl" unlock_tier="1" />
+            </display_entry>
+			<display_entry icon="gunchinalake" name_key="gunchinalake" has_quality="true" unlock_level="30,70,110,150,190,230">
+                <unlock_entry item="gunchinalake" unlock_tier="2" />
+            </display_entry>
+			<display_entry icon="gunm32a1mgl" name_key="gunm32a1mgl" has_quality="true" unlock_level="40,80,120,160,200,240">
+                <unlock_entry item="gunm32a1mgl" unlock_tier="3" />
+            </display_entry>
+			<display_entry icon="gunrpg26" name_key="gunrpg26" has_quality="true" unlock_level="50,90,130,170,210,250">
+                <unlock_entry item="gunrpg26" unlock_tier="4" />
+            </display_entry>
+			<display_entry icon="gunrpg7" name_key="gunrpg7" has_quality="true" unlock_level="60,100,140,180,220,300">
+                <unlock_entry item="gunrpg7" unlock_tier="5" />
+            </display_entry>
+						
+            <effect_group>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,350" value="1" tags="gunfn40gl"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,350" value="1" tags="gunchinalake"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="40,350" value="1" tags="gunm32a1mgl"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,350" value="1" tags="gunrpg26"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="60,350" value="1" tags="gunrpg7"/>
+				
+				<passive_effect name="CraftingTier" operation="base_add" level="60,105,145,185,225,350" value="1,2,3,4,5,5" tags="gunfn40gl"/>	
+				<passive_effect name="CraftingTier" operation="base_add" level="70,110,150,190,230,350" value="1,2,3,4,5,5" tags="gunchinalake"/>	
+				<passive_effect name="CraftingTier" operation="base_add" level="80,120,160,200,240,350" value="1,2,3,4,5,5" tags="gunm32a1mgl"/>	
+				<passive_effect name="CraftingTier" operation="base_add" level="90,130,170,210,250,350" value="1,2,3,4,5,5" tags="gunrpg26"/>
+				<passive_effect name="CraftingTier" operation="base_add" level="100,140,180,220,300,350" value="1,2,3,4,5,5" tags="gunrpg7"/>
+				</effect_group>
+        </crafting_skill>	
+		<!-- GRENADE LAUNCHERS -->			
+		<!-- RIFLES -->
+		<crafting_skill name="craftingEFTRifles" max_level="200" parent="attCrafting" name_key="craftingEFTRiflesName" desc_key="craftingEFTRiflesDesc" long_desc_key="craftingEFTRiflesLongDesc" icon="ui_game_symbol_tool_smithing">
+            <display_entry icon="gunadar,gunstar15,gunm700" name_key="Rifles" has_quality="true" unlock_level="10,35,60,85,110,135">
+                <unlock_entry item="gunadar,gunstar15,gunm700" unlock_tier="1" />					
+            </display_entry>
+			<display_entry icon="gundvl10,gunt5000,gunFALsa58dmr" name_key="Rifles" has_quality="true" unlock_level="15,40,65,90,115,140">
+                <unlock_entry item="gundvl10,gunt5000,gunFALsa58dmr" unlock_tier="2" />
+            </display_entry>
+			<display_entry icon="gunm1aEBR,gunrfb,gunsr25,gunrsass" name_key="Rifles" has_quality="true" unlock_level="20,45,70,95,120,150">
+                <unlock_entry item="gunm1aEBR,gunrfb,gunsr25,gunrsass" unlock_tier="3" />				
+            </display_entry>
+			<display_entry icon="gunhkg28,gunmp18,gunmosin,gunsv98" name_key="Rifles" has_quality="true" unlock_level="25,50,75,100,125,160">
+               <unlock_entry item="gunhkg28,gunmp18,gunmosin,gunsv98" unlock_tier="4" />
+            </display_entry>
+			<display_entry icon="gunsvt,gunsvd,gunaxmc,gunswordmk18" name_key="Rifles" has_quality="true" unlock_level="30,55,80,105,130,170">               			
+				<unlock_entry item="gunsvt,gunsvd,gunaxmc,gunswordmk18" unlock_tier="5" />
+            </display_entry>
+			
+            <effect_group>
+            <passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,200" value="1" tags="gunadar,gunstar15,gunm700"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,200" value="1" tags="gundvl10,gunt5000,gunFALsa58dmr"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,200" value="1" tags="gunm1aEBR,gunrfb,gunsr25,gunrsass"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="25,200" value="1" tags="gunhkg28,gunmp18,gunmosin,gunsv98"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,200" value="1" tags="gunsvt,gunsvd,gunaxmc,gunswordmk18"/>
+						
+			<passive_effect name="CraftingTier" operation="base_add" level="35,60,85,110,135,200" value="1,2,3,4,5,5" tags="gunadar,gunstar15,gunm700"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="40,65,90,115,140,200" value="1,2,3,4,5,5" tags="gundvl10,gunt5000,gunFALsa58dmr"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="45,70,95,120,150,200" value="1,2,3,4,5,5" tags="gunm1aEBR,gunrfb,gunsr25,gunrsass"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="50,75,100,125,160,200" value="1,2,3,4,5,5" tags="gunhkg28,gunmp18,gunmosin,gunsv98"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="55,80,105,130,170,200" value="1,2,3,4,5,5" tags="gunsvt,gunsvd,gunaxmc,gunswordmk18"/>
+			</effect_group>
+        </crafting_skill>
+		<!-- RIFLES -->
+		<!-- MACHINE GUNS -->
+		<crafting_skill name="craftingEFTMachineguns" max_level="200" parent="attCrafting" name_key="craftingEFTMachinegunsName" desc_key="craftingEFTMachinegunsDesc" long_desc_key="craftingEFTMachinegunsLongDesc" icon="ui_game_symbol_tool_smithing">
+            <display_entry icon="gunauga3,gung36kv2,gunm4a1,gunm16a4,gunl85a2,gunmdr556,gunhk416" name_key="Machineguns" has_quality="true" unlock_level="10,35,60,85,110,135">
+                <unlock_entry item="gunauga3,gung36kv2,gunm4a1,gunm16a4,gunl85a2,gunmdr556,gunhk416" unlock_tier="1" />	
+            </display_entry>
+			<display_entry icon="gunIWItavorx95,gunIWIcarmel,gunak300velociraptor,gunhoneybadger,gunmcx,gunFALsa58br,gunmdr762,gunscarh" name_key="Machineguns" has_quality="true" unlock_level="15,40,65,90,115,140">
+               <unlock_entry item="gunIWItavorx95,gunIWIcarmel,gunak300velociraptor,gunhoneybadger,gunmcx,gunFALsa58br,gunmdr762,gunscarh" unlock_tier="2" />
+            </display_entry>
+			<display_entry icon="gunhk417,gunm14sass,gunaks74un,gunak74n,gunak74m,gunak12,gunak107,gunsks" name_key="Machineguns" has_quality="true" unlock_level="20,45,70,95,120,150">
+               <unlock_entry item="gunhk417,gunm14sass,gunaks74un,gunak74n,gunak74m,gunak12,gunak107,gunsks" unlock_tier="3" />	
+            </display_entry>
+			<display_entry icon="gunakmn,gunak103,gunak109,gunrd704,gunmk47,gun9a91,gunvss,gunasval" name_key="Machineguns" has_quality="true" unlock_level="25,50,75,100,125,160">
+                <unlock_entry item="gunakmn,gunak103,gunak109,gunrd704,gunmk47,gun9a91,gunvss,gunasval" unlock_tier="4" />
+            </display_entry>
+			<display_entry icon="gunfamas,gunmcxspear,gunash12,gunrpk16,gunfnminimi,gunrpd,gunm60e6,gunpkp" name_key="Machineguns" has_quality="true" unlock_level="30,55,80,105,130,170">
+               <unlock_entry item="gunfamas,gunmcxspear,gunash12,gunrpk16,gunfnminimi,gunrpd,gunm60e6,gunpkp" unlock_tier="5" />
+            </display_entry>
+			
+            <effect_group>
+            <passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,200" value="1" tags="gunauga3,gung36kv2,gunm4a1,gunm16a4,gunl85a2,gunmdr556,gunhk416"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,200" value="1" tags="gunIWItavorx95,gunIWIcarmel,gunak300velociraptor,gunhoneybadger,gunmcx,gunFALsa58br,gunmdr762,gunscarh"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,200" value="1" tags="gunhk417,gunm14sass,gunaks74un,gunak74n,gunak74m,gunak12,gunak107,gunsks"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="25,200" value="1" tags="gunakmn,gunak103,gunak109,gunrd704,gunmk47,gun9a91,gunvss,gunasval"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,200" value="1" tags="gunfamas,gunmcxspear,gunash12,gunrpk16,gunfnminimi,gunrpd,gunm60e6,gunpkp"/>
+						
+			<passive_effect name="CraftingTier" operation="base_add" level="35,60,85,110,135,200" value="1,2,3,4,5,5" tags="gunauga3,gung36kv2,gunm4a1,gunm16a4,gunl85a2,gunmdr556,gunhk416"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="40,65,90,115,140,200" value="1,2,3,4,5,5" tags="gunIWItavorx95,gunIWIcarmel,gunak300velociraptor,gunhoneybadger,gunmcx,gunFALsa58br,gunmdr762,gunscarh"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="45,70,95,120,150,200" value="1,2,3,4,5,5" tags="gunhk417,gunm14sass,gunaks74un,gunak74n,gunak74m,gunak12,gunak107,gunsks"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="50,75,100,125,160,200" value="1,2,3,4,5,5" tags="gunakmn,gunak103,gunak109,gunrd704,gunmk47,gun9a91,gunvss,gunasval"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="55,80,105,130,170,200" value="1,2,3,4,5,5" tags="gunfamas,gunmcxspear,gunash12,gunrpk16,gunfnminimi,gunrpd,gunm60e6,gunpkp"/>
+			</effect_group>
+        </crafting_skill>
+		<!-- MACHINE GUNS -->	
+		</append>
+		<!-- *** Adrenaline Rush -->
+	<append xpath="/progression/perks" >		
+		<!-- SMGS -->
+		<perk name="perkEFTXSMGS" parent="skillEFTXSmgs" max_level="5" name_key="EFTX SMGS" desc_key="Finding More SMG Books in loot" icon="ui_game_symbol_gunslinger">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="1" desc_key="reqAgilityLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="3" desc_key="reqAgilityLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="5" desc_key="reqAgilityLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="7" desc_key="reqAgilityLevel07"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="10" desc_key="reqAgilityLevel10"/></level_requirements>
+		<effect_group>
+			<passive_effect name="BlockDamage" operation="perc_add" level="0,5" value="0,1" tags="eftSMG"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="0,5" value="0,.5" tags="eftSMG"/>
+
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="0,5" value="0,0.25" tags="eftSMG"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="0,5" value="0,0.30" tags="eftSMG"/>
+
+			<passive_effect name="IncrementalSpreadMultiplier" operation="perc_add" level="0,5" value="0,-.25" tags="eftSMG"/>
+			</effect_group>	
+		<!-- Increase the chance to find SMG crafting skill magazines with each perk rank up to crafting skill 200 -->
+		<effect_group>
+			<passive_effect name="LootProb" operation="perc_add" level="1,5" value="2,10" tags="eftxsmgsCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingSMGS" operation="LT" value="200"/>
+			</passive_effect>
+			<!-- Once SMG crafting skill reaches 200, set the probability bonus of finding SMG crafting skill magazines to 0 -->
+			<passive_effect name="LootProb" operation="base_set" level="1,5" value="1,1" tags="eftxsmgsCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingSMGS" operation="Equals" value="200"/>
+			</passive_effect>
+			</effect_group>	
+			<effect_group>
+			<effect_description level="1" desc_key="perkEFTXSMGSRank1Desc" long_desc_key="Find SMG books in loot"/>
+			<effect_description level="2" desc_key="perkEFTXSMGSRank2Desc" long_desc_key="Find more SMG books in loot"/>
+			<effect_description level="3" desc_key="perkEFTXSMGSRank3Desc" long_desc_key="Find even more SMG books in loot"/>
+			<effect_description level="4" desc_key="perkEFTXSMGSRank4Desc" long_desc_key="Do you really need this many SMG books"/>
+			<effect_description level="5" desc_key="perkEFTXSMGSRank5Desc" long_desc_key="Fine have more SMG books"/>
+		</effect_group>		
+		</perk>	
+		<!-- SMGS -->
+		<!-- PISTOLS -->
+		<perk name="perkEFTXPistols" parent="skillEFTXPistols" max_level="5" name_key="EFTX Pistols" desc_key="Finding More Pistols Books in loot" icon="ui_game_symbol_gunslinger">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="1" desc_key="reqAgilityLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="3" desc_key="reqAgilityLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="5" desc_key="reqAgilityLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="7" desc_key="reqAgilityLevel07"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="10" desc_key="reqAgilityLevel10"/></level_requirements>
+			<effect_group>
+			<passive_effect name="BlockDamage" operation="perc_add" level="0,5" value="0,1" tags="eftPistol"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="0,5" value="0,.5" tags="eftPistol"/>
+
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="0,5" value="0,0.25" tags="eftPistol"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="0,5" value="0,0.30" tags="eftPistol"/>
+
+			<passive_effect name="IncrementalSpreadMultiplier" operation="perc_add" level="0,5" value="0,-.25" tags="eftPistol"/>
+			</effect_group>	
+			<effect_group>
+			<!-- Increase the chance to find Pistol crafting skill magazines with each perk rank up to crafting skill 125 -->
+			<passive_effect name="LootProb" operation="perc_add" level="1,5" value="2,10" tags="eftxpistolsCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingPistols" operation="LT" value="2"/>
+			</passive_effect>
+			<!-- Once Pistol crafting skill reaches 125, set the probability bonus of finding Pistol crafting skill magazines to 0 -->
+			<passive_effect name="LootProb" operation="base_set" level="1,5" value="1,1" tags="eftxpistolsCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingPistols" operation="Equals" value="125"/>
+			</passive_effect>
+			<effect_description level="1" desc_key="perkEFTXPistolsRank1Desc" long_desc_key="Finding Pistol books"/>
+			<effect_description level="2" desc_key="perkEFTXPistolsRank2Desc" long_desc_key="You find more Pistol books"/>
+			<effect_description level="3" desc_key="perkEFTXPistolsRank3Desc" long_desc_key="What have we here, even more Pistol books"/>
+			<effect_description level="4" desc_key="perkEFTXPistolsRank4Desc" long_desc_key="Let me guess what is in here. Yep more Pistol books"/>
+			<effect_description level="5" desc_key="perkEFTXPistolsRank5Desc" long_desc_key="All I find is Pistol books"/>
+			</effect_group>
+			</perk>
+		<!-- PISTOLS -->
+			<!-- SHOTGUNS -->
+			<perk name="perkEFTXShotties" parent="skillEFTXShotguns" max_level="5" name_key="EFTX Shotties" desc_key="Finding More Shotgun Books in loot" icon="ui_game_symbol_shotgun">
+			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="1" desc_key="reqStrengthLevel01"/></level_requirements>
+			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="3" desc_key="reqStrengthLevel03"/></level_requirements>
+			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="5" desc_key="reqStrengthLevel05"/></level_requirements>
+			<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="7" desc_key="reqStrengthLevel07"/></level_requirements>
+			<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="10" desc_key="reqStrengthLevel10"/></level_requirements>
+			<effect_group>
+			<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".2,1" tags="eftShotties"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="eftShotties"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,5" value=".1,.30" tags="eftShotties"/>
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,5" value=".1,.5" tags="eftShotties"/>
+			</effect_group>
+			<effect_group>
+			<!-- Increase the chance to find shotgun crafting skill magazines with each perk rank up to crafting skill 100 -->
+			<passive_effect name="LootProb" operation="perc_add" level="1,5" value="2,10" tags="eftxshotgunsCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingEFTShotguns" operation="LT" value="150"/>
+			</passive_effect>
+			<!-- Once shotgun crafting skill reaches 150, set the probability bonus of finding shotgun crafting skill magazines to 0 -->
+			<passive_effect name="LootProb" operation="base_set" level="1,5" value="1,1" tags="eftxshotgunsCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingEFTShotguns" operation="Equals" value="150"/>
+			</passive_effect>	
+			<effect_description level="1" desc_key="perkEFTXShotgunsRank1Desc" long_desc_key="Find Shotgun books in loot"/>
+			<effect_description level="2" desc_key="perkEFTXShotgunsRank2Desc" long_desc_key="Find more Shotgun books in loot"/>
+			<effect_description level="3" desc_key="perkEFTXShotgunsRank3Desc" long_desc_key="Find even more Shotgun books in loot"/>
+			<effect_description level="4" desc_key="perkEFTXShotgunsRank4Desc" long_desc_key="Do you really need this many Shotgun books"/>
+			<effect_description level="5" desc_key="perkEFTXShotgunsRank5Desc" long_desc_key="Fine have more Shotgun books"/>
+			</effect_group>
+		</perk>
+		<!-- SHOTGUNS -->
+		<!-- LAUNCHERS -->
+		<perk name="perkEFTXBoomBoom" parent="skillEFTXExplosives" max_level="5"  name_key="EFTX Boom Boom" desc_key="Finding More Rocket and Grenade Launcher Books in loot" icon="ui_game_symbol_explosion">
+			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="1" desc_key="reqPerceptionLevel01"/></level_requirements>
+			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="3" desc_key="reqPerceptionLevel03"/></level_requirements>
+			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="5" desc_key="reqPerceptionLevel05"/></level_requirements>
+			<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="7" desc_key="reqPerceptionLevel07"/></level_requirements>
+			<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="10" desc_key="reqPerceptionLevel10"/></level_requirements>
+			<effect_group>
+			<passive_effect name="DismemberChance" operation="base_add" level="1,2,3,4,5" value=".05,.1,.2,.3,.45" tags="eftBoom"/>
+			<passive_effect name="ExplosionBlockDamage" operation="perc_add" level="0,5" value="0,.5" tags="eftBoom"/>
+			<passive_effect name="ExplosionEntityDamage" operation="perc_add" level="0,5" value="0,.5" tags="eftBoom"/>
+			<passive_effect name="WeaponHandling" operation="perc_add" level="1,5" value="0.1,0.5" tags="eftBoom"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,5" value="0.15,0.35" tags="eftBoom"/>
+			</effect_group>
+			<effect_group>
+			<!-- Increase the chance to find Launcher crafting skill magazines with each perk rank up to crafting skill 250 -->
+			<passive_effect name="LootProb" operation="perc_add" level="1,5" value="2,10" tags="eftxrocketsandLaunchersSCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingRocketsandLaunchers" operation="LT" value="300"/>
+			</passive_effect>
+			<!-- Once Launcher crafting skill reaches 250, set the probability bonus of finding Launcher crafting skill magazines to 0 -->
+			<passive_effect name="LootProb" operation="base_set" level="1,5" value="1,1" tags="eftxrocketsandLaunchersSCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingRocketsandLaunchers" operation="Equals" value="300"/>
+			</passive_effect>
+			<effect_description level="1" desc_key="perkEFTXBoomBoomRank1Desc" long_desc_key="Find more Launcher books to get closer to the boom boom"/>
+			<effect_description level="2" desc_key="perkEFTXBoomBoomRank2Desc" long_desc_key="Find the Books Get the Boom Boom"/>
+			<effect_description level="3" desc_key="perkEFTXBoomBoomRank3Desc" long_desc_key="Find even more Launcher books for the boom boom"/>
+			<effect_description level="4" desc_key="perkEFTXBoomBoomRank4Desc" long_desc_key="You want more launcher books"/>
+			<effect_description level="5" desc_key="perkEFTXBoomBoomRank5Desc" long_desc_key="Drop the bombs you are finding lots of Launcher books"/>
+			</effect_group>
+		</perk>
+		<!-- LAUNCHERS -->
+		<!-- RIFLES -->
+		<perk name="perkEFTXRifles" parent="skillEFTXRifles" max_level="5"  name_key="EFTX Rifles" desc_key="Find More Rifle Books in loot" icon="ui_game_symbol_map_cursor">
+			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="1" desc_key="reqPerceptionLevel01"/></level_requirements>
+			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="3" desc_key="reqPerceptionLevel03"/></level_requirements>
+			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="5" desc_key="reqPerceptionLevel05"/></level_requirements>
+			<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="7" desc_key="reqPerceptionLevel07"/></level_requirements>
+			<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="10" desc_key="reqPerceptionLevel10"/></level_requirements>
+			<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="eftRifles"/>
+			<passive_effect name="WeaponHandling" operation="perc_add" level="1,2,3,4,5" value=".1,.2,.32,.45,.60" tags="eftRifles"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,5" value="0.1,0.3" tags="eftRifles"/>
+			</effect_group>
+			<effect_group>
+		<!-- Increase the chance to find rifle crafting skill magazines with each perk rank up to crafting skill 200 -->
+			<passive_effect name="LootProb" operation="perc_add" level="1,5" value="2,10" tags="eftxriflesCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingEFTRifles" operation="LT" value="200"/>
+			</passive_effect>
+			<!-- Once rifle crafting skill reaches 200, set the probability bonus of finding rifle crafting skill magazines to 0 -->
+			<passive_effect name="LootProb" operation="base_set" level="1,5" value="1,1" tags="eftxriflesCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingEFTRifles" operation="Equals" value="200"/>
+			</passive_effect>
+			<effect_description level="1" desc_key="perkEFTXRiflesRank1Desc" long_desc_key="Find more Rifle books"/>
+			<effect_description level="2" desc_key="perkEFTXRiflesRank2Desc" long_desc_key="Find the Rifle Books"/>
+			<effect_description level="3" desc_key="perkEFTXRiflesRank3Desc" long_desc_key="Find even more Rifle books"/>
+			<effect_description level="4" desc_key="perkEFTXRiflesRank4Desc" long_desc_key="You want more Rifle books"/>
+			<effect_description level="5" desc_key="perkEFTXRiflesRank5Desc" long_desc_key="Mass Rifle book find"/>
+			</effect_group>
+		</perk>
+		<!-- RIFLES -->
+		<!-- MACHINE GUNS -->
+		<perk name="perkEFTXMGS" parent="skillEFTXMGS" max_level="5"  name_key="EFTX Machine Guns" desc_key="Find More Machine Gun Books" icon="ui_game_symbol_map_cursor">
+			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="1" desc_key="reqFortitudeLevel01"/></level_requirements>
+			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="3" desc_key="reqFortitudeLevel03"/></level_requirements>
+			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="5" desc_key="reqFortitudeLevel05"/></level_requirements>
+			<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="7" desc_key="reqFortitudeLevel07"/></level_requirements>
+			<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="10" desc_key="reqFortitudeLevel10"/></level_requirements>
+			<effect_group>
+			<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".2,1" tags="eftMGS"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="eftMGS"/>
+
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,5" value="0.05,0.25" tags="eftMGS"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,5" value="0.1,0.3" tags="eftMGS"/>
+
+			<passive_effect name="KickDegreesVerticalMin" operation="perc_add" level="0,5" value="0,-.03" tags="eftMGS"/>
+			<passive_effect name="KickDegreesVerticalMax" operation="perc_add" level="0,5" value="0,-.15" tags="eftMGS"/>
+			<passive_effect name="KickDegreesHorizontalMin" operation="perc_add" level="0,5" value="0,-.03" tags="eftMGS"/>
+			<passive_effect name="KickDegreesHorizontalMax" operation="perc_add" level="0,5" value="0,-.15" tags="eftMGS"/>
+
+			<passive_effect name="IncrementalSpreadMultiplier" operation="perc_add" level="1,5" value="-.03,-.15" tags="eftMGS"/>
+			</effect_group>
+			<effect_group>
+		<!-- Increase the chance to find Machine Gun crafting skill magazines with each perk rank up to crafting skill 200 -->
+			<passive_effect name="LootProb" operation="perc_add" level="1,5" value="2,10" tags="eftxmachinegunsCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingEFTMachineguns" operation="LT" value="200"/>
+			</passive_effect>
+			<!-- Once Machine Gun crafting skill reaches 200, set the probability bonus of finding Machine Gun crafting skill magazines to 0 -->
+			<passive_effect name="LootProb" operation="base_set" level="1,5" value="1,1" tags="eftxmachinegunsCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingEFTMachineguns" operation="Equals" value="200"/>
+			</passive_effect>
+			<effect_description level="1" desc_key="perkEFTXMGSRank1Desc" long_desc_key="Find more Machine Gun books"/>
+			<effect_description level="2" desc_key="perkEFTXMGSRank2Desc" long_desc_key="Find the Machine Gun Books"/>
+			<effect_description level="3" desc_key="perkEFTXMGSRank3Desc" long_desc_key="Find even more Machine Gun books"/>
+			<effect_description level="4" desc_key="perkEFTXMGSRank4Desc" long_desc_key="You want more Machine Gun books"/>
+			<effect_description level="5" desc_key="perkEFTXMGSRank5Desc" long_desc_key="Mass Machine Gun book find"/>
+			</effect_group>
+		</perk>
+		<!-- MACHINE GUNS -->
+		<!-- WEAPON MODIFIER BIPODS FOREGRIPS -->
+		<perk name="perkBipodsForegrips" parent="skillEFTXModifiers" max_level="5"  name_key="Bipods and Foregrips" desc_key="Finding more books on Bipods and Foregrips" icon="ui_game_symbol_map_cursor">
+			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="3" desc_key="reqIntellectLevel03"/></level_requirements>
+			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="5" desc_key="reqIntellectLevel05"/></level_requirements>
+			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="6" desc_key="reqIntellectLevel06"/></level_requirements>
+			<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="8" desc_key="reqIntellectLevel08"/></level_requirements>
+			<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>
+			<effect_group>
+		<!-- Increase the chance to find bipods and foregrips crafting skill magazines with each perk rank up to crafting skill 50 -->
+			<passive_effect name="LootProb" operation="perc_add" level="1,5" value="2,10" tags="eftxweaponmodifiersbipodsforegripsCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingBipodsForegrips" operation="LT" value="50"/>
+			</passive_effect>
+			<!-- Once bipods and foregrips crafting skill reaches 50, set the probability bonus of finding bipods and foregrips crafting skill magazines to 0 -->
+			<passive_effect name="LootProb" operation="base_set" level="1,5" value="1,1" tags="eftxweaponmodifiersbipodsforegripsCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingBipodsForegrips" operation="Equals" value="50"/>
+			</passive_effect>
+			<effect_description level="1" desc_key="perkEFTXBipodsForegripsRank1Desc" long_desc_key="Find more Bipods and Foregrips books"/>
+			<effect_description level="2" desc_key="perkEFTXBipodsForegripsRank2Desc" long_desc_key="Find the Bipods and Foregrips Books"/>
+			<effect_description level="3" desc_key="perkEFTXBipodsForegripsRank3Desc" long_desc_key="Find even more Bipods and Foregrips books"/>
+			<effect_description level="4" desc_key="perkEFTXBipodsForegripsRank4Desc" long_desc_key="You want more Bipods and Foregrips books"/>
+			<effect_description level="5" desc_key="perkEFTXBipodsForegripsRank5Desc" long_desc_key="Mass Bipods and Foregrips book find"/>
+			</effect_group>
+		</perk>
+		<!-- WEAPON MODIFIER BIPODS FOREGRIPS -->
+		<!-- WEAPON MODIFIER GRENADE LAUNCHER ATTACHMENTS -->
+		<perk name="perkGrenadeLauncherAttachments" parent="skillEFTXExplosives" max_level="5"  name_key="Grenade Launcher Attachments" desc_key="Find more To bring the Boom Boom" icon="ui_game_symbol_map_cursor">
+			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="3" desc_key="reqIntellectLevel03"/></level_requirements>
+			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="5" desc_key="reqIntellectLevel05"/></level_requirements>
+			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="6" desc_key="reqIntellectLevel06"/></level_requirements>
+			<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="8" desc_key="reqIntellectLevel08"/></level_requirements>
+			<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>
+			<effect_group>
+		<!-- Increase the chance to find Grenade Launcher Attachments crafting skill magazines with each perk rank up to crafting skill 100 -->
+			<passive_effect name="LootProb" operation="perc_add" level="1,5" value="2,10" tags="eftxweaponmodifiersgrenadelauncherattachmentsCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingGrenadeLauncherAttachments" operation="LT" value="100"/>
+			</passive_effect>
+			<!-- Once Grenade Launcher Attachments crafting skill reaches 100, set the probability bonus of finding Grenade Launcher Attachments crafting skill magazines to 0 -->
+			<passive_effect name="LootProb" operation="base_set" level="1,5" value="1,1" tags="eftxweaponmodifiersgrenadelauncherattachmentsCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingGrenadeLauncherAttachments" operation="Equals" value="100"/>
+			</passive_effect>
+			<effect_description level="1" desc_key="perkEFTXGrenadeLauncherAttachmentsRank1Desc" long_desc_key="Find more Grenade Launcher Attachments books"/>
+			<effect_description level="2" desc_key="perkEFTXGrenadeLauncherAttachmentsRank2Desc" long_desc_key="Find the Grenade Launcher Attachments Books"/>
+			<effect_description level="3" desc_key="perkEFTXGrenadeLauncherAttachmentsRank3Desc" long_desc_key="Find even more Grenade Launcher Attachments books"/>
+			<effect_description level="4" desc_key="perkEFTXGrenadeLauncherAttachmentsRank4Desc" long_desc_key="You want more Grenade Launcher Attachments books"/>
+			<effect_description level="5" desc_key="perkEFTXGrenadeLauncherAttachmentsRank5Desc" long_desc_key="Mass Grenade Launcher Attachments book find"/>
+			</effect_group>
+		</perk>		
+		<!-- WEAPON MODIFIER GRENADE LAUNCHER ATTACHMENTS -->
+		<!-- WEAPON MODIFIER SCOPES -->
+		<perk name="perkScopes" parent="skillEFTXModifiers" max_level="5"  name_key="Scopes" desc_key="I see you" icon="ui_game_symbol_map_cursor">
+			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="3" desc_key="reqIntellectLevel03"/></level_requirements>
+			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="5" desc_key="reqIntellectLevel05"/></level_requirements>
+			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="6" desc_key="reqIntellectLevel06"/></level_requirements>
+			<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="8" desc_key="reqIntellectLevel08"/></level_requirements>
+			<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>
+			<effect_group>
+		<!-- Increase the chance to find Scopes crafting skill magazines with each perk rank up to crafting skill 125 -->
+			<passive_effect name="LootProb" operation="perc_add" level="1,5" value="2,10" tags="eftxweaponmodifiersscopesCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingScopes" operation="LT" value="125"/>
+			</passive_effect>
+			<!-- Once Scopes crafting skill reaches 125, set the probability bonus of finding Scopes crafting skill magazines to 0 -->
+			<passive_effect name="LootProb" operation="base_set" level="1,5" value="1,1" tags="eftxweaponmodifiersscopesCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingScopes" operation="Equals" value="125"/>
+			</passive_effect>
+			<effect_description level="1" desc_key="perkEFTXScopesRank1Desc" long_desc_key="Find more Scopes books"/>
+			<effect_description level="2" desc_key="perkEFTXScopesRank2Desc" long_desc_key="Find the Scopes Books"/>
+			<effect_description level="3" desc_key="perkEFTXScopesRank3Desc" long_desc_key="Find even more Scopes books"/>
+			<effect_description level="4" desc_key="perkEFTXScopesRank4Desc" long_desc_key="You want more Scopes books"/>
+			<effect_description level="5" desc_key="perkEFTXScopesRank5Desc" long_desc_key="Mass Scopes book find"/>
+			</effect_group>
+		</perk>			
+		<!-- WEAPON MODIFIER SCOPES -->
+		<!-- WEAPON MODIFIER MAGAZINES -->
+		<perk name="perkMagazines" parent="skillEFTXModifiers" max_level="5"  name_key="Magazines" desc_key="Carry more ammo in guns by finding more magazine books" icon="ui_game_symbol_map_cursor">
+			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="3" desc_key="reqIntellectLevel03"/></level_requirements>
+			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="5" desc_key="reqIntellectLevel05"/></level_requirements>
+			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="6" desc_key="reqIntellectLevel06"/></level_requirements>
+			<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="8" desc_key="reqIntellectLevel08"/></level_requirements>
+			<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>
+			<effect_group>
+		<!-- Increase the chance to find Magazines crafting skill magazines with each perk rank up to crafting skill 125 -->
+			<passive_effect name="LootProb" operation="perc_add" level="1,5" value="2,10" tags="eftxweaponmodifiersmagazinesCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingMagazines" operation="LT" value="125"/>
+			</passive_effect>
+			<!-- Once Magazines crafting skill reaches 125, set the probability bonus of finding Magazines crafting skill magazines to 0 -->
+			<passive_effect name="LootProb" operation="base_set" level="1,5" value="1,1" tags="eftxweaponmodifiersmagazinesCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingMagazines" operation="Equals" value="125"/>
+			</passive_effect>
+			<effect_description level="1" desc_key="perkEFTXMagazinesRank1Desc" long_desc_key="Find more Magazines books"/>
+			<effect_description level="2" desc_key="perkEFTXMagazinesRank2Desc" long_desc_key="Find the Magazines Books"/>
+			<effect_description level="3" desc_key="perkEFTXMagazinesRank3Desc" long_desc_key="Find even more Magazines books"/>
+			<effect_description level="4" desc_key="perkEFTXMagazinesRank4Desc" long_desc_key="You want more Magazines books"/>
+			<effect_description level="5" desc_key="perkEFTXMagazinesRank5Desc" long_desc_key="Mass Magazines book find"/>
+			</effect_group>
+		</perk>			
+		<!-- WEAPON MODIFIER MAGAZINES -->
+		<!-- WEAPON MODIFIER SILENCERS -->
+		<perk name="perkSilencers" parent="skillEFTXModifiers" max_level="5"  name_key="Silencers" desc_key="Hunt in silence, Find more of the silencer books" icon="ui_game_symbol_map_cursor">
+			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="3" desc_key="reqIntellectLevel03"/></level_requirements>
+			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="5" desc_key="reqIntellectLevel05"/></level_requirements>
+			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="6" desc_key="reqIntellectLevel06"/></level_requirements>
+			<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="8" desc_key="reqIntellectLevel08"/></level_requirements>
+			<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>
+			<effect_group>
+		<!-- Increase the chance to find Silencers crafting skill magazines with each perk rank up to crafting skill 125 -->
+			<passive_effect name="LootProb" operation="perc_add" level="1,5" value="2,10" tags="eftxweaponmodifierssilencersCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingSilencers" operation="LT" value="125"/>
+			</passive_effect>
+			<!-- Once Silencers crafting skill reaches 125, set the probability bonus of finding Silencers crafting skill magazines to 0 -->
+			<passive_effect name="LootProb" operation="base_set" level="1,5" value="1,1" tags="eftxweaponmodifierssilencersCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingSilencers" operation="Equals" value="125"/>
+			</passive_effect>
+			<effect_description level="1" desc_key="perkEFTXSilencersRank1Desc" long_desc_key="Find more Silencers books"/>
+			<effect_description level="2" desc_key="perkEFTXSilencersRank2Desc" long_desc_key="Find the Silencers Books"/>
+			<effect_description level="3" desc_key="perkEFTXSilencersRank3Desc" long_desc_key="Find even more Silencers books"/>
+			<effect_description level="4" desc_key="perkEFTXSilencersRank4Desc" long_desc_key="You want more Silencers books"/>
+			<effect_description level="5" desc_key="perkEFTXSilencersRank5Desc" long_desc_key="Mass Silencers book find"/>
+			</effect_group>
+		</perk>			
+		<!-- WEAPON MODIFIER SILENCERS -->
+		<!-- WEAPON MODIFIER STOCKS -->
+		<perk name="perkStocks" parent="skillEFTXModifiers" max_level="5"  name_key="Stocks" desc_key="Find more Stock Books in the world" icon="ui_game_symbol_map_cursor">
+			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="3" desc_key="reqIntellectLevel03"/></level_requirements>
+			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="5" desc_key="reqIntellectLevel05"/></level_requirements>
+			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="6" desc_key="reqIntellectLevel06"/></level_requirements>
+			<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="8" desc_key="reqIntellectLevel08"/></level_requirements>
+			<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>
+			<effect_group>
+		<!-- Increase the chance to find Stocks crafting skill magazines with each perk rank up to crafting skill 125 -->
+			<passive_effect name="LootProb" operation="perc_add" level="1,5" value="2,10" tags="eftxweaponmodifiersstocksCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingStocks" operation="LT" value="125"/>
+			</passive_effect>
+			<!-- Once Stocks crafting skill reaches 125, set the probability bonus of finding Stocks crafting skill to 0 -->
+			<passive_effect name="LootProb" operation="base_set" level="1,5" value="1,1" tags="eftxweaponmodifiersstocksCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingStocks" operation="Equals" value="125"/>
+			</passive_effect>
+			<effect_description level="1" desc_key="perkEFTXStocksRank1Desc" long_desc_key="Find more Stocks books"/>
+			<effect_description level="2" desc_key="perkEFTXStocksRank2Desc" long_desc_key="Find the Stocks Books"/>
+			<effect_description level="3" desc_key="perkEFTXStocksRank3Desc" long_desc_key="Find even more Stocks books"/>
+			<effect_description level="4" desc_key="perkEFTXStocksRank4Desc" long_desc_key="You want more Stocks books"/>
+			<effect_description level="5" desc_key="perkEFTXStocksRank5Desc" long_desc_key="Mass Stocks book find"/>
+			</effect_group>
+		</perk>			
+		<!-- WEAPON MODIFIER STOCKS -->
+		<!-- HEADLIGHTS AND NVGS -->
+		<perk name="perkLights" parent="skillEFTXModifiers" max_level="5"  name_key="Lights" desc_key="Find more books on Lights and Night vision goggles" icon="ui_game_symbol_map_cursor">
+			<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="3" desc_key="reqIntellectLevel03"/></level_requirements>
+			<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="5" desc_key="reqIntellectLevel05"/></level_requirements>
+			<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="6" desc_key="reqIntellectLevel06"/></level_requirements>
+			<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="8" desc_key="reqIntellectLevel08"/></level_requirements>
+			<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="10" desc_key="reqIntellectLevel10"/></level_requirements>
+			<effect_group>
+		<!-- Increase the chance to find HeadLights and NVGS crafting skill with each perk rank up to crafting skill 25 -->
+			<passive_effect name="LootProb" operation="perc_add" level="1,5" value="2,10" tags="eftxheadlightsandnvgsCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingheadLightsandNVG" operation="LT" value="25"/>
+			</passive_effect>
+			<!-- Once Doctor HeadLights and NVGS crafting skill reaches 25, set the probability bonus of finding HeadLights and NVGS crafting skill to 0 -->
+			<passive_effect name="LootProb" operation="base_set" level="1,5" value="1,1" tags="eftxheadlightsandnvgsCSM">
+				<requirement name="ProgressionLevel" progression_name="craftingheadLightsandNVG" operation="Equals" value="25"/>
+			</passive_effect>
+			<effect_description level="1" desc_key="perkEFTXLightsRank1Desc" long_desc_key="Find more Lights and NVGs books"/>
+			<effect_description level="2" desc_key="perkEFTXLightsRank2Desc" long_desc_key="Find the Lights and NVGs books"/>
+			<effect_description level="3" desc_key="perkEFTXLightsRank3Desc" long_desc_key="Find even more Lights and NVGs books"/>
+			<effect_description level="4" desc_key="perkEFTXLightsRank4Desc" long_desc_key="You want more Lights and NVGs books"/>
+			<effect_description level="5" desc_key="perkEFTXLightsRank5Desc" long_desc_key="Mass Lights and NVGs book find"/>
+			</effect_group>
+		</perk>			
+		<!-- HEADLIGHTS AND NVGS -->			
+</append>	
+
+</configs>
